@@ -6,3 +6,4 @@ set expandtab		"fills tabs with spaces
 set softtabstop=4	"removes the spaces created for tabs all in one backspace
 set cursorline		"highlites the line you are currently in
 set mouse=nv		"enables mouse in normal and visual mode
+set noswapfile      "disable swap file creation
