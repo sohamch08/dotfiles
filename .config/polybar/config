@@ -18,7 +18,7 @@
 
 [colors]
 ;background = ${xrdb:color0:#222}
-background = #222
+background = #aa202020
 background-alt = #444
 ;foreground = ${xrdb:color7:#222}
 foreground = #dfdfdf
@@ -33,7 +33,7 @@ width = 100%
 height = 27
 offset-x = 0%
 offset-y = 0%
-radius = 6.0
+radius = 0
 fixed-center = false
 background = ${colors.background}
 foreground = ${colors.foreground}
@@ -45,7 +45,7 @@ border-size = 0
 border-color = #00000000
 
 padding-left = 0
-padding-right = 0 
+padding-right = 4
 
 module-margin-left = 1
 module-margin-right = 1 
@@ -55,11 +55,16 @@ font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-2 = siji:pixelsize=10;1
 
 modules-left = i3
-modules-center = mpd
-modules-right = pulseaudio memory cpu battery date powermenu 
+modules-right = pulseaudio brightness cpu memory battery date powermenu
+
 tray-position = right
-tray-padding = 16
-;tray-background = #0063ff
+tray-detached = false
+tray-maxsize = 20
+tray-background = #202020
+tray-offset-x = 0
+tray-offset-y = 0
+tray-padding = 4
+tray-scale = 1.0
 
 ;wm-restack = bspwm
 ;wm-restack = i3
@@ -74,6 +79,30 @@ tray-padding = 16
 
 cursor-click = pointer
 cursor-scroll = ns-resize
+
+[settings]
+screenchange-reload = true
+;compositing-background = xor
+;compositing-background = screen
+;compositing-foreground = source
+;compositing-border = over
+pseudo-transparency = false
+
+[global/wm]
+margin-top = 0
+margin-bottom = 0
+
+[module/brightness]
+type = custom/script
+exec = brightnessctl get
+interval = 0
+format-prefix = " "
+format-prefix-foreground = #fff
+format-foreground = #fff
+format-padding = 1
+scroll-down = brightnessctl set +5
+scroll-up = brightnessctl set 5-
+format-underline = #268bd2
 
 [module/xwindow]
 type = internal/xwindow
@@ -169,7 +198,7 @@ label-urgent-padding = 2
 type = internal/mpd
 format-online = <label-song>  <icon-prev> <icon-stop> <toggle> <icon-next>
 
-icon-prev = 
+icon-prev = "玲"
 icon-stop = 
 icon-play = 
 icon-pause = 
@@ -204,7 +233,7 @@ card = intel_backlight
 type = internal/cpu
 interval = 2
 format-prefix = ""
-format-prefix-foreground =  ${colors.foreground-alt}
+format-prefix-foreground = #fff
 format-underline = #f90000
 label = %percentage:2%%
 
@@ -259,9 +288,9 @@ type = internal/date
 interval = 5
 
 date =
-date-alt = %Y-%m-%d
+date-alt = %d.%m.%Y
 
-time = ﮮ %H:%M
+time = "ﮮ %H:%M "
 time-alt =  || ﮮ %H:%M:%S
 
 format-prefix = 
@@ -367,7 +396,7 @@ format-discharging = <animation-discharging> <label-discharging>
 format-discharging-underline = ${self.format-charging-underline}
 
 format-full-prefix = " "
-format-full-prefix-foreground = ${colors.foreground-alt}
+format-full-prefix-foreground = #fff
 format-full-underline = ${self.format-charging-underline}
 
 ramp-capacity-0 = 
@@ -419,7 +448,7 @@ expand-right = true
 
 format-spacing = 1
 
-label-open = " "  
+label-open = "⏻"  
 label-open-foreground = #0a81f5
 label-close =  cancel
 label-close-foreground = ${colors.secondary}
@@ -441,16 +470,5 @@ menu-2-0-exec = sudo poweroff
 menu-2-1 = cancel
 menu-2-1-exec = menu-open-0
 
-[settings]
-screenchange-reload = true
-;compositing-background = xor
-;compositing-background = screen
-;compositing-foreground = source
-;compositing-border = over
-;pseudo-transparency = false
-
-[global/wm]
-margin-top = 0
-margin-bottom = 5
 
 ; vim:ft=dosini
