@@ -1,1 +1,0 @@
-# SDDM files
