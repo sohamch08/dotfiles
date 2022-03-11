@@ -1,0 +1,3 @@
+youtube-dl -o '$HOME/Downloads/youtube-dl_songs/%(channel)s/%(title)s - %(channel)s.%(ext)s' -f bestaudio --extract-audio --audio-format mp3 --audio-quality 0 https://youtu.be/5Agwr66NVV8
+youtube-dl -o '$HOME/Downloads/youtube-dl_songs/%(channel)s/%(title)s - %(channel)s.%(ext)s' --write-thumbnail --skip-download https://youtu.be/5Agwr66NVV8
+youtube-dl -f bestaudio -o '%(title)s - %(channel)s.%(ext)s' https://youtu.be/5Agwr66NVV8 --get-filename >> yt-download_history.txt
