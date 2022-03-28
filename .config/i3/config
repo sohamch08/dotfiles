@@ -1,7 +1,7 @@
 #Variables Declared
 set $mod Mod4
 set $fm "dolphin"
-set $myterm "alacritty"
+set $myterm alacritty
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -14,7 +14,7 @@ font pango:monospace 11
 ###########################################################
 ############################ GAPS #########################
 ###########################################################
-for_window [class=".*"] border pixel 2
+for_window [class=".*"] border pixel 1
 gaps inner 10
 gaps outer 5
 
@@ -31,6 +31,7 @@ exec_always picom --experimental-backends
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec_always nm_applet
 exec_always --no-startup-id numlockx on
+exec_always blueman-applet
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
 # exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
@@ -53,7 +54,7 @@ bindsym XF86MonBrightnessDown exec "brightnessctl -d amdgpu_bl0 set 10-; notify-
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec alacritty -vv
+bindsym $mod+Return exec $myterm
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -61,6 +62,7 @@ bindsym $mod+Shift+q kill
 # start rofi (a program launcher)
 bindsym $mod+d exec --no-startup-id rofi -show drun -show-icons
 bindsym $mod+Shift+d exec dmenu_run
+bindsym $mod+Shift+Ctrl+d exec rofi -show run
 
 # change focus
 bindsym $mod+h focus left
@@ -159,7 +161,7 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 #############################################################################
 
 bindsym $mod+b exec brave
-bindsym $Mod+m exec rhythmbox
+bindsym $Mod+m exec alacritty -e cmus
 
 bindsym $mod+Shift+p exec systemsettings
 bindsym $Mod+Shift+t exec telegram-desktop
