@@ -165,11 +165,13 @@ bindsym $Mod+m exec alacritty -e cmus
 
 bindsym $mod+Shift+p exec systemsettings
 bindsym $Mod+Shift+t exec telegram-desktop
+bindsym $Mod+Shift+v exec code
 bindsym $Mod+Shift+w exec $fm
 bindsym $mod+Shift+x exec i3lock
 
 bindsym $Mod+Shift+Ctrl+q exec poweroff
 bindsym $Mod+Shift+Ctrl+r exec reboot
+bindsym $Mod+Shift+Ctrl+x exec texstudio
 
 
 # Screenshot
