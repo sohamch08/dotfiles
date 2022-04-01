@@ -59,7 +59,7 @@ unset rc
 #	pwdmaxlen=$(( ( pwdmaxlen < ${#dir} ) ? ${#dir} : pwdmaxlen ))
 #
 #	NEW_PWD=${PWD/#$HOME/\~}
-#
+#	
 #	local pwdoffset=$(( ${#NEW_PWD} - pwdmaxlen ))
 #
 #	# Generate name
@@ -109,7 +109,7 @@ unset rc
 #	## COLOR CODES                                                            ##
 #	## These can be used in the configuration below                           ##
 #	############################################################################
-#
+#	
 #	## FONT EFFECT
 #	local      NONE='0'
 #	local      BOLD='1'
@@ -118,8 +118,8 @@ unset rc
 #	local     BLINK='5'
 #	local    INVERT='7'
 #	local    HIDDEN='8'
-#
-#
+#	
+#	
 #	## COLORS
 #	local   DEFAULT='9'
 #	local     BLACK='0'
@@ -138,15 +138,15 @@ unset rc
 #	local L_MAGENTA='65'
 #	local    L_CYAN='66'
 #	local     WHITE='67'
-#
-#
+#	
+#	
 #	## TYPE
 #	local     RESET='0'
 #	local    EFFECT='0'
 #	local     COLOR='30'
 #	local        BG='40'
-#
-#
+#	
+#	
 #	## 256 COLOR CODES
 #	local NO_FORMAT="\[\033[0m\]"
 #	local ORANGE_BOLD="\[\033[1;38;5;208m\]"
@@ -157,21 +157,21 @@ unset rc
 #	local WHITE_BOLD="\[\033[1;38;5;15m\]"
 #	local GRAY_BOLD="\[\033[1;90m\]"
 #	local BLUE_BOLD="\[\033[1;38;5;74m\]"
-#
-#
-#
-#
-#
-#	##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##
+#	
+#	
+#	
+#	
+#	
+#	##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  
 #	  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##
-#	##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##
+#	##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ## 
 #
-#
-#
+#	
+#	
 #	##                          CONFIGURE HERE                                ##
 #
-#
-#
+#	
+#	
 #	############################################################################
 #	## CONFIGURATION                                                          ##
 #	## Choose your color combination here                                     ##
@@ -179,31 +179,31 @@ unset rc
 #	local FONT_COLOR_1=$WHITE
 #	local BACKGROUND_1=$RED
 #	local TEXTEFFECT_1=$BOLD
-#
+#	
 #	local FONT_COLOR_2=$WHITE
 #	local BACKGROUND_2=$L_MAGENTA
 #	local TEXTEFFECT_2=$BOLD
-#
+#	
 #	local FONT_COLOR_3=$D_GRAY
 #	local BACKGROUND_3=$WHITE
 #	local TEXTEFFECT_3=$BOLD
-#
+#	
 #	local PROMT_FORMAT=$BLUE_BOLD
 #
-#
+#	
 #	############################################################################
 #	## EXAMPLE CONFIGURATIONS                                                 ##
 #	## I use them for different hosts. Test them out ;)                       ##
 #	############################################################################
-#
+#	
 #	## CONFIGURATION: BLUE-WHITE
 #	if [ "$HOSTNAME" = dell ]; then
 #		FONT_COLOR_1=$WHITE; BACKGROUND_1=$BLUE; TEXTEFFECT_1=$BOLD
-#		FONT_COLOR_2=$WHITE; BACKGROUND_2=$L_BLUE; TEXTEFFECT_2=$BOLD
-#		FONT_COLOR_3=$D_GRAY; BACKGROUND_3=$WHITE; TEXTEFFECT_3=$BOLD
+#		FONT_COLOR_2=$WHITE; BACKGROUND_2=$L_BLUE; TEXTEFFECT_2=$BOLD	
+#		FONT_COLOR_3=$D_GRAY; BACKGROUND_3=$WHITE; TEXTEFFECT_3=$BOLD	
 #		PROMT_FORMAT=$CYAN_BOLD
 #	fi
-#
+#	
 #	## CONFIGURATION: BLACK-RED
 #	if [ "$HOSTNAME" = giraff6 ]; then
 #		FONT_COLOR_1=$WHITE; BACKGROUND_1=$BLACK; TEXTEFFECT_1=$BOLD
@@ -211,7 +211,7 @@ unset rc
 #		FONT_COLOR_3=$WHITE; BACKGROUND_3=$RED; TEXTEFFECT_3=$BOLD
 #		PROMT_FORMAT=$RED_BOLD
 #	fi
-#
+#	
 #	## CONFIGURATION: RED-BLACK
 #	#FONT_COLOR_1=$WHITE; BACKGROUND_1=$RED; TEXTEFFECT_1=$BOLD
 #	#FONT_COLOR_2=$WHITE; BACKGROUND_2=$D_GRAY; TEXTEFFECT_2=$BOLD
@@ -225,7 +225,7 @@ unset rc
 #		FONT_COLOR_3=$WHITE; BACKGROUND_3=$BLUE; TEXTEFFECT_3=$BOLD
 #		PROMT_FORMAT=$CYAN_BOLD
 #	fi
-#
+#	
 #	## CONFIGURATION: GRAY-SCALE
 #	if [ "$HOSTNAME" = giraff ]; then
 #		FONT_COLOR_1=$WHITE; BACKGROUND_1=$BLACK; TEXTEFFECT_1=$BOLD
@@ -233,7 +233,7 @@ unset rc
 #		FONT_COLOR_3=$WHITE; BACKGROUND_3=$L_GRAY; TEXTEFFECT_3=$BOLD
 #		PROMT_FORMAT=$BLACK_BOLD
 #	fi
-#
+#	
 #	## CONFIGURATION: GRAY-CYAN
 #	if [ "$HOSTNAME" = light ]; then
 #		FONT_COLOR_1=$WHITE; BACKGROUND_1=$BLACK; TEXTEFFECT_1=$BOLD
@@ -241,49 +241,49 @@ unset rc
 #		FONT_COLOR_3=$BLACK; BACKGROUND_3=$L_CYAN; TEXTEFFECT_3=$BOLD
 #		PROMT_FORMAT=$CYAN_BOLD
 #	fi
-#
-#
-#	##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##
+#	
+#	
+#	##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  
 #	  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##
-#	##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##
+#	##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ## 	
 #
-#
-#
-#
+#	
+#	
+#	
 #	############################################################################
 #	## TEXT FORMATING                                                         ##
 #	## Generate the text formating according to configuration                 ##
 #	############################################################################
-#
+#	
 #	## CONVERT CODES: add offset
 #	FC1=$(($FONT_COLOR_1+$COLOR))
 #	BG1=$(($BACKGROUND_1+$BG))
 #	FE1=$(($TEXTEFFECT_1+$EFFECT))
-#
+#	
 #	FC2=$(($FONT_COLOR_2+$COLOR))
 #	BG2=$(($BACKGROUND_2+$BG))
 #	FE2=$(($TEXTEFFECT_2+$EFFECT))
-#
+#	
 #	FC3=$(($FONT_COLOR_3+$COLOR))
 #	BG3=$(($BACKGROUND_3+$BG))
 #	FE3=$(($TEXTEFFECT_3+$EFFECT))
-#
+#	
 #	FC4=$(($FONT_COLOR_4+$COLOR))
 #	BG4=$(($BACKGROUND_4+$BG))
 #	FE4=$(($TEXTEFFECT_4+$EFFECT))
-#
+#	
 #
 #	## CALL FORMATING HELPER FUNCTION: effect + font color + BG color
 #	local TEXT_FORMAT_1
 #	local TEXT_FORMAT_2
 #	local TEXT_FORMAT_3
-#	local TEXT_FORMAT_4
+#	local TEXT_FORMAT_4	
 #	format_font TEXT_FORMAT_1 $FE1 $FC1 $BG1
 #	format_font TEXT_FORMAT_2 $FE2 $FC2 $BG2
 #	format_font TEXT_FORMAT_3 $FC3 $FE3 $BG3
 #	format_font TEXT_FORMAT_4 $FC4 $FE4 $BG4
-#
-#
+#	
+#	
 #	# GENERATE PROMT SECTIONS
 #	local PROMT_USER=$"$TEXT_FORMAT_1 \u "
 #	local PROMT_HOST=$"$TEXT_FORMAT_2 \h "
@@ -296,17 +296,17 @@ unset rc
 #	## Generate the separators between sections                               ##
 #	## Uses background colors of the sections                                 ##
 #	############################################################################
-#
+#	
 #	## CONVERT CODES
 #	TSFC1=$(($BACKGROUND_1+$COLOR))
 #	TSBG1=$(($BACKGROUND_2+$BG))
-#
+#	
 #	TSFC2=$(($BACKGROUND_2+$COLOR))
 #	TSBG2=$(($BACKGROUND_3+$BG))
-#
+#	
 #	TSFC3=$(($BACKGROUND_3+$COLOR))
 #	TSBG3=$(($DEFAULT+$BG))
-#
+#	
 #
 #	## CALL FORMATING HELPER FUNCTION: effect + font color + BG color
 #	local SEPARATOR_FORMAT_1
@@ -315,10 +315,10 @@ unset rc
 #	format_font SEPARATOR_FORMAT_1 $TSFC1 $TSBG1
 #	format_font SEPARATOR_FORMAT_2 $TSFC2 $TSBG2
 #	format_font SEPARATOR_FORMAT_3 $TSFC3 $TSBG3
-#
+#	
 #
 #	# GENERATE SEPARATORS WITH FANCY TRIANGLE
-#	local TRIANGLE=$'\uE0B0'
+#	local TRIANGLE=$'\uE0B0'	
 #	local SEPARATOR_1=$SEPARATOR_FORMAT_1$TRIANGLE
 #	local SEPARATOR_2=$SEPARATOR_FORMAT_2$TRIANGLE
 #	local SEPARATOR_3=$SEPARATOR_FORMAT_3$TRIANGLE
@@ -346,7 +346,7 @@ unset rc
 #	############################################################################
 #	PS1="$TITLEBAR\n${PROMT_USER}${SEPARATOR_1}${PROMT_HOST}${SEPARATOR_2}${PROMT_PWD}${SEPARATOR_3}${PROMT_INPUT}"
 #
-#
+#	
 #
 #	## For terminal line coloring, leaving the rest standard
 #	none="$(tput sgr0)"
@@ -360,14 +360,14 @@ unset rc
 ###  MAIN                                                                      ##
 #################################################################################
 #
-###	Bash provides an environment variable called PROMPT_COMMAND.
-###	The contents of this variable are executed as a regular Bash command
-###	just before Bash displays a prompt.
+###	Bash provides an environment variable called PROMPT_COMMAND. 
+###	The contents of this variable are executed as a regular Bash command 
+###	just before Bash displays a prompt. 
 ###	We want it to call our own command to truncate PWD and store it in NEW_PWD
 #PROMPT_COMMAND=bash_prompt_command
 #
 ###	Call bash_promnt only once, then unset it (not needed any more)
-###	It will set $PS1 with colors and relative to $NEW_PWD,
+###	It will set $PS1 with colors and relative to $NEW_PWD, 
 ###	which gets updated by $PROMT_COMMAND on behalf of the terminal
 #bash_prompt
 #unset bash_prompt
@@ -392,6 +392,8 @@ alias yay='paru'
 alias anicli='~/GitHub/ani-cli/ani-cli'
 alias anup='~/GitHub/anup/target/release/anup'
 alias deadbeef='~/Downloads/deadbeef/deadbeef'
+alias cdlatex='cd ~/Arna/LaTeX/CMI/B.Sc/Sem\ 2'
+alias sourced='source ~/.bashrc'
 
 neofetch
 # ~/github/weebsay/weebsay
@@ -404,11 +406,11 @@ if test -n "$KITTY_INSTALLATION_DIR" -a -e "$KITTY_INSTALLATION_DIR/shell-integr
 export LESS_TERMCAP_mb=$'\E[01;31m'             # begin blinking
 export LESS_TERMCAP_md=$'\E[01;31m'             # begin bold
 export LESS_TERMCAP_me=$'\E[0m'                 # end mode
-export LESS_TERMCAP_se=$'\E[0m'                 # end standout-mode
-export LESS_TERMCAP_so=$'\E[01;44;33m'          # begin standout-mode - info box
+export LESS_TERMCAP_se=$'\E[0m'                 # end standout-mode                 
+export LESS_TERMCAP_so=$'\E[01;44;33m'          # begin standout-mode - info box                              
 export LESS_TERMCAP_ue=$'\E[0m'                 # end underline
 export LESS_TERMCAP_us=$'\E[01;32m'             # begin underline
 #export MANPAGER="/usr/bin/most -s"             # color using most
-eval "$(starship init bash)"
+eval "$(starship init bash)" 
 . "$HOME/.cargo/env"
 
