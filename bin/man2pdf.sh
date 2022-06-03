@@ -1,4 +1,2 @@
-read $file
-pdffile=$file.pdf
-man -Tpdf $file > $pdffile
-mv $pdffile ~/man2pdf
+man -Tpdf $1 > $1.pdf
+mv $1.pdf ~/man2pdf
