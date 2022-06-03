@@ -45,6 +45,12 @@ alias cleanup='sudo pacman -Rns $(pacman -Qtdq)' # remove orphaned packages
 alias ls='exa -aG --sort=type'
 alias ll='exa -aglhHS -s type --icons'
 
+### Git Aliases
+alias gs="git status"
+alias ga="git add"
+alias gc="git commit -m"
+alias gp="git push origin"
+
 alias tlmgr='/usr/share/texmf-dist/scripts/texlive/tlmgr.pl --usermode'
 alias anicli='~/GitHub/ani-cli/ani-cli'
 alias anup='~/GitHub/anup/target/release/anup'
