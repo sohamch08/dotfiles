@@ -133,7 +133,7 @@ font:
   # The `style` can be specified to pick a specific face.
   #style: Bold Italic
   # Point size
-  size: 8.0
+  size: 7.5
   # Offset is the extra space around each character. `offset.y` can be thought
   # of as modifying the line spacing, and `offset.x` as modifying the letter
   # spacing.
@@ -199,7 +199,7 @@ schemes:
   Dracula:
     &Dracula
     primary:
-      background: '#282a36'
+      background: '#1e222a'
       foreground: '#f8f8f2'
     cursor:
       text: CellBackground
@@ -253,36 +253,38 @@ schemes:
 
 # Colors (Tomorrow Night)
 colors:
-  # Default colors
+  name: Ashes (dark)
+  author: Chris Kempson
   primary:
-    background: '#000000'
-    foreground: '#ffffff'
-  # Normal colors
+    background: "#1c2023"
+    foreground: "#c7ccd1"
+  cursor:
+    text: "#1c2023"
+    cursor: "#c7ccd1"
   normal:
-    black: '#000000'
-    red: '#cd0000'
-    green: '#00cd00'
-    yellow: '#cdcd00'
-    blue: '#0000ee'
-    magenta: '#cd00cd'
-    cyan: '#00cdcd'
-    white: '#e5e5e5'
-
-  # Bright colors
+    black: "#1c2023"
+    red: "#c7ae95"
+    green: "#95c7ae"
+    yellow: "#aec795"
+    blue: "#ae95c7"
+    magenta: "#c795ae"
+    cyan: "#95aec7"
+    white: "#c7ccd1"
   bright:
-    black: '#7f7f7f'
-    red: '#ff0000'
-    green: '#00ff00'
-    yellow: '#ffff00'
-    blue: '#5c5cff'
-    magenta: '#ff00ff'
-    cyan: '#00ffff'
-    white: '#ffffff'
-theme: XTerm
+    black: "#747c84"
+    red: "#c7ae95"
+    green: "#95c7ae"
+    yellow: "#aec795"
+    blue: "#ae95c7"
+    magenta: "#c795ae"
+    cyan: "#95aec7"
+    white: "#f3f4f5"
+colors: *Dracula
+# theme: Ashes.dark
 
 # Default colors
 #primary:
-#  background: '#1d1f21'
+#  background: '#282a36'
 #  foreground: '#c5c8c6'
 # Bright and dim foreground colors
 #
