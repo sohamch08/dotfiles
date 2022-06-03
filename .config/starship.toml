@@ -43,6 +43,13 @@ deleted = "x"
 diverged = "⇕⇡${ahead_count}⇣${behind_count}"
 style = "bold red"
 
+[git_branch]
+symbol = " "
+format = "on [$symbol$branch(:$remote_branch)]($style) "
+style = "bold dimmed green"
+# truncation_length = 4
+# truncation_symbol = ""
+
 # Last param in the first line/row
 [cmd_duration]
 disabled = false
