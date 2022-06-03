@@ -8,6 +8,3 @@ file_name=$name.png
 scrot ~/Pictures/$file_name
 
 xclip -selection clipboard -target image/png -i ~/Pictures/$file_name
-
-
-
