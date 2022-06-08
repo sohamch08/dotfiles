@@ -44,7 +44,8 @@ alias zathura="devour zathura"
 alias okular="devour okular"
 
 #eval "$(starship init zsh)"
-eval "$(zoxide init zsh)"
-eval "$(starship init zsh)"
 . "$HOME/.cargo/env"
 neofetch
+eval "$(zoxide init zsh)"
+eval "$(starship init zsh)"
+
