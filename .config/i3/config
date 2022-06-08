@@ -64,6 +64,7 @@ exec_always blueman-applet
 exec_always kdeconnect-app -silent
 exec --no-startup-id $myTerm -t "musicterminal" -e cmus
 exec --no-startup-id $myTerm -t "dropdown"
+exec_always --no-startup-id mpd
 
 ################
 # Audio Control
@@ -108,6 +109,10 @@ bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
+
+# Move to next and previos Workspaces where a window is open
+bindsym $mod+Tab workspace next
+bindsym $mod+Shift+Tab workspace prev
 
 ######################
 # Splitting Direction
@@ -196,7 +201,8 @@ bindsym $mod+r mode "resize"
 bindsym $mod+Return exec $myTerm
 
 ### Keybind $Mod+Shift+<key>
-bindsym $mod+Shift+p exec systemsettings
+bindsym $mod+Shift+semicolon exec systemsettings
+bindsym $mod+Shift+p exec rofi-pass
 bindsym $Mod+Shift+t exec telegram-desktop
 bindsym $Mod+Shift+v exec code
 bindsym $Mod+Shift+w exec $fm
