@@ -5,11 +5,6 @@ add_newline = false
 [line_break]
 # disabled = true
 
-# Replace the "❯" symbol in the prompt with "➜"
-# [character] # The name of the module we are configuring is "character"
-# success_symbol = "[➜](bold green)" # The "success_symbol" segment is being set to "➜" with the color "bold green"
-
-# Disable the package module, hiding it from the prompt completely
 [username]
 format = " [╭─$user]($style)@"
 show_always = true
@@ -33,13 +28,16 @@ repo_root_style = "purple"
 repo_root_format = "[$before_root_path]($style)[$repo_root]($repo_root_style)[$path]($repo_root_style) "
 # Fourth param
 [sudo]
-disabled = false
+disabled = true
 
 # Before all the version info (python, nodejs, php, etc.)
 [git_status]
 ahead = "⇡${count}"
 behind = "⇣${count}"
-deleted = "x"
+deleted = "x${count}"
+untracked =	"?${count}"
+modified = "!${count}"
+staged = "+${count}"
 diverged = "⇕⇡${ahead_count}⇣${behind_count}"
 style = "bold red"
 
@@ -106,4 +104,61 @@ disabled = true
 disabled = true
 
 [nodejs]
+disabled = true
+
+[c]
+disabled = true
+
+[conda]
+disabled = true
+
+[dart]
+disabled = true
+
+[docker_context]
+disabled = true
+
+[golang]
+disabled = true
+
+[haskell]
+disabled = true
+
+[java]
+disabled = true
+
+[jobs]
+disabled = true
+
+[julia]
+disabled = true
+
+[lua]
+disabled = true
+
+[nim]
+disabled = true
+
+[perl]
+disabled = true
+
+[php]
+disabled = true
+
+[rlang]
+disabled = true
+
+[red]
+disabled = true
+
+[ruby]
+disabled = true
+
+[rust]
+disabled = true
+
+[scala]
+disabled = true
+
+[swift]
 disabled = true
