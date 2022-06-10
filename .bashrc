@@ -281,9 +281,7 @@ ex=:\
 *.iso=💿:\
 "
 
-eval "$(zoxide init bash)"
 eval "$(starship init bash)" 
-. "$HOME/.cargo/env"
 
 
 neofetch
