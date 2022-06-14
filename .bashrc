@@ -53,7 +53,7 @@ alias gc="git commit -m"
 alias gp="git push origin"
 
 alias tlmgr='/usr/share/texmf-dist/scripts/texlive/tlmgr.pl --usermode'
-alias anicli='~/GitHub/ani-cli/ani-cli'
+alias anime='aniwrapper -t doomone'
 alias anup='~/GitHub/anup/target/release/anup'
 alias sourced='source ~/.bashrc'
 alias cat='bat'
