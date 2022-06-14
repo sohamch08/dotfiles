@@ -74,6 +74,9 @@ exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id dbus-launch dunst --config ~/.config/dunst/dunstrc
 # Starts greenclip deamon
 exec --no-startup-id greenclip daemon>/dev/null 
+# Bettery warning popup
+exec --no-startuo-id i3-battery-popup -m "Warning: Battery is getting low\
+         CONNECT YOUR CHARGER" -n
 
 
 ################
@@ -300,7 +303,11 @@ set $grey		#b0b5bd
 set $mediumgrey		#8b8b8b
 set $yellowbrown	#e1b700
 
-client.focused		    $lightblue	$darkblue	$white		$purple		$mediumgrey
-client.unfocused	    $darkblue	$darkblue	$grey		$purple		$darkgrey
-client.focused_inactive	$darkblue	$darkblue	$grey		$purple		$black
-client.urgent		    $urgentred	$urgentred	$white		$purple		$yellowbrown
+#client.focused		    $lightblue	$darkblue	$white		$purple		$mediumgrey
+#client.unfocused	    $darkblue	$darkblue	$grey		$purple		$darkgrey
+#client.focused_inactive	$darkblue	$darkblue	$grey		$purple		$black
+#client.urgent		    $urgentred	$urgentred	$white		$purple		$yellowbrown
+client.focused #664477 #664477 #cccccc #e7d8b1
+client.focused_inactive #e7d8b1 #e7d8b1 #181715 #A074C4
+client.unfocused #222133 #222133 #AAAAAA #A074C4
+client.urgent #CE4045 #CE4045 #e7d8b1 #DCCD69
