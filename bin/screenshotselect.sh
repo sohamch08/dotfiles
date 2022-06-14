@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-name=$(date +"%d-%m-%y-%T")
+name=$(date '+%Y-%m-%d %H:%M:%S')
 file_name=$name.png
 
 
