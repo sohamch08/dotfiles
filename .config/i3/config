@@ -20,7 +20,7 @@
 # Variables Declared
 #####################
 set $mod Mod4
-set $fm "dolphin"
+set $fm "thunar"
 set $myTerm alacritty
 
 #######
@@ -54,27 +54,37 @@ exec xinput set-prop "ELAN071A:00 04F3:30FD Touchpad" "libinput Tapping Enabled"
 exec --no-startup-id /usr/bin/gnome-keyring-daemon --start --components=secrets
 # Opens Network Manager
 exec_always --no-startup-id nm-applet
-# Opnes kde pam_kwallet_init to use saved passwards in kwallet5 even after changing de
-exec --no-startup-id /usr/lib/pam_kwallet_init
+# Opens nitrojen with previous wallpaper
 exec --no-startup-id nitrogen --restore
+# starts picom
 exec_always picom --experimental-backends
+# launches polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-exec_always --no-startup-id numlockx on
+# Opens Bluetooth Manager
 exec_always blueman-applet
+# Opens kdeconnect 
 exec_always kdeconnect-app -silent
-exec --no-startup-id $myTerm -t "musicterminal" -e cmus
+# Opens a terminal for cmus
+exec --no-startup-id $myTerm -t "musicterminal" -e ~/bin/cmus-start.sh
+# Opens a terminal
 exec --no-startup-id $myTerm -t "dropdown"
-exec_always --no-startup-id mpd
+# Get auth work with polkit-gnome
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+# Starts dunst
+exec --no-startup-id dbus-launch dunst --config ~/.config/dunst/dunstrc
+# Starts greenclip deamon
+exec --no-startup-id greenclip daemon>/dev/null 
+
 
 ################
 # Audio Control
 ################
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && $refresh_i3status
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% && $refresh_i3status
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
-bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% 
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% 
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle 
+bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle 
 
 #####################
 # Brightness Control
@@ -114,6 +124,8 @@ bindsym $mod+Shift+Right move right
 bindsym $mod+Tab workspace next
 bindsym $mod+Shift+Tab workspace prev
 
+# Move to an empty workspace
+bindsym $mod+Shift+n exec ~/.config/i3/scripts/empty_workspace
 ######################
 # Splitting Direction
 ######################
@@ -188,13 +200,15 @@ bindsym $mod+Shift+r restart
 
 
 ### Starting a program launcher
-bindsym $mod+d exec --no-startup-id rofi -show drun -show-icons
-bindsym $mod+Ctrl+d exec --no-startup-id rofi -show run 
+bindsym $mod+d exec --no-startup-id rofi -show drun  -config ~/.config/rofi/rofidmenu.rasi
+bindsym $mod+Ctrl+d exec --no-startup-id rofi -show run -config ~/.config/rofi/rofidmenu.rasi
 bindsym $mod+Shift+e exec --no-startup-id rofi -show emoji 
 bindsym $mod+Shift+d exec dmenu_run
+bindsym $mod+w exec rofi -show window -config ~/.config/rofi/rofidmenu.rasi
+bindsym $mod+c exec --no-startup-id rofi -modi "clipboard:greenclip print" -show clipboard -config ~/.config/rofi/rofidmenu.rasi
 
 ### Keybind $Mod+<key>
-bindsym $mod+b exec brave --password-store=kwallet5
+bindsym $mod+b exec brave --password-store
 bindsym $mod+g exec gimp
 bindsym $mod+o exec com.obsproject.Studio
 bindsym $mod+r mode "resize"
@@ -202,6 +216,7 @@ bindsym $mod+Return exec $myTerm
 
 ### Keybind $Mod+Shift+<key>
 bindsym $mod+Shift+semicolon exec systemsettings
+bindsym $mod+Shift+a exec aniwrapper -t doomone
 bindsym $mod+Shift+p exec rofi-pass
 bindsym $Mod+Shift+t exec telegram-desktop
 bindsym $Mod+Shift+v exec code
@@ -213,12 +228,15 @@ bindsym $mod+Shift+q kill
 bindsym $Mod+Shift+Ctrl+x exec texstudio
 
 ### I3 Session ending
-# Shut down
-bindsym $Mod+Shift+Ctrl+q exec poweroff
-# Restart
-bindsym $Mod+Shift+Ctrl+r exec reboot
-# Log out
-bindsym $mod+Shift+Ctrl+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+# Power Menu
+bindsym $Mod+Shift+Ctrl+q exec ~/.config/i3/scripts/powermenu
+# Power Profiles
+bindsym $Mod+Shift+Ctrl+r exec ~/.config/i3/scripts/power-profiles
+
+### Music control
+bindsym XF86AudioPause exec cmus-remote --pause
+bindsym XF86AudioPrev exec cmus-remote --prev
+bindsym XF86AudioNext exec cmus-remote --next
 
 
 ### Screenshot
@@ -265,3 +283,24 @@ for_window [title="dropdown"] resize set 1500 800
 for_window [title="dropdown"] move scratchpad
 for_window [title="dropdown"] border pixel 5
 
+#################
+# Color settings
+#################
+
+# Define colors variables:
+set $darkbluetrans	#08052be6
+set $darkblue		#08052b
+set $lightblue		#5294e2
+set $urgentred		#e53935
+set $white		#ffffff
+set $black		#000000
+set $purple		#e345ff
+set $darkgrey		#383c4a
+set $grey		#b0b5bd
+set $mediumgrey		#8b8b8b
+set $yellowbrown	#e1b700
+
+client.focused		    $lightblue	$darkblue	$white		$purple		$mediumgrey
+client.unfocused	    $darkblue	$darkblue	$grey		$purple		$darkgrey
+client.focused_inactive	$darkblue	$darkblue	$grey		$purple		$black
+client.urgent		    $urgentred	$urgentred	$white		$purple		$yellowbrown
