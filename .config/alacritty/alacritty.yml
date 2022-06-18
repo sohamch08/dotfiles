@@ -133,7 +133,7 @@ font:
   # The `style` can be specified to pick a specific face.
   #style: Bold Italic
   # Point size
-  size: 7.5
+  size: 6
   # Offset is the extra space around each character. `offset.y` can be thought
   # of as modifying the line spacing, and `offset.x` as modifying the letter
   # spacing.
@@ -466,14 +466,14 @@ cursor:
 #   - Off: Disable blinking by default
 #   - On: Enable blinking by default
 #   - Always: Force the cursor to always blink
-  blinking: On
+  blinking: Off
 # Vi mode cursor style
 #
 # If the vi mode cursor style is `None` or not specified, it will fall back to
 # the style of the active value of the normal cursor.
 #
 # See `cursor.style` for available options.
-#vi_mode_style: None
+ vi_mode_style: Block
 # Cursor blinking interval in milliseconds.
 #blink_interval: 750
 # If this is `true`, the cursor will be rendered as a hollow box when the
