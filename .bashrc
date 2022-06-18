@@ -56,10 +56,9 @@ alias tlmgr='/usr/share/texmf-dist/scripts/texlive/tlmgr.pl --usermode'
 alias anime='aniwrapper -t doomone'
 alias anup='~/GitHub/anup/target/release/anup'
 alias sourced='source ~/.bashrc'
-alias cat='bat'
 alias cmatrix="unimatrix -s 95 -c blue -f"
 alias termicons="~/GitHub/icons-in-terminal/print_icons.sh"
-
+alias yarn="yarn --use-yarnrc $XDG_CONFIG_HOME/yarn/config"
 ### Devour
 alias mpv="devour mpv"
 alias zathura="devour zathura"
@@ -91,6 +90,11 @@ export BW_SESSION="nhqJP42VgvZl682uMvTHS+QRPW0Cp5t+JZtRP6KMKz6vVpuFTTquc6xxnGgxi
 export PASSWORD_STORE_ENABLE_EXTENSIONS="true"
 export TERM=xterm-256color
 export EDITOR=nvim
+export GOPATH="$XDG_DATA_HOME"/go
+export GTK2_RC_FILES="$XDG_CONFIG_HOME"/gtk-2.0/gtkrc
+export LESSHISTFILE="$XDG_CACHE_HOME"/less/history
+export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME"/npm/npmrc
+export RUSTUP_HOME="$XDG_DATA_HOME"/rustup
 # lf icons
 export LF_ICONS="\
 tw=:\
