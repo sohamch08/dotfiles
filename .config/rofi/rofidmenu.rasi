@@ -4,7 +4,6 @@
  *******************************************************/
 configuration {
     font:				"Noto Sans Regular 10";
-    show-icons:				true;
     icon-theme:				"Qogir";
     display-drun:			"Apps";
     drun-display-format:		"{name}";
