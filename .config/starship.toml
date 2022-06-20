@@ -32,13 +32,13 @@ disabled = true
 
 # Before all the version info (python, nodejs, php, etc.)
 [git_status]
-ahead = "⇡${count}"
+ahead = "⇡ ${count}"
 behind = "⇣${count}"
 deleted = "x${count}"
 untracked =	"?${count}"
 modified = "!${count}"
 staged = "+${count}"
-diverged = "⇕⇡${ahead_count}⇣${behind_count}"
+diverged = "⇕⇡ ${ahead_count}⇣ ${behind_count}"
 style = "bold red"
 
 [git_branch]
