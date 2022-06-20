@@ -18,7 +18,7 @@ Plug 'sonph/onehalf', { 'rtp': 'vim' }
 Plug 'https://github.com/lambdalisue/nerdfont.vim.git'
 Plug 'https://github.com/ryanoasis/vim-devicons.git'
 
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 
 Plug 'https://github.com/mboughaba/i3config.vim.git'
