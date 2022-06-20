@@ -51,6 +51,7 @@ alias gs="git status"
 alias ga="git add"
 alias gc="git commit -m"
 alias gp="git push origin"
+alias gcl="git clone"
 
 alias tlmgr='/usr/share/texmf-dist/scripts/texlive/tlmgr.pl --usermode'
 alias anime='aniwrapper -t doomone'
@@ -58,12 +59,12 @@ alias anup='~/GitHub/anup/target/release/anup'
 alias sourced='source ~/.bashrc'
 alias cmatrix="unimatrix -s 95 -c blue -f"
 alias termicons="~/GitHub/icons-in-terminal/print_icons.sh"
-alias yarn="yarn --use-yarnrc $XDG_CONFIG_HOME/yarn/config"
 ### Devour
 alias mpv="devour mpv"
 alias zathura="devour zathura"
 alias okular="devour okular"
 alias evince="devour evince"
+alias v="nvim"
 
 
 # Specific Directories
@@ -95,6 +96,7 @@ export GTK2_RC_FILES="$XDG_CONFIG_HOME"/gtk-2.0/gtkrc
 export LESSHISTFILE="$XDG_CACHE_HOME"/less/history
 export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME"/npm/npmrc
 export RUSTUP_HOME="$XDG_DATA_HOME"/rustup
+export EXA_ICON_SPACING=2
 # lf icons
 export LF_ICONS="\
 tw=:\
@@ -287,6 +289,6 @@ ex=:\
 
 eval "$(starship init bash)" 
 
-
-neofetch
+neofetch 
+#--kitty --source ~/.config/neofetch/light.jpg --size 300px --gap 1
 # colorscript random
