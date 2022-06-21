@@ -97,6 +97,7 @@ export LESSHISTFILE="$XDG_CACHE_HOME"/less/history
 export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME"/npm/npmrc
 export RUSTUP_HOME="$XDG_DATA_HOME"/rustup
 export EXA_ICON_SPACING=2
+export PS2=""
 # lf icons
 export LF_ICONS="\
 tw=:\

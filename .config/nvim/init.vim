@@ -7,6 +7,7 @@ source ~/.vim/mapping.vim
 " let g:airline_theme='wombat'
 
 let NERDTreeShowHidden=1
+let NERDTreeHijackNetrw=1
 
 let g:haskellmode_completion_ghc = 0
 autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
@@ -81,3 +82,6 @@ colorscheme tokyonight
 let g:coc_node_path='/usr/bin/node'
 
 let g:tex_conceal = ''
+
+let g:vifm_replace_netrw = 1
+let g:vifm_replace_netrw_cmd = "Vifm"

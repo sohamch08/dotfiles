@@ -12,3 +12,4 @@ set mouse=nv		"enables mouse in normal and visual mode
 set noswapfile      "disable swap file creation
 set clipboard=unnamedplus
 set showtabline=2
+set ignorecase
