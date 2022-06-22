@@ -8,6 +8,8 @@ source ~/.vim/mapping.vim
 
 let NERDTreeShowHidden=1
 let NERDTreeHijackNetrw=1
+let g:netrw_localrmdir='rm -rf'
+let g:netrw_local_delete_recursive=1
 
 let g:haskellmode_completion_ghc = 0
 autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
@@ -74,14 +76,12 @@ let g:WebDevIconsDefaultFolderSymbolColor = s:beige " sets the color for folders
 let g:WebDevIconsDefaultFileSymbolColor = s:blue " sets the color for files that did not match any rule
 
 let g:indentLine_char = '│'
+
 syntax on
 filetype plugin indent on
 
 colorscheme tokyonight
 
-let g:coc_node_path='/usr/bin/node'
 
 let g:tex_conceal = ''
 
-let g:vifm_replace_netrw = 1
-let g:vifm_replace_netrw_cmd = "Vifm"

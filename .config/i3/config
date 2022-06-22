@@ -21,7 +21,7 @@
 #####################
 set $mod Mod4
 set $fm "thunar"
-set $myTerm alacritty
+set $myTerm kitty
 
 #######
 # Font
@@ -65,9 +65,9 @@ exec_always blueman-applet
 # Opens kdeconnect 
 exec_always kdeconnect-app -silent
 # Opens a terminal for cmus
-exec --no-startup-id $myTerm -t "musicterminal" -e ~/bin/cmus-start.sh
+exec --no-startup-id $myTerm -T "musicterminal" -e ~/bin/cmus-start.sh
 # Opens a terminal
-exec --no-startup-id $myTerm -t "dropdown"
+exec --no-startup-id $myTerm -T "dropdown"
 # Get auth work with polkit-gnome
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 # Starts dunst

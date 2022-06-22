@@ -17,7 +17,7 @@ Plug 'catppuccin/vim', { 'as': 'catppuccin' }
 Plug 'sonph/onehalf', { 'rtp': 'vim' }
 Plug 'https://github.com/lambdalisue/nerdfont.vim.git'
 Plug 'https://github.com/ryanoasis/vim-devicons.git'
-
+Plug 'mhinz/vim-startify'
 " Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 

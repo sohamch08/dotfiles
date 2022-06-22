@@ -95,16 +95,16 @@
 # Font configuration
 font:
   normal:
-    family: Iosevka Nerd Font
+    family: Iosevka
     style: Regular
   bold:
-    family: Iosevka Nerd Font
+    family: Iosevka
     style: Bold
   italic:
-    family: Iosevka Nerd Font
+    family: Iosevka
     style: Italic
   bold_italic:
-    family: Iosevka Nerd Font
+    family: Iosevka
     style: Bold Italic
   size: 7
   # Offset is the extra space around each character. `offset.y` can be thought
