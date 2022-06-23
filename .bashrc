@@ -40,10 +40,14 @@ alias parsua='paru -Sua --noconfirm'             # update only AUR pkgs (paru)
 alias parsyu='paru -Syu --noconfirm'             # update standard pkgs and AUR pkgs (paru)
 alias unlock='sudo rm /var/lib/pacman/db.lck'    # remove pacman lock
 alias cleanup='sudo pacman -Rns $(pacman -Qtdq)' # remove orphaned packages
-alias grep='grep --color=always'
+
+### Grep 
+alias gr='grep --color=always'
+alias egr='egrep --color=always'
 
 ### Exa as ls
-alias ls='exa -aG --sort=type'
+alias ls='exa -aG --color=always --group-directories-first --sort=type --icon'
+alias sl='exa -aG --color=always --group-directories-first --sort=type --icon'
 alias ll='exa -aglhHS -s type --icons'
 
 ### Git Aliases
@@ -53,12 +57,6 @@ alias gc="git commit -m"
 alias gp="git push origin"
 alias gcl="git clone"
 
-alias tlmgr='/usr/share/texmf-dist/scripts/texlive/tlmgr.pl --usermode'
-alias anime='aniwrapper -t doomone'
-alias anup='~/GitHub/anup/target/release/anup'
-alias sourced='source ~/.bashrc'
-alias cmatrix="unimatrix -s 95 -c blue -f"
-alias termicons="~/GitHub/icons-in-terminal/print_icons.sh"
 ### Devour
 alias mpv="devour mpv"
 alias zathura="devour zathura"
@@ -66,10 +64,28 @@ alias okular="devour okular"
 alias evince="devour evince"
 alias v="nvim"
 
-
-# Specific Directories
+### cd nevigation
+alias ,='cd -'
+alias cd1='cd ..' 
+alias cd2='cd ../..'
+alias cd3='cd ../../..'
+alias cd4='cd ../../../..'
+alias cd5='cd ../../../../..'
 alias cdlatex='cd ~/Arna/LaTeX/CMI/B.Sc/Sem\ 2'
 alias cddotfiles="cd ~/GitHub/dotfiles/"
+
+### Cat 
+alias c='cat'
+alias b='bat'
+
+### Others
+alias tlmgr='/usr/share/texmf-dist/scripts/texlive/tlmgr.pl --usermode'
+alias anime='aniwrapper -t doomone'
+alias anup='~/GitHub/anup/target/release/anup'
+alias sourced='source ~/.bashrc'
+alias cmatrix="unimatrix -s 95 -c blue -f"
+alias termicons="~/GitHub/icons-in-terminal/print_icons.sh"
+
 
 # BEGIN_KITTY_SHELL_INTEGRATION
 if test -n "$KITTY_INSTALLATION_DIR" -a -e "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; then source "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; fi
@@ -98,6 +114,7 @@ export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME"/npm/npmrc
 export RUSTUP_HOME="$XDG_DATA_HOME"/rustup
 export EXA_ICON_SPACING=2
 export PS2=""
+export BAT_THEME="Monokai Extended"
 # lf icons
 export LF_ICONS="\
 tw=:\
