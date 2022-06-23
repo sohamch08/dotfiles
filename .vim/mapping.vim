@@ -6,7 +6,7 @@ map <C-Right>   :bnext<CR>
 map <C-Left>    :bprevious<CR>
 
 " Opens file explorer
-map <leader>e   :Lex 30<CR>
+map <leader>e   :Lex 20<CR>
 
 " Move between splits
 map <C-h>       <C-w>h

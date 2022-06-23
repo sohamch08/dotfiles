@@ -1,6 +1,6 @@
-source ~/.vim/plugins.vim
-source ~/.vim/sets.vim
-source ~/.vim/mapping.vim
+source ~/.config/nvim/user/plugins.vim
+source ~/.config/nvim/user/sets.vim
+source ~/.config/nvim/user/mapping.vim
 
 " let g:airline_powerline_fonts=1
 " let g:airline#extensions#tabline#enabled = 1

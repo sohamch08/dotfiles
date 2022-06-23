@@ -292,4 +292,3 @@ eval "$(starship init bash)"
 
 neofetch 
 #--kitty --source ~/.config/neofetch/light.jpg --size 300px --gap 1
-# colorscript random

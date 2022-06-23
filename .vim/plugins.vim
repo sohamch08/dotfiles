@@ -25,4 +25,5 @@ Plug 'https://github.com/mboughaba/i3config.vim.git'
 
 
 Plug 'https://github.com/Yggdroot/indentLine.git'
+Plug 'https://github.com/kshenoy/vim-signature.git'
 call plug#end()
