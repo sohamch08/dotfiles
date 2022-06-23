@@ -209,6 +209,7 @@ bindsym $mod+Shift+d exec dmenu_run
 bindsym $mod+w exec rofi -show window -config ~/.config/rofi/rofidmenu.rasi -show-icons icon-theme Qogir
 
 bindsym $mod+c exec --no-startup-id rofi -modi "clipboard:greenclip print" -show clipboard -config ~/.config/rofi/rofidmenu.rasi
+bindsym $mod+semicolon exec ~/bin/dm-config.sh
 
 ### Keybind $Mod+<key>
 bindsym $mod+b exec brave --password-store
