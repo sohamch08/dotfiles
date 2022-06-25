@@ -16,10 +16,10 @@ fi
 
 # User specific aliases and functions
 if [ -d ~/.bashrc.d ]; then
-	for rc in ~/.bashrc.d/*; do
-		if [ -f "$rc" ]; then
-			. "$rc"
-		fi
+    for rc in ~/.bashrc.d/*; do
+        if [ -f "$rc" ]; then
+            . "$rc"
+        fi
 	done
 fi
 
@@ -46,8 +46,8 @@ alias gr='grep --color=always'
 alias egr='egrep --color=always'
 
 ### Exa as ls
-alias ls='exa -aG --color=always --group-directories-first --sort=type --icon'
-alias sl='exa -aG --color=always --group-directories-first --sort=type --icon'
+alias ls='exa -aG --color=always --group-directories-first --sort=type --icons'
+alias sl='exa -aG --color=always --group-directories-first --sort=type --icons'
 alias ll='exa -aglhHS -s type --icons'
 
 ### Git Aliases
@@ -305,7 +305,14 @@ ex=:\
 *.iso=💿:\
 "
 
-eval "$(starship init bash)" 
+# eval "$(starship init bash)" 
+function _update_ps1() {
+    PS1=$(powerline-shell $?)
+}
+
+if [[ $TERM != linux && ! $PROMPT_COMMAND =~ _update_ps1 ]]; then
+    PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
+fi
 
 neofetch 
 #--kitty --source ~/.config/neofetch/light.jpg --size 300px --gap 1

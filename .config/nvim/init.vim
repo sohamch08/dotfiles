@@ -1,6 +1,8 @@
 source ~/.config/nvim/user/plugins.vim
 source ~/.config/nvim/user/sets.vim
 source ~/.config/nvim/user/mapping.vim
+source ~/.config/nvim/user/plugins_conf/coc.vim
+" source ~/.config/nvim/user/autocommand.vim
 
 " let g:airline_powerline_fonts=1
 " let g:airline#extensions#tabline#enabled = 1
@@ -76,6 +78,7 @@ let g:WebDevIconsDefaultFolderSymbolColor = s:beige " sets the color for folders
 let g:WebDevIconsDefaultFileSymbolColor = s:blue " sets the color for files that did not match any rule
 
 let g:indentLine_char = '│'
+let g:vim_json_conceal=0
 
 syntax on
 filetype plugin indent on
@@ -84,4 +87,4 @@ colorscheme tokyonight
 
 
 let g:tex_conceal = ''
-
+let g:coc_node_path ='/usr/bin/node'
