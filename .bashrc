@@ -305,14 +305,14 @@ ex=:\
 *.iso=💿:\
 "
 
-# eval "$(starship init bash)" 
-function _update_ps1() {
+eval "$(starship init bash)"
+: ' function _update_ps1() {
     PS1=$(powerline-shell $?)
 }
 
 if [[ $TERM != linux && ! $PROMPT_COMMAND =~ _update_ps1 ]]; then
     PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
 fi
-
+'
 neofetch 
 #--kitty --source ~/.config/neofetch/light.jpg --size 300px --gap 1

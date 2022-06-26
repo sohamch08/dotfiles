@@ -72,7 +72,7 @@ exec --no-startup-id $myTerm -T "dropdown"
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 # Starts dunst
 exec --no-startup-id dbus-launch dunst --config ~/.config/dunst/dunstrc
-# Starts greenclip deamon
+# Starts greenclip deamon (install rofi-greenclip from the AUR)
 exec --no-startup-id greenclip daemon>/dev/null 
 # Bettery warning popup
 exec --no-startuo-id i3-battery-popup -m "Warning: Battery is getting low"
@@ -202,13 +202,19 @@ bindsym $mod+Shift+r restart
 
 
 ### Starting a program launcher
+# Rofi: application menu
 bindsym $mod+d exec --no-startup-id ~/.config/rofi/scripts/launcher-ribbon.sh
+# Rofi: binary files menu
 bindsym $mod+Ctrl+d exec --no-startup-id ~/.config/rofi/scripts/launcher-text.sh
+# Rofi: emoji menu 
 bindsym $mod+Shift+e exec --no-startup-id rofi -show emoji -config ~/.config/rofi/rofidmenu.rasi -display-emoji "😃 "
-bindsym $mod+Shift+d exec dmenu_run
+# Rofi: open windows menu
 bindsym $mod+w exec rofi -show window -config ~/.config/rofi/rofidmenu.rasi -show-icons icon-theme Qogir
-
+# Rofi: clipboard menu
 bindsym $mod+c exec --no-startup-id rofi -modi "clipboard:greenclip print" -show clipboard -config ~/.config/rofi/rofidmenu.rasi
+# Dmenu: binary files menu
+bindsym $mod+Shift+d exec dmenu_run
+# Demnu: config files edit menu
 bindsym $mod+semicolon exec ~/bin/dm-config.sh
 
 ### Keybind $Mod+<key>

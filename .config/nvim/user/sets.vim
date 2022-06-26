@@ -1,4 +1,4 @@
-set number		"sets line number
+set number relativenumber		"sets line number
 " set relativenumber	"sets relative line numbers
 set autoindent
 set autowrite
@@ -14,3 +14,5 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 set listchars=eol:
+set tags
+set hidden

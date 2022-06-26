@@ -1,8 +1,8 @@
 source ~/.config/nvim/user/plugins.vim
+source ~/.config/nvim/user/plugins/coc.vim
+luafile ~/.config/nvim/user/plugins/comments.lua
 source ~/.config/nvim/user/sets.vim
 source ~/.config/nvim/user/mapping.vim
-source ~/.config/nvim/user/plugins_conf/coc.vim
-" source ~/.config/nvim/user/autocommand.vim
 
 " let g:airline_powerline_fonts=1
 " let g:airline#extensions#tabline#enabled = 1
@@ -88,3 +88,4 @@ colorscheme tokyonight
 
 let g:tex_conceal = ''
 let g:coc_node_path ='/usr/bin/node'
+

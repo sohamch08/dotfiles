@@ -21,7 +21,6 @@ noremap <silent> <C-S-k> :resize +1<CR>
 noremap <silent> <C-S-j> :resize -2<CR>
 
 " Comments line
-map <leader>/   :Commentary<CR>
 
 " Saves the file
 map <C-s>       :w<CR>
@@ -36,5 +35,6 @@ noremap <silent> 0 g0
 noremap <silent> $ g$
 
 " Moving a line or a chunk of lines
-xnoremap <silent> <A-k> :m-2<CR>gv=gv
+noremap <silent> <A-k> :m-2<CR>gv=gv
+noremap <silent> <A-j> :m+1<CR>gv=gv
 xnoremap <silent> <A-j> :m'>+<CR>gv=gv
