@@ -51,12 +51,13 @@ alias sl='exa -aG --color=always --group-directories-first --sort=type --icons'
 alias ll='exa -aglhHS -s type --icons'
 
 ### Git Aliases
-alias gs="git status"
 alias ga="git add"
 alias gc="git commit -m"
-alias gp="git push origin"
+alias gd='git diff'
 alias gcl="git clone"
+alias gp="git push origin"
 alias gpa="git add -A && git commit -m updated && git push origin"
+alias gs="git status"
 
 ### Devour
 alias mpv="devour mpv"
