@@ -56,6 +56,7 @@ alias ga="git add"
 alias gc="git commit -m"
 alias gp="git push origin"
 alias gcl="git clone"
+alias gpa="git add -A && git commit -m updated && git push origin"
 
 ### Devour
 alias mpv="devour mpv"
