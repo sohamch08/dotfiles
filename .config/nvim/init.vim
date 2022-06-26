@@ -1,8 +1,10 @@
+source ~/.config/nvim/user/sets.vim
+source ~/.config/nvim/user/mapping.vim
 source ~/.config/nvim/user/plugins.vim
 source ~/.config/nvim/user/plugins/coc.vim
 luafile ~/.config/nvim/user/plugins/comments.lua
-source ~/.config/nvim/user/sets.vim
-source ~/.config/nvim/user/mapping.vim
+luafile ~/.config/nvim/user/plugins/nvim-tree.lua
+luafile ~/.config/nvim/user/plugins/gitsigns.lua
 
 " let g:airline_powerline_fonts=1
 " let g:airline#extensions#tabline#enabled = 1
@@ -85,7 +87,7 @@ filetype plugin indent on
 
 colorscheme tokyonight
 
-
 let g:tex_conceal = ''
+let g:vimtex_syntax_conceal_disable = 1
 let g:coc_node_path ='/usr/bin/node'
 

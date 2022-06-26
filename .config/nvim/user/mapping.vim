@@ -1,4 +1,11 @@
 " Maps leader key
+" fef
+" fsdf
+" dsf
+" sdf
+" dsff
+" sdffd
+" fsdf
 let mapleader = " "
 
 " Move Between Buffers
@@ -6,7 +13,7 @@ map <C-Right>   :bnext<CR>
 map <C-Left>    :bprevious<CR>
 
 " Opens file explorer
-map <leader>e   :Lex 20<CR>
+map <leader>e   :NvimTreeToggle<CR>
 
 " Move between splits
 map <C-h>       <C-w>h
@@ -38,3 +45,5 @@ noremap <silent> $ g$
 noremap <silent> <A-k> :m-2<CR>gv=gv
 noremap <silent> <A-j> :m+1<CR>gv=gv
 xnoremap <silent> <A-j> :m'>+<CR>gv=gv
+
+nmap <C-q> :Startify<CR>

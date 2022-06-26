@@ -14,5 +14,5 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 set listchars=eol:
-set tags
 set hidden
+set conceallevel=0
