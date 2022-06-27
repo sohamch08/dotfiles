@@ -16,3 +16,4 @@ set expandtab
 set listchars=eol:
 set hidden
 set conceallevel=0
+set signcolumn=auto

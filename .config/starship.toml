@@ -1,104 +1,106 @@
+# Only able in zsh
+# right_format = """$cmd_duration"""
 # Inserts a blank line between shell prompts
 add_newline = false
 
 # Make prompt a single line instead of two lines
 [line_break]
-# disabled = true
+disabled = true
 
-[username]
-format = " [╭─$user]($style)@"
-show_always = true
-style_root = "bold red"
-style_user = "bold dimmed green"
-
-# Second param
-[hostname]
-disabled = false
-format = "[$hostname]($style) in "
-ssh_only = false
-style = "bold cyan"
-trim_at = "-"
-
-# Third param
+# [username]
+# format = " [╭─$user]($style)@"
+# show_always = true
+# style_root = "bold red"
+# style_user = "bold dimmed green"
+#
+# # Second param
+# [hostname]
+# disabled = false
+# format = "[$hostname]($style) in "
+# ssh_only = false
+# style = "bold cyan"
+# trim_at = "-"
+#
+# # Third param
 [directory]
 style = "bold cyan"
 truncate_to_repo = false
 truncation_length = 0
 repo_root_style = "purple"
-# use_logical_path = false
+use_logical_path = false
 format = "[$path]($style) "
 repo_root_format = "[$before_root_path]($style)[$repo_root]($repo_root_style)[$path]($repo_root_style) "
-# Fourth param
-[sudo]
-disabled = true
-
-# Before all the version info (python, nodejs, php, etc.)
-[git_status]
-ahead = "⇡ ${count}"
-behind = "⇣${count}"
-deleted = "x${count}"
-untracked =	"?${count}"
-modified = "!${count}"
-staged = "+${count}"
-diverged = "⇕⇡ ${ahead_count}⇣ ${behind_count}"
-style = "bold red"
-
+# # Fourth param
+# [sudo]
+# disabled = true
+#
+# # Before all the version info (python, nodejs, php, etc.)
+# [git_status]
+# ahead = "⇡ ${count}"
+# behind = "⇣${count}"
+# deleted = "x${count}"
+# untracked =	"?${count}"
+# modified = "!${count}"
+# staged = "+${count}"
+# diverged = "⇕⇡ ${ahead_count}⇣ ${behind_count}"
+# style = "bold red"
+#
 [git_branch]
 symbol = " "
 format = "on [$symbol$branch(:$remote_branch)]($style) "
 style = "bold dimmed green"
 # truncation_length = 4
 # truncation_symbol = ""
-
-# Last param in the first line/row
+#
+# # Last param in the first line/row
 [cmd_duration]
 disabled = false
-format = "took [$duration]($style)"
+format = "[\\[$duration\\]]($style) "
 min_time = 1
-
-
-## SECOND LINE/ROW: Prompt
-# Somethere at the beginning
-[battery]
-charging_symbol = ""
-disabled = true
-discharging_symbol = ""
-full_symbol = ""
-
-[[battery.display]]  # "bold red" style when capacity is between 0% and 10%
-disabled = true
-style = "bold red"
-threshold = 15
-
-[[battery.display]]  # "bold yellow" style when capacity is between 10% and 30%
-disabled = true
-style = "bold yellow"
-threshold = 50
-
-[[battery.display]]  # "bold green" style when capacity is between 10% and 30%
-disabled = true
-style = "bold green"
-threshold = 80
-
-# Prompt: optional param 1
-[time]
-disabled = true
-format = " 🕙 $time($style)\n"
-style = "bright-white"
-time_format = "%T"
-
-# Prompt: param 2
-[character]
-error_symbol = " [×](bold red)"
-success_symbol = " [╰───➤](bold dimmed green)"
-
-# SYMBOLS
-[status]
-disabled = false
-format = '[\[$symbol$status_common_meaning$status_signal_name$status_maybe_int\]]($style)'
-map_symbol = true
-pipestatus = true
-symbol = "🔴"
+#
+#
+# ## SECOND LINE/ROW: Prompt
+# # Somethere at the beginning
+# [battery]
+# charging_symbol = ""
+# disabled = true
+# discharging_symbol = ""
+# full_symbol = ""
+#
+# [[battery.display]]  # "bold red" style when capacity is between 0% and 10%
+# disabled = true
+# style = "bold red"
+# threshold = 15
+#
+# [[battery.display]]  # "bold yellow" style when capacity is between 10% and 30%
+# disabled = true
+# style = "bold yellow"
+# threshold = 50
+#
+# [[battery.display]]  # "bold green" style when capacity is between 10% and 30%
+# disabled = true
+# style = "bold green"
+# threshold = 80
+#
+# # Prompt: optional param 1
+# [time]
+# disabled = true
+# format = " 🕙 $time($style)\n"
+# style = "bright-white"
+# time_format = "%T"
+#
+# # Prompt: param 2
+# [character]
+# error_symbol = " [×](bold red)"
+# success_symbol = " [╰───➤](bold dimmed green)"
+#
+# # SYMBOLS
+# [status]
+# disabled = false
+# format = '[\[$symbol$status_common_meaning$status_signal_name$status_maybe_int\]]($style)'
+# map_symbol = true
+# pipestatus = true
+# symbol = "🔴"
 [package]
 disabled = true
 

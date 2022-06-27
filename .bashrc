@@ -68,7 +68,7 @@ alias v="nvim"
 
 ### cd nevigation
 alias ,='cd -'
-alias cd1='cd ..' 
+alias ..='cd ..' 
 alias cd2='cd ../..'
 alias cd3='cd ../../..'
 alias cd4='cd ../../../..'
@@ -87,6 +87,7 @@ alias anup='~/GitHub/anup/target/release/anup'
 alias sourced='source ~/.bashrc'
 alias cmatrix="unimatrix -s 95 -c blue -f"
 alias termicons="~/GitHub/icons-in-terminal/print_icons.sh"
+alias rm='shred -uzn3'
 
 
 # BEGIN_KITTY_SHELL_INTEGRATION
