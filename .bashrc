@@ -87,7 +87,8 @@ alias anup='~/GitHub/anup/target/release/anup'
 alias sourced='source ~/.bashrc'
 alias cmatrix="unimatrix -s 95 -c blue -f"
 alias termicons="~/GitHub/icons-in-terminal/print_icons.sh"
-alias rm='shred -uzn3'
+alias del='shred -uzn3'
+alias rmdir='rm -rf'
 
 
 # BEGIN_KITTY_SHELL_INTEGRATION
