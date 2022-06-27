@@ -35,15 +35,15 @@ repo_root_format = "[$before_root_path]($style)[$repo_root]($repo_root_style)[$p
 # disabled = true
 #
 # # Before all the version info (python, nodejs, php, etc.)
-# [git_status]
-# ahead = "⇡ ${count}"
-# behind = "⇣${count}"
-# deleted = "x${count}"
-# untracked =	"?${count}"
-# modified = "!${count}"
-# staged = "+${count}"
-# diverged = "⇕⇡ ${ahead_count}⇣ ${behind_count}"
-# style = "bold red"
+[git_status]
+ahead = " ${count}"
+behind = "⇣${count}"
+deleted = "x${count}"
+untracked =	"?${count}"
+modified = "!${count}"
+staged = "+${count}"
+diverged = "⇕⇡ ${ahead_count}⇣ ${behind_count}"
+style = "bold red"
 #
 [git_branch]
 symbol = " "
