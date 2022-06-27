@@ -36,7 +36,7 @@ repo_root_format = "[$before_root_path]($style)[$repo_root]($repo_root_style)[$p
 #
 # # Before all the version info (python, nodejs, php, etc.)
 [git_status]
-ahead = " ${count}"
+ahead = "⇡ ${count}"
 behind = "⇣${count}"
 deleted = "x${count}"
 untracked =	"?${count}"
