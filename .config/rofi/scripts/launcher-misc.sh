@@ -12,11 +12,11 @@
 # gnome_do	slingshot		appdrawer			appdrawer_alt	appfolder
 # column	row				row_center			screen			row_dock		row_dropdown
 
-theme="blurry_full"
-dir=~/.config/rofi/themes/launchers/misc
+theme="screen"
+dir="$HOME/.config/rofi/themes/launchers/misc"
 
 # comment these lines to disable random style
 themes=($(ls -p --hide="launcher.sh" $dir))
-#theme="${themes[$(( $RANDOM % 16 ))]}"
+theme="${themes[$(( $RANDOM % 16 ))]}"
 
 rofi -no-lazy-grab -show drun -modi drun -theme $dir/"$theme"

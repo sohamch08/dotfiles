@@ -12,13 +12,13 @@
 # style_7     style_8     style_9     style_10    style_11    style_12
 
 theme="style_3"
-dir=~/.config/rofi/themes/launchers/colorful
+dir="$HOME/.config/rofi/themes/launchers/colorful"
 
 # dark
 ALPHA="#00000000"
 BG="#000000ff"
 FG="#FFFFFFff"
-SELECT="#303030ff"
+SELECT="#101010ff"
 
 # light
 #ALPHA="#00000000"
@@ -45,7 +45,7 @@ cat > $dir/colors.rasi <<- EOF
 EOF
 
 # comment these lines to disable random style
-#themes=($(ls -p --hide="launcher.sh" --hide="colors.rasi" $dir))
-#theme="${themes[$(( $RANDOM % 12 ))]}"
+# themes=($(ls -p --hide="launcher.sh" --hide="colors.rasi" $dir))
+# theme="${themes[$(( $RANDOM % 12 ))]}"
 
 rofi -no-lazy-grab -show drun -modi drun -theme $dir/"$theme"

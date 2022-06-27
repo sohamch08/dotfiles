@@ -91,3 +91,5 @@ let g:tex_conceal = ''
 let g:vimtex_syntax_conceal_disable = 1
 let g:coc_node_path ='/usr/bin/node'
 
+
+autocmd BufWritePost *.tex silent! execute "tex.sh %"
