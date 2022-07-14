@@ -68,7 +68,6 @@ alias mpv="devour mpv"
 alias zathura="devour zathura"
 alias okular="devour okular"
 alias evince="devour evince"
-alias v="nvim"
 
 ### cd nevigation
 alias ,='cd -'
@@ -94,6 +93,7 @@ alias termicons="~/GitHub/icons-in-terminal/print_icons.sh"
 alias del='shred -uzn3'
 alias rmdir='rm -rf'
 alias info=viminfo
+alias v="nvim"
 
 # srccpy
 alias scrh='scrcpy --lock-video-orientation=3'
