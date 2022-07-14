@@ -28,6 +28,10 @@ unset rc
 
 [ -f "/home/sohamch/.ghcup/env" ] && source "/home/sohamch/.ghcup/env" # ghcup-env
 
+
+viminfo () {
+    nvim -R -M -c "Info $1 $2" +only
+}
 # Aliases
 
 ### Pacman, Yay, Paru
@@ -46,8 +50,8 @@ alias gr='grep --color=always'
 alias egr='egrep --color=always'
 
 ### Exa as ls
-alias ls='exa -aG --color=always --group-directories-first --sort=type --icons'
-alias sl='exa -aG --color=always --group-directories-first --sort=type --icons'
+alias ls='exa -aG --color=always --group-directories-first --sort=type'
+alias sl='exa -aG --color=always --group-directories-first --sort=type'
 alias ll='exa -aglhHS -s type --icons'
 
 ### Git Aliases
@@ -89,8 +93,13 @@ alias cmatrix="unimatrix -s 95 -c blue -f"
 alias termicons="~/GitHub/icons-in-terminal/print_icons.sh"
 alias del='shred -uzn3'
 alias rmdir='rm -rf'
+alias info=viminfo
 
-
+# srccpy
+alias scrh='scrcpy --lock-video-orientation=3'
+alias scrhi='scrcpy --lock-video-orientation=1'
+alias scrv='scrcpy --lock-video-orientation=0'
+alias scrvi='scrcpy --lock-video-orientation=2'
 # BEGIN_KITTY_SHELL_INTEGRATION
 if test -n "$KITTY_INSTALLATION_DIR" -a -e "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; then source "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; fi
 # END_KITTY_SHELL_INTEGRATION
@@ -119,6 +128,8 @@ export RUSTUP_HOME="$XDG_DATA_HOME"/rustup
 export EXA_ICON_SPACING=2
 export PS2=""
 export BAT_THEME="Monokai Extended"
+export ANDROID_HOME="$XDG_DATA_HOME"/android
+export HISTFILE="${XDG_STATE_HOME}"/bash/history
 # lf icons
 export LF_ICONS="\
 tw=:\
@@ -310,13 +321,13 @@ ex=:\
 "
 
 eval "$(starship init bash)"
-: ' function _update_ps1() {
-    PS1=$(powerline-shell $?)
-}
+# function _update_ps1() {
+#     PS1=$(powerline-shell $?)
+# }
+#
+# if [[ $TERM != linux && ! $PROMPT_COMMAND =~ _update_ps1 ]]; then
+#     PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
+# fi
 
-if [[ $TERM != linux && ! $PROMPT_COMMAND =~ _update_ps1 ]]; then
-    PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
-fi
-'
 neofetch 
 #--kitty --source ~/.config/neofetch/light.jpg --size 300px --gap 1

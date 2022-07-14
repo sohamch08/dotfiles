@@ -59,19 +59,24 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec_always blueman-applet
 # Opens kdeconnect 
 exec_always kdeconnect-app -silent
-# Opens a terminal for cmus
-exec --no-startup-id $myTerm -t "musicterminal" -e ~/bin/cmus-start.sh
-# Opens a terminal
-exec --no-startup-id $myTerm -t "dropdown"
 # Get auth work with polkit-gnome
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 # Starts dunst
 exec --no-startup-id dbus-launch dunst --config ~/.config/dunst/dunstrc
 # Starts greenclip deamon (install rofi-greenclip from the AUR)
 exec --no-startup-id greenclip daemon>/dev/null 
+# Clear greenclip
+exec greenclip clear
 # Bettery warning popup
 exec --no-startuo-id i3-battery-popup -m "Warning: Battery is getting low"
 
+### For scratchpad
+# Opens a terminal for cmus
+exec --no-startup-id $myTerm -t "musicterminal" -e ~/bin/cmus-start.sh
+# Opens a terminal
+exec --no-startup-id $myTerm -t "dropdown"
+# Opens a terminal for bluetoothctl
+exec --no-startup-id $myTerm -t "bluetoothctlterminal" -e bluetoothctl
 
 ################
 # Audio Control
@@ -213,15 +218,14 @@ bindsym $mod+Shift+d exec dmenu_run
 bindsym $mod+semicolon exec ~/bin/dm-config.sh
 
 ### Keybind $Mod+<key>
-bindsym $mod+b exec brave --password-store
 bindsym $mod+g exec gimp
 bindsym $mod+o exec com.obsproject.Studio
 bindsym $mod+r mode "resize"
 bindsym $mod+Return exec $myTerm
 
 ### Keybind $Mod+Shift+<key>
-bindsym $mod+Shift+semicolon exec systemsettings
 bindsym $mod+Shift+a exec aniwrapper -t doomone
+bindsym $mod+Shift+b exec brave --password-store
 bindsym $mod+Shift+p exec rofi-pass
 bindsym $Mod+Shift+t exec telegram-desktop
 bindsym $Mod+Shift+v exec code
@@ -275,6 +279,7 @@ mode "resize" {
 ### Keybindings
 bindsym $mod+m [title="musicterminal"] scratchpad show; [title="musicterminal"] move position center; exec cmus-remote -C "view sorted"
 bindsym $mod+u [title="dropdown"] scratchpad show; [title="dropdown"] move position center
+bindsym $mod+b [title="bluetoothctlterminal"] scratchpad show; [title="bluetoothctlterminal"] move position center
 
 #-#===musicterminal scratchpad wondow===#-#
 for_window [title="musicterminal"] floating enable
@@ -287,6 +292,12 @@ for_window [title="dropdown"] floating enable
 for_window [title="dropdown"] resize set 1500 800
 for_window [title="dropdown"] move scratchpad
 for_window [title="dropdown"] border pixel 5
+
+#-#===bluetoothctlterminal scratchpad wondow===#-#
+for_window [title="bluetoothctlterminal"] floating enable
+for_window [title="bluetoothctlterminal"] resize set 1500 800
+for_window [title="bluetoothctlterminal"] move scratchpad
+for_window [title="bluetoothctlterminal"] border pixel 5
 
 #################
 # Color settings

@@ -25,6 +25,7 @@ Plug 'kyazdani42/nvim-web-devicons' " optional, for file icons
 Plug 'kyazdani42/nvim-tree.lua'
 
 Plug 'https://github.com/mboughaba/i3config.vim.git'
+Plug 'HiPhish/info.vim'
 
 
 Plug 'https://github.com/Yggdroot/indentLine.git'
