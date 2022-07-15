@@ -295,7 +295,7 @@ for_window [title="dropdown"] border pixel 5
 
 #-#===bluetoothctlterminal scratchpad wondow===#-#
 for_window [title="bluetoothctlterminal"] floating enable
-for_window [title="bluetoothctlterminal"] resize set 1500 800
+for_window [title="bluetoothctlterminal"] resize set 800 400
 for_window [title="bluetoothctlterminal"] move scratchpad
 for_window [title="bluetoothctlterminal"] border pixel 5
 
