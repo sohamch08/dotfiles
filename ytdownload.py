@@ -27,8 +27,8 @@ def generate_bash():
     with open("/home/sohamch/command.sh","w") as f:
         f.write(f"{app} {path} {audiodownload} {link}\n")
         f.write(f"{app} {path} {thumbnaildownload} {link}\n")
-        f.write(f"{app} {title} {link} {filename} >> yt-download_history.txt\n")
-        f.write("find ~/Downloads/youtube-dl_songs -name '*.webp' -exec magick {} {}.png \; -exec rm {} \;")
+        f.write(f"{app} {title} {link} {filename} >> $HOME/yt-download_history.txt\n")
+        f.write("find ~/Downloads/youtube-dl_songs -name '*.webp' -exec magick {} {}.png \; -exec rm {} \;\n")
         f.write("sort -o $HOME/yt-download_history.txt $HOME/yt-download_history.txt")
     f.close()
 
