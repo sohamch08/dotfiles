@@ -94,6 +94,7 @@ alias del='shred -uzn3'
 alias rmdir='rm -rf'
 alias info=viminfo
 alias v="nvim"
+alias wifi="wine $HOME/IPConnectInstaller.exe"
 
 # srccpy
 alias scrh='scrcpy --lock-video-orientation=3'
