@@ -79,6 +79,11 @@ alias cd5='cd ../../../../..'
 alias cdlatex='cd ~/Arna/LaTeX/CMI/B.Sc/Sem\ 2'
 alias cddotfiles="cd ~/GitHub/dotfiles/"
 
+### Kdeconncet
+alias kdec='kdeconnect-cli'
+alias kdecpingmsg='kdeconnect-cli --ping-msg'
+alias kdecmusname='kdeconnect-cli --ping-msg "$(cmus-remote -Q | grep "tag title" | cut -c 11-)" -n SOHAM_POCO_X3'
+
 ### Cat 
 alias c='cat'
 alias b='bat'
@@ -94,7 +99,7 @@ alias del='shred -uzn3'
 alias rmdir='rm -rf'
 alias info=viminfo
 alias v="nvim"
-alias wifi="wine $HOME/IPConnectInstaller.exe"
+alias wifi="wine $HOME/.wine/drive_c/Program\ Files\ \(x86\)/Connector/Connector.exe"
 
 # srccpy
 alias scrh='scrcpy --lock-video-orientation=3'
