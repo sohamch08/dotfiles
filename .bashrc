@@ -76,7 +76,7 @@ alias cd2='cd ../..'
 alias cd3='cd ../../..'
 alias cd4='cd ../../../..'
 alias cd5='cd ../../../../..'
-alias cdlatex='cd ~/Arna/LaTeX/CMI/B.Sc/Sem\ 2'
+alias cdlatex='cd ~/Arna/LaTeX/CMI/B.Sc/Sem\ 3'
 alias cddotfiles="cd ~/GitHub/dotfiles/"
 
 ### Kdeconncet

@@ -1,11 +1,3 @@
-" Maps leader key
-" fef
-" fsdf
-" dsf
-" sdf
-" dsff
-" sdffd
-" fsdf
 let mapleader = " "
 
 " Move Between Buffers
@@ -30,7 +22,8 @@ noremap <silent> <C-S-j> :resize -2<CR>
 " Comments line
 
 " Saves the file
-map <C-s>       :w<CR>
+noremap <C-s>       :w<CR>
+inoremap <C-s>      <Esc>:w<CR>
 
 " Closes a buffer
 " map zz          :bd<CR>
@@ -47,3 +40,10 @@ noremap <silent> <A-j> :m+1<CR>gv=gv
 xnoremap <silent> <A-j> :m'>+<CR>gv=gv
 
 nmap <C-q> :Startify<CR>
+
+
+" Shell mimics or emacs bindings
+inoremap <C-a> <Esc>I
+inoremap <C-e> <Esc>A
+noremap <C-a> <Esc>I
+noremap <C-e> <Esc>A
