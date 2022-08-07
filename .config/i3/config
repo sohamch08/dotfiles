@@ -36,9 +36,9 @@ for_window [class=".*"] border pixel 3
 gaps inner 10
 gaps outer 0
 
-##########################
+#########################
 # Autostart Applications
-##########################
+#########################
 
 # Start XDG autostart .desktop files using dex. See also
 # https://wiki.archlinux.org/index.php/XDG_Autostart
@@ -55,6 +55,8 @@ exec --no-startup-id nitrogen --restore
 exec_always picom --experimental-backends
 # launches polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+# Autotiling
+exec_always --no-startup-id autotiling
 # Opens Bluetooth Manager
 exec_always blueman-applet
 # Opens kdeconnect 
