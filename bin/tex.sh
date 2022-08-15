@@ -1,12 +1,11 @@
-dest=~/Documents/.latex_build
-mkdir -p $dest
+dest=~/Documents/.latex_build/
 pdflatex $1
 pdflatex $1 > $1.build
-mv *.log $dest
-mv *.out $dest
-mv *.gz  $dest
-mv *.aux $dest
-mv *.toc $dest
-mv *.fdb_latexmk $dest
-mv *.fls $dest
-mv $1.build $dest
+find . -name *.aux -exec mv {} $dest \;
+find . -name *.log -exec mv {} $dest \;
+find . -name *.out -exec mv {} $dest \;
+find . -name *.gz -exec mv {}  $dest \;
+find . -name *.toc -exec mv {} $dest \;
+find . -name *.fdb_latexmk -exec mv {} $dest \;
+find . -name *.fls -exec mv {} $dest \;
+find . -name $1.build -exec mv {} $dest \;

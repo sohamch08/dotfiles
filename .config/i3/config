@@ -222,6 +222,7 @@ bindsym $mod+semicolon exec ~/bin/dm-config.sh
 ### Keybind $Mod+<key>
 bindsym $mod+g exec gimp
 bindsym $mod+o exec com.obsproject.Studio
+bindsym $mod+p exec okular ~/Books/$(/bin/ls ~/Books | dmenu -i -p 'Books:' -l 20)
 bindsym $mod+r mode "resize"
 bindsym $mod+Return exec $myTerm
 
