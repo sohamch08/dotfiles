@@ -92,8 +92,8 @@ element-text {
 	font:							"feather 32";
     expand:                         true;
     horizontal-align:               0.5;
-    vertical-align:                 0.5;
-    margin:                         40px 0px 40px 0px;
+    vertical-align:                 0.0;
+    margin:                         50px 0px 40px 0px;
 }
 
 element normal.urgent,
