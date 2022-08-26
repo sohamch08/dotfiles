@@ -21,5 +21,5 @@ if [[ "$choice" == "quit" ]]
 then exit 1
 elif [ "$choice" ]; then
     path=$(printf '%s\n' "${choice}" | awk '{print $NF}')
-    kitty -e nvim "$path"
+    alacritty -e nvim "$path"
 fi
