@@ -46,3 +46,4 @@ gitsigns.setup {
     enable = false,
   },
 }
+vim.o.signcolumn = 'yes'

@@ -17,3 +17,4 @@ set listchars=eol:
 set hidden
 set signcolumn=auto
 set conceallevel=0
+set signcolumn=yes

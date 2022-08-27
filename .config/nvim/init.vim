@@ -91,5 +91,3 @@ let g:tex_conceal = ''
 let g:vimtex_syntax_conceal_disable = 1
 let g:coc_node_path ='/usr/bin/node'
 let g:indentLine_conceallevel = 0
-
-

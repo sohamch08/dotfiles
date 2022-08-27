@@ -8,7 +8,7 @@ fi
 # User specific environment
 if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin" ]]
 then
-    PATH="$HOME/.local/bin:$HOME/bin:PATH"
+    PATH="$HOME/.local/bin:$HOME/bin:$PATH"
 fi
 
 # Uncomment the following line if you don't like systemctl's auto-paging feature:
@@ -44,6 +44,8 @@ alias parsua='paru -Sua --noconfirm'             # update only AUR pkgs (paru)
 alias parsyu='paru -Syu --noconfirm'             # update standard pkgs and AUR pkgs (paru)
 alias unlock='sudo rm /var/lib/pacman/db.lck'    # remove pacman lock
 alias cleanup='sudo pacman -Rns $(pacman -Qtdq)' # remove orphaned packages
+alias netshare='sudo killall dnsmasq; sudo hotspot wlan0 start'  # Start Hotspot
+alias netshstop='sudo hotspot wlan0 stop'        # Stop Hotspot
 
 ### Grep 
 alias gr='grep --color=always'
@@ -94,13 +96,13 @@ alias anime='aniwrapper -t doomone'
 alias anup='~/GitHub/anup/target/release/anup'
 alias sourced='source ~/.bashrc'
 alias cmatrix="unimatrix -s 95 -c blue -f"
-alias termicons="~/GitHub/icons-in-terminal/print_icons.sh"
+# alias termicons="~/GitHub/icons-in-terminal/print_icons.sh"
 alias del='shred -uzn3'
 alias rmdir='rm -rf'
 alias info=viminfo
 alias v="nvim"
 alias wifi="wine $HOME/.wine/drive_c/Program\ Files\ \(x86\)/Connector/Connector.exe"
-
+alias man2pdf='f() { man -Tpdf $1 > $1.pdf && notify-send "Created $1 Man Page to $1.pdf" -t 2000 && mv $1.pdf ~/man2pdf; unset -f f; }; f '
 # srccpy
 alias scrh='scrcpy --lock-video-orientation=3'
 alias scrhi='scrcpy --lock-video-orientation=1'
@@ -136,195 +138,7 @@ export PS2=""
 export BAT_THEME="Monokai Extended"
 export ANDROID_HOME="$XDG_DATA_HOME"/android
 export HISTFILE="${XDG_STATE_HOME}"/bash/history
-# lf icons
-export LF_ICONS="\
-tw=:\
-st=:\
-ow=:\
-dt=:\
-di=:\
-fi=:\
-ln=:\
-or=:\
-ex=:\
-*.c=:\
-*.cc=:\
-*.clj=:\
-*.coffee=:\
-*.conf=:\
-*config=:\
-*.cpp=:\
-*.css=:\
-*.d=:\
-*.dart=:\
-*.erl=:\
-*.exs=:\
-*.fs=:\
-*.font=ﯔ:\
-*.ttf=ﯔ:\
-*.otf=ﯔ:\
-*.gitconfig=:\
-*.git-credentials=:\
-*.githubtoken=:\
-*.git-credentials=:\
-*.go=:\
-*.h=:\
-*.hh=:\
-*.hpp=:\
-*.hs=:\
-*.html=:\
-*.ini=:\
-*.java=:\
-*.jl=:\
-*.js=:\
-*.json=:\
-*.lua=:\
-*.md=:\
-*.php=:\
-*.pl=:\
-*.pro=:\
-*.py=:\
-*.rb=:\
-*.rs=:\
-*.scala=:\
-*.ts=:\
-*.vim=:\
-*.vimrc=:\
-*.nvim=:\
-*.viminfo=:\
-*.cmd=:\
-*.ps1=:\
-*.sh=:\
-*.bash=:\
-*.zsh=:\
-*.fish=:\
-*.bashrc=:\
-*.bash_history=:\
-*.bash_profile=:\
-*.bash_logout=:\
-*.zshrc=:\
-*.zshenv=:\
-*.zhistory=:\
-*.tar=:\
-*.tgz=:\
-*.arc=:\
-*.arj=:\
-*.taz=:\
-*.lha=:\
-*.lz4=:\
-*.lzh=:\
-*.lzma=:\
-*.tlz=:\
-*.txz=:\
-*.tzo=:\
-*.t7z=:\
-*.zip=:\
-*.z=:\
-*.dz=:\
-*.gz=:\
-*.lrz=:\
-*.lz=:\
-*.lzo=:\
-*.xz=:\
-*.zst=:\
-*.tzst=:\
-*.bz2=:\
-*.bz=:\
-*.tbz=:\
-*.tbz2=:\
-*.tz=:\
-*.deb=:\
-*.rpm=:\
-*.jar=:\
-*.war=:\
-*.ear=:\
-*.sar=:\
-*.rar=:\
-*.alz=:\
-*.ace=:\
-*.zoo=:\
-*.cpio=:\
-*.7z=:\
-*.rz=:\
-*.cab=:\
-*.wim=:\
-*.swm=:\
-*.dwm=:\
-*.esd=:\
-*.jpg==🖼️:\
-*.jpeg=🖼️:\
-*.mjpg=🖼️:\
-*.mjpeg=🖼️:\
-*.gif=🖼️:\
-*.bmp=🖼️:\
-*.pbm=🖼️:\
-*.pgm=🖼️:\
-*.ppm=🖼️:\
-*.tga=🖼️:\
-*.xbm=🖼️:\
-*.xpm=🖼️:\
-*.tif=🖼️:\
-*.tiff=🖼️:\
-*.png=🖼️:\
-*.svg=🖼️:\
-*.svgz=🖼️:\
-*.mng=🖼️:\
-*.pcx=🖼️:\
-*.mov=📽:\
-*.mpg=📽:\
-*.mpeg=📽:\
-*.m2v=📽:\
-*.mkv=📽:\
-*.webm=📽:\
-*.ogm=📽:\
-*.mp4=📽:\
-*.m4v=📽:\
-*.mp4v=📽:\
-*.vob=📽:\
-*.qt=📽:\
-*.nuv=📽:\
-*.wmv=📽:\
-*.asf=📽:\
-*.rm=📽:\
-*.rmvb=📽:\
-*.flc=📽:\
-*.avi=📽:\
-*.fli=📽:\
-*.flv=📽:\
-*.gl=🖼️:\
-*.dl=🖼️:\
-*.xcf=🖼️:\
-*.xwd=🖼️:\
-*.yuv=🖼️:\
-*.cgm=🖼️:\
-*.emf=🖼️:\
-*.ogv=:\
-*.ogx=:\
-*.aac=:\
-*.au=:\
-*.flac=:\
-*.m4a=:\
-*.mid=:\
-*.midi=:\
-*.mka=:\
-*.mp3=:\
-*.mpc=:\
-*.ogg=:\
-*.ra=:\
-*.wav=:\
-*.oga=:\
-*.opus=:\
-*.spx=:\
-*.xspf=:\
-*.pdf=:\
-*.djvu=:\
-*.epub=:\
-*.nix=:\
-*.xml=謹:\
-*.tex=烈:\
-*.txsprofile=烈ףּ:\
-*.iso=💿:\
-"
+
 
 eval "$(starship init bash)"
 # function _update_ps1() {
@@ -337,3 +151,4 @@ eval "$(starship init bash)"
 
 neofetch 
 #--kitty --source ~/.config/neofetch/light.jpg --size 300px --gap 1
+
