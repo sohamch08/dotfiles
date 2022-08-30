@@ -79,6 +79,8 @@ exec --no-startup-id $myTerm -t "musicterminal" -e ~/bin/cmus-start.sh
 exec --no-startup-id $myTerm -t "dropdown"
 # Opens a terminal for bluetoothctl
 exec --no-startup-id $myTerm -t "bluetoothctlterminal" -e bluetoothctl
+# Opens thunderbird
+exec --no-startup-id thunderbird
 
 ################
 # Audio Control
@@ -292,6 +294,7 @@ mode "resize" {
 bindsym $mod+m [title="musicterminal"] scratchpad show; [title="musicterminal"] move position center; exec cmus-remote -C "view sorted"
 bindsym $mod+u [title="dropdown"] scratchpad show; [title="dropdown"] move position center
 bindsym $mod+b [title="bluetoothctlterminal"] scratchpad show; [title="bluetoothctlterminal"] move position center
+bindsym $mod+Shift+m [class="thunderbird"] scratchpad show; [class="thunderbird"] move position center
 
 #-#===musicterminal scratchpad wondow===#-#
 for_window [title="musicterminal"] floating enable
@@ -311,6 +314,9 @@ for_window [title="bluetoothctlterminal"] resize set 800 400
 for_window [title="bluetoothctlterminal"] move scratchpad
 for_window [title="bluetoothctlterminal"] border pixel 5
 
+for_window [class="thunderbird"] floating enable
+for_window [class="thunderbird"] resize set 1820 825
+for_window [class="thunderbird"] move scratchpad
 #################
 # Color settings
 #################
