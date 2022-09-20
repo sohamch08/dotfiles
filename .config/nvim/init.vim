@@ -6,15 +6,6 @@ luafile ~/.config/nvim/user/plugins/comments.lua
 luafile ~/.config/nvim/user/plugins/nvim-tree.lua
 luafile ~/.config/nvim/user/plugins/gitsigns.lua
 
-" let g:airline_powerline_fonts=1
-" let g:airline#extensions#tabline#enabled = 1
-" let g:airline_theme='wombat'
-
-let NERDTreeShowHidden=1
-let NERDTreeHijackNetrw=1
-let g:netrw_localrmdir='rm -rf'
-let g:netrw_local_delete_recursive=1
-
 let g:haskellmode_completion_ghc = 0
 autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
 
@@ -67,17 +58,6 @@ let s:white = "FFFFFF"
 let s:rspec_red = 'FE405F'
 let s:git_orange = 'F54D27'
 
-let g:NERDTreeExtensionHighlightColor = {} " this line is needed to avoid error
-let g:NERDTreeExtensionHighlightColor['css'] = s:blue " sets the color of css files to blue
-
-let g:NERDTreeExactMatchHighlightColor = {} " this line is needed to avoid error
-let g:NERDTreeExactMatchHighlightColor['.gitignore'] = s:git_orange " sets the color for .gitignore files
-
-let g:NERDTreePatternMatchHighlightColor = {} " this line is needed to avoid error
-let g:NERDTreePatternMatchHighlightColor['.*_spec\.rb$'] = s:rspec_red " sets the color for files ending with _spec.rb
-
-let g:WebDevIconsDefaultFolderSymbolColor = s:beige " sets the color for folders that did not match any rule
-let g:WebDevIconsDefaultFileSymbolColor = s:blue " sets the color for files that did not match any rule
 
 let g:indentLine_char = '│'
 let g:vim_json_conceal=0
