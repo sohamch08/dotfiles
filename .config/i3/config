@@ -56,7 +56,7 @@ exec_always picom --experimental-backends
 # launches polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 # Autotiling
-exec_always --no-startup-id autotiling
+# exec_always --no-startup-id autotiling
 # Opens Bluetooth Manager
 exec_always blueman-applet
 # Opens kdeconnect 
@@ -70,7 +70,9 @@ exec --no-startup-id greenclip daemon>/dev/null
 # Clear greenclip
 exec greenclip clear
 # Bettery warning popup
-exec --no-startuo-id i3-battery-popup -m "Warning: Battery is getting low"
+exec --no-startup-id i3-battery-popup -m "Warning: Battery is getting low"
+# redshift
+exec --no-startup-id redshift -l 13:80
 
 ### For scratchpad
 # Opens a terminal for cmus

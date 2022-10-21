@@ -104,6 +104,7 @@ alias v="nvim"
 alias wifi="wine $HOME/.wine/drive_c/Program\ Files\ \(x86\)/Connector/Connector.exe"
 alias man2pdf='f() { man -Tpdf $1 > $1.pdf && notify-send "Created $1 Man Page to $1.pdf" -t 2000 && mv $1.pdf ~/man2pdf; unset -f f; }; f '
 alias touchtoggle="xinput-toggle.sh 'ELAN071A:00 04F3:30FD Touchpad'"
+alias grubcorrect="sudo grub-install"
 # srccpy
 alias scrh='scrcpy --lock-video-orientation=3'
 alias scrhi='scrcpy --lock-video-orientation=1'
