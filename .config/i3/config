@@ -237,7 +237,7 @@ bindsym $mod+r mode "resize"
 bindsym $mod+Return exec $myTerm
 
 ### Keybind $Mod+Shift+<key>
-bindsym $mod+Shift+a exec aniwrapper -t doomone
+bindsym $mod+Shift+a exec thunar ~/Books/Complexity_Theory/Algebraic_Complexity_Theory
 bindsym $mod+Shift+b exec brave --password-store
 bindsym $mod+Shift+p exec rofi-pass
 bindsym $Mod+Shift+t exec telegram-desktop

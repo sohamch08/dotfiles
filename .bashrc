@@ -110,6 +110,10 @@ alias scrh='scrcpy --lock-video-orientation=3'
 alias scrhi='scrcpy --lock-video-orientation=1'
 alias scrv='scrcpy --lock-video-orientation=0'
 alias scrvi='scrcpy --lock-video-orientation=2'
+alias bluetoothrestart='sudo systemctl restart bluetooth'
+
+
+
 # BEGIN_KITTY_SHELL_INTEGRATION
 if test -n "$KITTY_INSTALLATION_DIR" -a -e "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; then source "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; fi
 # END_KITTY_SHELL_INTEGRATION
