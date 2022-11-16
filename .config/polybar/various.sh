@@ -16,9 +16,6 @@ $1 == "numid=20" {
 # "" if capslock enabled
 capslock=$(xset q | grep "Caps Lock:   on")
 
-# "" if mic unmuted
-mute=$(pactl list sources | grep  "Mute: yes")
-
 
 if [ "$headset" = "on"  ]
 then
@@ -30,26 +27,15 @@ then
 	iconCaps= 
 fi
 
-if [ "$mute" = "" ]
-then
-	iconMute=
-fi
-
-
 # spaecethetic
 if [ "$capslock" != "" ] && [ "$headset" = "on" ]
 then
 	spaceone=" "
 fi
 
-if ([ "$capslock" != "" ] && [ "$mute" = "" ]) || ([ "$headset" = "on" ] && [ "$mute" = "" ])
-then
-	spacetwo=" "
-fi
-
 
 # icons output
-echo "${iconCaps}$spaceone${iconHeadset}$spacetwo${iconMute}"
+echo "${iconCaps}$spaceone${iconHeadset}"
 
 
 
