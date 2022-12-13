@@ -94,10 +94,6 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle 
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle 
 
-# bindsym Ctrl+Shift+v exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% 
-# bindsym Ctrl+v exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% 
-# bindsym Ctrl+m exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle 
-
 bindsym $mod+F3 exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% 
 bindsym $mod+F2 exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5%
 bindsym $mod+F1 exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
@@ -108,9 +104,6 @@ bindsym $mod+F4 exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ togg
 # Use brightnessctl to adjust brightness in monitor
 bindsym XF86MonBrightnessUp exec "brightnessctl -d amdgpu_bl0 set 10+; notify-send 'brightness up'" 
 bindsym XF86MonBrightnessDown exec "brightnessctl -d amdgpu_bl0 set 10-; notify-send 'brightness down'"
-
-bindsym Ctrl+Shift+b exec "brightnessctl -d amdgpu_bl0 set 10+; notify-send 'brightness up'" 
-bindsym Ctrl+b exec "brightnessctl -d amdgpu_bl0 set 10-; notify-send 'brightness down'"
 
 bindsym $mod+F9 exec "brightnessctl -d amdgpu_bl0 set 10+; notify-send 'brightness up'" 
 bindsym $mod+F10 exec "brightnessctl -d amdgpu_bl0 set 10-; notify-send 'brightness down'"
