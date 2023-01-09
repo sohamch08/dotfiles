@@ -38,6 +38,17 @@ fi
 echo "${iconCaps}$spaceone${iconHeadset}"
 
 
+batcond=$(upower -i $(upower -e | grep BAT) | grep --color=never -E "state|to full|to empty|percentage")
+batper=$(echo $a | cut -d " " -f 4)
+batstate=$(echo $a | cut -d " " -f 2)
 
+if [ "$batper" = "98%"] && [ "$batstate" = "charging" ]
+then
+    notify-send "Battery is full !!REMOVE CHARGER!!" -t 5000
+fi
 
+if [ "$batper" = "20%" ] && [ "$batstate" = "discharging" ]
+then
+    notify-send "Battery is low !!CONNECT THE CHARGER!!" -t 5000
+fi
 
