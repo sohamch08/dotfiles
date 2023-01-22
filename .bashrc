@@ -111,8 +111,8 @@ alias scrhi='scrcpy --lock-video-orientation=1'
 alias scrv='scrcpy --lock-video-orientation=0'
 alias scrvi='scrcpy --lock-video-orientation=2'
 alias bluetoothrestart='sudo systemctl restart bluetooth'
-
-
+alias j='f() { input=$1; javac $input; java $(echo $input | cut -d '.' -f 1); unset -f f; }; f '
+alias flac2mp3='f() { input=$1; ffmpeg -y -i $input -codec:a libmp3lame -q:a 0 -map_metadata 0 -id3v2_version 3 -write_id3v1 1 ${input}.mp3; unset -f f; }; f '
 
 # BEGIN_KITTY_SHELL_INTEGRATION
 if test -n "$KITTY_INSTALLATION_DIR" -a -e "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; then source "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; fi
@@ -158,3 +158,4 @@ eval "$(starship init bash)"
 neofetch 
 #--kitty --source ~/.config/neofetch/light.jpg --size 300px --gap 1
 
+export PATH=$PATH:/home/sohamch/.spicetify
