@@ -51,8 +51,6 @@ exec --no-startup-id /usr/bin/gnome-keyring-daemon --start --components=secrets
 exec_always --no-startup-id nm-applet
 # Opens nitrojen with previous wallpaper
 exec --no-startup-id nitrogen --restore
-# starts picom
-exec_always picom --experimental-backends
 # launches polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 # Autotiling
@@ -73,6 +71,9 @@ exec greenclip clear
 exec --no-startup-id i3-battery-popup -m "Warning: Battery is getting low"
 # redshift
 exec --no-startup-id redshift -l 13:80
+# starts picom
+# exec_always --no-startup-id picom --experimental-backends
+exec --no-startup-id picom -f
 
 ### For scratchpad
 # Opens a terminal for cmus

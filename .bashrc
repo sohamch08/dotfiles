@@ -59,9 +59,9 @@ alias ll='exa -aglhHS -s type --icons'
 ### Git Aliases
 alias ga="git add"
 alias gc="git commit -m"
-alias gd='git diff'
 alias gcl="git clone"
-alias gp="git push origin"
+alias gd='git diff'
+alias gp="git pull"
 alias gpa="git add -A && git commit -m updated && git push origin"
 alias gs="git status"
 
@@ -80,6 +80,7 @@ alias cd4='cd ../../../..'
 alias cd5='cd ../../../../..'
 alias cdlatex='cd ~/Arna/LaTeX/CMI/B.Sc/Sem\ 4'
 alias cddotfiles="cd ~/GitHub/dotfiles/"
+alias cdcomp="cd ~/GitHub/Complexity_Ass/"
 
 ### Kdeconncet
 alias kdec='kdeconnect-cli'
