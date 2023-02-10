@@ -1,5 +1,5 @@
-pdflatex $1
-pdflatex $1
+pdflatex $1tex
+pdflatex $1tex
 find . -name '*.aux' -exec rm {} \;
 find . -name '*.log' -exec rm {} \;
 find . -name '*.out' -exec rm {} \;
