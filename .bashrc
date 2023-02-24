@@ -65,6 +65,12 @@ alias gp="git pull"
 alias gpa="git add -A && git commit -m updated && git push origin"
 alias gs="git status"
 
+### Rclone 
+alias rcg="rclone congig"
+alias rcc="rclone copy -P"
+alias rcs="rclone sync -P"
+
+
 ### Devour
 alias mpv="devour mpv"
 alias zathura="devour zathura"
@@ -103,7 +109,7 @@ alias rmdir='rm -rf'
 alias info=viminfo
 alias v="nvim"
 alias wifi="wine $HOME/.wine/drive_c/Program\ Files\ \(x86\)/Connector/Connector.exe"
-alias man2pdf='f() { man -Tpdf $1 > $1.pdf && notify-send "Created $1 Man Page to $1.pdf" -t 2000 && mv $1.pdf ~/man2pdf; unset -f f; }; f '
+alias man2pdf='f() { man -Tpdf $1 > $1.pdf && notify-send "Created $1 Man Page to $1.pdf" -t 2000 && mv $1.pdf ~/man2pdf; unset -f f; }; f'
 alias touchtoggle="xinput-toggle.sh 'ELAN071A:00 04F3:30FD Touchpad'"
 alias grubcorrect="sudo grub-install"
 # srccpy
@@ -113,6 +119,7 @@ alias scrv='scrcpy --lock-video-orientation=0'
 alias scrvi='scrcpy --lock-video-orientation=2'
 alias bluetoothrestart='sudo systemctl restart bluetooth'
 alias j='f() { input=$1; javac $input; java $(echo $input | cut -d '.' -f 1); unset -f f; }; f '
+alias spot='f() { spotdl $1 -p "/home/sohamch/Downloads/spotdl/{artists}/{album}/{title}-{artist}.{ext}"; unset -f f; }; f '
 alias flac2mp3='f() { input=$1; ffmpeg -y -i $input -codec:a libmp3lame -q:a 0 -map_metadata 0 -id3v2_version 3 -write_id3v1 1 ${input}.mp3; unset -f f; }; f '
 
 # BEGIN_KITTY_SHELL_INTEGRATION
