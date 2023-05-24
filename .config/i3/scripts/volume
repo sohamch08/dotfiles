@@ -32,7 +32,15 @@ if [[ -z "$MIXER" ]] ; then
             MIXER="pulse"
         fi
     fi
-    [ -n "$(lsmod | grep jack)" ] && MIXER="jackplug"
+
+	while read Module _; do
+		case $Module in
+			*jack*)
+				MIXER='jackplug'
+
+				break ;;
+		esac
+	done < /proc/modules
     MIXER="${2:-$MIXER}"
 fi
 
@@ -72,7 +80,7 @@ volume() {
 }
 
 format() {
-  
+
   perl_filter='if (/.*\[(\d+%)\] (\[(-?\d+.\d+dB)\] )?\[(on|off)\]/)'
   perl_filter+='{CORE::say $4 eq "off" ? "MUTE" : "'
   # If dB was selected, print that instead
