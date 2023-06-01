@@ -14,7 +14,7 @@ quiet=false
 # i3lockcolor_bin="i3lock-color" # Manually set command for i3lock-color
 
 # default theme
-loginbox=00000066
+loginbox=00000000
 loginshadow=00000000
 locktext="Welcome"
 font="sans-serif"
@@ -34,4 +34,4 @@ bshlcolor=d23c3dff
 verifcolor=ffffffff
 wrongcolor=d23c3dff
 modifcolor=d23c3dff
-bgcolor=000000ff
+bgcolor=00000000
