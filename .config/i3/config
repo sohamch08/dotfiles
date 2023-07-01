@@ -238,7 +238,6 @@ bindsym $mod+r mode "resize"
 bindsym $mod+Return exec $myTerm
 
 ### Keybind $Mod+Shift+<key>
-bindsym $mod+Shift+a exec thunar ~/Books/Complexity_Theory/Algebraic_Complexity_Theory
 bindsym $mod+Shift+b exec brave --password-store
 bindsym $mod+Shift+p exec rofi-pass
 bindsym $Mod+Shift+t exec telegram-desktop
@@ -302,6 +301,7 @@ bindsym $mod+m [title="musicterminal"] scratchpad show; [title="musicterminal"] 
 bindsym $mod+u [title="dropdown"] scratchpad show; [title="dropdown"] move position center
 bindsym $mod+b [title="bluetoothctlterminal"] scratchpad show; [title="bluetoothctlterminal"] move position center
 bindsym $mod+Shift+m [class="thunderbird"] scratchpad show; [class="thunderbird"] move position center
+bindsym $mod+Shift+a [class="obs"] scratchpad show; [class="obs"] move position center
 
 #-#===musicterminal scratchpad wondow===#-#
 for_window [title="musicterminal"] floating enable
@@ -324,6 +324,10 @@ for_window [title="bluetoothctlterminal"] border pixel 5
 for_window [class="thunderbird"] floating enable
 for_window [class="thunderbird"] resize set 1820 825
 for_window [class="thunderbird"] move scratchpad
+
+for_window [class="obs"] floating enable
+for_window [class="obs"] resize set 1820 825
+for_window [class="obs"] move scratchpad
 #################
 # Color settings
 #################
