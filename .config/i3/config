@@ -242,7 +242,7 @@ bindsym $mod+Shift+p exec rofi-pass
 bindsym $Mod+Shift+t exec telegram-desktop
 bindsym $Mod+Shift+v exec code
 bindsym $Mod+Shift+w exec $fm
-bindsym $mod+Shift+x exec betterlockscreen -l dim
+bindsym $mod+Shift+x exec betterlockscreen -l
 bindsym $mod+Shift+q kill
 
 ### Keybind $Mod+Shift+Ctrl+<key>
