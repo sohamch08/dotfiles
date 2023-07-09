@@ -87,6 +87,7 @@ alias cd5='cd ../../../../..'
 alias cdlatex='cd ~/Arna/LaTeX/CMI/B.Sc/Sem\ 4'
 alias cddotfiles="cd ~/GitHub/dotfiles/"
 alias cdcomp="cd ~/GitHub/Complexity_Ass/"
+alias cdacad="cd ~/Arna/Markdown/My-Academic-Works/"
 
 ### Kdeconncet
 alias kdec='kdeconnect-cli'

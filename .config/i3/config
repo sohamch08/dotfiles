@@ -231,6 +231,7 @@ bindsym $mod+Shift+d exec dmenu_run
 bindsym $mod+semicolon exec ~/bin/dm-config.sh
 
 ### Keybind $Mod+<key>
+bindsym $mod+o exec flatpak run md.obsidian.Obsidian
 bindsym $mod+g exec gimp
 bindsym $mod+p exec ~/bin/openbook.sh
 bindsym $mod+r mode "resize"
