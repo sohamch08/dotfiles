@@ -301,7 +301,7 @@ bindsym $mod+m [title="musicterminal"] scratchpad show; [title="musicterminal"] 
 bindsym $mod+u [title="dropdown"] scratchpad show; [title="dropdown"] move position center
 bindsym $mod+b [title="bluetoothctlterminal"] scratchpad show; [title="bluetoothctlterminal"] move position center
 bindsym $mod+Shift+m [class="thunderbird"] scratchpad show; [class="thunderbird"] move position center
-bindsym $mod+Shift+a [title="OBS 29.1.1-2 - Profile: Untitled - Scenes: Untitled"] scratchpad show; [title="OBS 29.1.1-2 - Profile: Untitled - Scenes: Untitled"] move position center
+bindsym $mod+Shift+a [title="OBS 29.1.3-1 - Profile: Untitled - Scenes: Untitled"] scratchpad show; [title="OBS 29.1.3-1 - Profile: Untitled - Scenes: Untitled"] move position center
 
 #-#===musicterminal scratchpad wondow===#-#
 for_window [title="musicterminal"] floating enable
@@ -325,9 +325,9 @@ for_window [class="thunderbird"] floating enable
 for_window [class="thunderbird"] resize set 1820 825
 for_window [class="thunderbird"] move scratchpad
 
-for_window [title="OBS 29.1.1-2 - Profile: Untitled - Scenes: Untitled"] floating enable
-for_window [title="OBS 29.1.1-2 - Profile: Untitled - Scenes: Untitled"] resize set 1820 825
-for_window [title="OBS 29.1.1-2 - Profile: Untitled - Scenes: Untitled"] move scratchpad
+for_window [title="OBS 29.1.3-1 - Profile: Untitled - Scenes: Untitled"] floating enable
+for_window [title="OBS 29.1.3-1 - Profile: Untitled - Scenes: Untitled"] resize set 1820 825
+for_window [title="OBS 29.1.3-1 - Profile: Untitled - Scenes: Untitled"] move scratchpad
 #################
 # Color settings
 #################
