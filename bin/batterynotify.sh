@@ -9,5 +9,5 @@ while true; do
         dunstify -u normal "Full Battery" "Battery level is ${battery_level}%"
     fi
 
-    sleep 120  # Check every 2 minutes (adjust as needed)
+    sleep 300  # Check every 2 minutes (adjust as needed)
 done

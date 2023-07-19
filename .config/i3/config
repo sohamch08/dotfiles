@@ -69,6 +69,8 @@ exec --no-startup-id greenclip daemon>/dev/null
 exec greenclip clear
 # Charging notification
 exec --no-startup-id /home/sohamch/bin/chargingnotify.sh
+# Charging notification
+exec --no-startup-id /home/sohamch/bin/batterynotify.sh
 # redshift
 exec --no-startup-id redshift -l 13:80
 # starts picom
