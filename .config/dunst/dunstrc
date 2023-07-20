@@ -37,6 +37,8 @@
     min_icon_size = 0
     max_icon_size = 32
     icon_path = /usr/share/icons/Qogir/16/status:/usr/share/icons/Qogir/16/devices/:/usr/share/icons/Qogir/16/apps/:/usr/share/pixmaps/
+    icon_theme = Papirus
+    enable_recursive_icon_lookup = true
     sticky_history = yes
     history_length = 20
     always_run_script = true
