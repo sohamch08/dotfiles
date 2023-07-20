@@ -2,7 +2,7 @@
     monitor = 0
     follow = mouse
     width = 350
-    origin = bottom-right
+    origin = top-right
     offset = 10x40
     progress_bar = true
     progress_bar_height = 10
@@ -36,7 +36,7 @@
     icon_position = left
     min_icon_size = 0
     max_icon_size = 32
-    icon_path = /usr/share/icons/Qogir/16/status:/usr/share/icons/Qogir/16/devices/:/usr/share/icons/Qogir/16/apps/:/usr/share/pixmaps/
+    icon_path = /home/sohamch/.config/dunst/icons:/usr/share/icons/Qogir/16/status:/usr/share/icons/Qogir/16/devices/:/usr/share/icons/Qogir/16/apps/:/usr/share/pixmaps/
     icon_theme = Papirus
     enable_recursive_icon_lookup = true
     sticky_history = yes
@@ -56,7 +56,8 @@
 
 [urgency_low]
     background = "#181825AA"
-    foreground = "#CDD6F4"
+    foreground = "#95f38b"
+    frame_color = "#95f38b"
     timeout = 10
 
 [urgency_normal]
