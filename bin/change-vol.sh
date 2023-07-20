@@ -21,11 +21,11 @@ function send_notification {
 #bar=$(seq -s "─" $(($volume/5)) | sed 's/[0-9]//g')
 if [ "$volume" = "0" ]; then
         icon_name="/usr/share/icons/Qogir/16/panel/audio-volume-muted.svg"
-dunstify "Volume is $volume" -i "$icon_name" -t 2000 -h int:value:"$volume"  --replace=555
+dunstify "Volume is ${volume}%" -i "$icon_name" -t 2000 -h int:value:"$volume"  --replace=555
     else
 	if [  "$volume" -lt "10" ]; then
 	     icon_name="/usr/share/icons/Qogir/16/panel/audio-volume-low.svg"
-dunstify "Volume is $volume" -i "$icon_name" -t 2000 -h int:value:"$volume"  --replace=555
+dunstify "Volume is ${volume}%" -i "$icon_name" -t 2000 -h int:value:"$volume"  --replace=555
     else
         if [ "$volume" -lt "30" ]; then
             icon_name="/usr/share/icons/Qogir/16/panel/audio-volume-low.svg"
@@ -40,7 +40,7 @@ dunstify "Volume is $volume" -i "$icon_name" -t 2000 -h int:value:"$volume"  --r
 fi
 bar=$(seq -s "─" $(($volume/5)) | sed 's/[0-9]//g')
 # Send the notification
-dunstify "Volume is $volume" -i "$icon_name" -t 2000 -h int:value:"$volume"  --replace=555
+dunstify "Volume is ${volume}%" -i "$icon_name" -t 2000 -h int:value:"$volume"  --replace=555
 }
 
 case $1 in
