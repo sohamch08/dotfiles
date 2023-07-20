@@ -6,9 +6,10 @@ while true; do
     charger_status=$(acpi -a | grep -o "on-line")
 
     if [[ $charger_status == "on-line" && $previous_status != "on-line" ]]; then
-        dunstify -u normal "Charger Plugged In" "The charger has been plugged in." -t 2000
+        dunstify -u normal "Charger Plugged In" "The charger has been plugged in." -t 2000 -i "/home/sohamch/.config/dunst/icons/battery-charging.svg"
     elif [[ $charger_status != "on-line" && $previous_status == "on-line" ]]; then
-        dunstify -u normal "Charger Unplugged" "The charger has been unplugged." -t 2000
+        dunstify -u normal "Charger Unplugged" "The charger has been unplugged." -t 2000 -i "/home/sohamch/.config/dunst/icons/charger-unplug.svg"
+
     fi
 
     previous_status=$charger_status
