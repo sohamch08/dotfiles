@@ -123,6 +123,7 @@ alias bluetoothrestart='sudo systemctl restart bluetooth'
 alias j='f() { input=$1; javac $input; java $(echo $input | cut -d '.' -f 1); unset -f f; }; f '
 alias spot='f() { spotdl $1 -p "/home/sohamch/Downloads/spotdl/{artists}/{album}/{title}-{artist}.{ext}"; unset -f f; }; f '
 alias flac2mp3='f() { input=$1; ffmpeg -y -i $input -codec:a libmp3lame -q:a 0 -map_metadata 0 -id3v2_version 3 -write_id3v1 1 ${input}.mp3; unset -f f; }; f '
+alias mdview='f() { input=$1; pandoc $input > $input.html ; lynx $input.html; unset -f f; }; f'
 
 # BEGIN_KITTY_SHELL_INTEGRATION
 if test -n "$KITTY_INSTALLATION_DIR" -a -e "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; then source "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; fi
