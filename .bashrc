@@ -169,4 +169,8 @@ eval "$(starship init bash)"
 neofetch 
 #--kitty --source ~/.config/neofetch/light.jpg --size 300px --gap 1
 
-export PATH=$PATH:/home/sohamch/.spicetify
+# This will  enable GPG agent caching. This allows the agent to remember my passphrase for a certain amount of taime.
+export GPG_TTY=$(tty)
+gpgconf --launch gpg-agent
+
+
