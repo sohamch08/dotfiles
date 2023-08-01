@@ -30,6 +30,4 @@ Plug 'HiPhish/info.vim'
 
 Plug 'https://github.com/Yggdroot/indentLine.git'
 Plug 'https://github.com/kshenoy/vim-signature.git'
-
-Plug 'lewis6991/gitsigns.nvim'
 call plug#end()

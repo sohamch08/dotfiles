@@ -4,7 +4,6 @@ source ~/.config/nvim/user/plugins.vim
 source ~/.config/nvim/user/plugins/coc.vim
 luafile ~/.config/nvim/user/plugins/comments.lua
 luafile ~/.config/nvim/user/plugins/nvim-tree.lua
-luafile ~/.config/nvim/user/plugins/gitsigns.lua
 
 let g:haskellmode_completion_ghc = 0
 autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc

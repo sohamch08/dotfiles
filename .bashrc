@@ -124,7 +124,9 @@ alias j='f() { input=$1; javac $input; java $(echo $input | cut -d '.' -f 1); un
 alias spot='f() { spotdl $1 -p "/home/sohamch/Downloads/spotdl/{artists}/{album}/{title}-{artist}.{ext}"; unset -f f; }; f '
 alias flac2mp3='f() { input=$1; ffmpeg -y -i $input -codec:a libmp3lame -q:a 0 -map_metadata 0 -id3v2_version 3 -write_id3v1 1 ${input}.mp3; unset -f f; }; f '
 alias mdview='f() { input=$1; pandoc $input > $input.html ; lynx $input.html; unset -f f; }; f'
-
+alias debinstall='f () { input=$1; sudo debtap $input; sudo pacman -U $input.tar.zst; unset -f f; }; f'
+alias vimpluginst="curl -fLo ~/.var/app/io.neovim.nvim/data/nvim/site/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim"
 # BEGIN_KITTY_SHELL_INTEGRATION
 if test -n "$KITTY_INSTALLATION_DIR" -a -e "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; then source "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; fi
 # END_KITTY_SHELL_INTEGRATION
@@ -165,6 +167,7 @@ eval "$(starship init bash)"
 # if [[ $TERM != linux && ! $PROMPT_COMMAND =~ _update_ps1 ]]; then
 #     PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
 # fi
+#
 
 neofetch 
 #--kitty --source ~/.config/neofetch/light.jpg --size 300px --gap 1
