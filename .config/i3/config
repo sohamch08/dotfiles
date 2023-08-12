@@ -76,6 +76,8 @@ exec --no-startup-id redshift -l 13:80
 # starts picom
 # exec_always --no-startup-id picom --experimental-backends
 exec --no-startup-id picom -f
+# disables Touchpad
+exec --no-startup-id xinput-toggle.sh 'ELAN071A:00 04F3:30FD Touchpad'
 
 ### For scratchpad
 # Opens a terminal for cmus
