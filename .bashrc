@@ -36,7 +36,7 @@ viminfo () {
 
 ### Pacman, Yay, Paru
 alias inst='sudo pacman -Sy'
-alias pcup='sudo pacman -Syu'                  # update only standard pkgs
+alias pcup='sudo pacman -Syu'                    # update only standard pkgs
 alias pacuup='sudo pacman -Syyu'                # Refresh pkglist & update standard pkgs
 alias yaysua='yay -Sua --noconfirm'              # update only AUR pkgs (yay)
 alias yaysyu='yay -Syu --noconfirm'              # update standard pkgs and AUR pkgs (yay)
@@ -84,7 +84,7 @@ alias cd2='cd ../..'
 alias cd3='cd ../../..'
 alias cd4='cd ../../../..'
 alias cd5='cd ../../../../..'
-alias cdlatex='cd ~/Arna/LaTeX/CMI/B.Sc/Sem\ 4'
+alias cdlatex='cd ~/Arna/LaTeX/CMI/B.Sc/Sem\ 5'
 alias cddotfiles="cd ~/GitHub/dotfiles/"
 alias cdcomp="cd ~/GitHub/Complexity_Ass/"
 alias cdacad="cd ~/Arna/Markdown/My-Academic-Works/"

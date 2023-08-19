@@ -112,11 +112,11 @@ bindsym $mod+F4 exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ togg
 # Brightness Control
 #####################
 # Use brightnessctl to adjust brightness in monitor
-bindsym XF86MonBrightnessUp exec "brightnessctl -d amdgpu_bl0 set 10+; notify-send 'brightness up'" 
-bindsym XF86MonBrightnessDown exec "brightnessctl -d amdgpu_bl0 set 10-; notify-send 'brightness down'"
+bindsym XF86MonBrightnessUp exec "brightnessctl -d amdgpu_bl1 set 10+; notify-send 'brightness up'" 
+bindsym XF86MonBrightnessDown exec "brightnessctl -d amdgpu_bl1 set 10-; notify-send 'brightness down'"
 
-bindsym $mod+F9 exec "brightnessctl -d amdgpu_bl0 set 10+; notify-send 'brightness up'" 
-bindsym $mod+F10 exec "brightnessctl -d amdgpu_bl0 set 10-; notify-send 'brightness down'"
+bindsym $mod+F9 exec "brightnessctl -d amdgpu_bl1 set 10+; notify-send 'brightness up'" 
+bindsym $mod+F10 exec "brightnessctl -d amdgpu_bl1 set 10-; notify-send 'brightness down'"
 #####################
 # Movement and Focus
 #####################
