@@ -53,6 +53,8 @@ exec_always --no-startup-id nm-applet
 exec --no-startup-id nitrogen --restore
 # launches polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+# Set brightness
+exec_always --no-startup-id "brightnessctl -d amdgpu_bl1 set 30"
 # Autotiling
 # exec_always --no-startup-id autotiling
 # Opens Bluetooth Manager

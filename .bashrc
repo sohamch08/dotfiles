@@ -57,13 +57,12 @@ alias sl='ls'
 alias ll='exa -aglhHS -s type --icons'
 
 ### Git Aliases
-alias ga="git add"
-alias gc="git commit -m"
-alias gcl="git clone"
-alias gd='git diff'
-alias gp="git pull"
+# alias ga="git add"
+# alias gc="git commit -m"
+# alias gcl="git clone"
+# alias gd='git diff'
+# alias gp="git pull"
 alias gpa="git add -A && git commit -m updated && git push origin"
-alias gs="git status"
 
 ### Rclone 
 alias rcg="rclone congig"
@@ -123,6 +122,7 @@ alias bluetoothrestart='sudo systemctl restart bluetooth'
 alias j='f() { input=$1; javac $input; java $(echo $input | cut -d '.' -f 1); unset -f f; }; f '
 alias spot='f() { spotdl $1 -p "/home/sohamch/Downloads/spotdl/{artists}/{album}/{title}-{artist}.{ext}"; unset -f f; }; f '
 alias flac2mp3='f() { input=$1; ffmpeg -y -i $input -codec:a libmp3lame -q:a 0 -map_metadata 0 -id3v2_version 3 -write_id3v1 1 ${input}.mp3; unset -f f; }; f '
+alias pstopdf='f() { input=$1; gs -sDEVICE=pdfwrite -sOutputFile=${input}.pdf -dBATCH -dNOPAUSE ${input} ; unset -f f; }; f '
 alias mdview='f() { input=$1; pandoc $input > $input.html ; lynx $input.html; unset -f f; }; f'
 alias debinstall='f () { input=$1; sudo debtap $input; sudo pacman -U $input.tar.zst; unset -f f; }; f'
 alias vimpluginst="curl -fLo ~/.var/app/io.neovim.nvim/data/nvim/site/autoload/plug.vim --create-dirs \
