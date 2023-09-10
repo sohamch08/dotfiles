@@ -22,7 +22,7 @@ sub help {
     print "Usage: cpu_usage [-w <warning>] [-c <critical>] [-d <decimals>]\n";
     print "-w <percent>: warning threshold to become yellow\n";
     print "-c <percent>: critical threshold to become red\n";
-    print "-d <decimals>:  Use <decimals> decimals for percentage (default is $decimals) \n"; 
+    print "-d <decimals>:  Use <decimals> decimals for percentage (default is $decimals) \n";
     exit 0;
 }
 
@@ -34,14 +34,14 @@ GetOptions("help|h" => \&help,
 
 # Get CPU usage
 $ENV{LC_ALL}="en_US"; # if mpstat is not run under en_US locale, things may break, so make sure it is
-open (MPSTAT, 'mpstat 1 1 |') or die;
+open (MPSTAT, 'mpstat 1 1 |') or die "$!";
 while (<MPSTAT>) {
     if (/^.*\s+(\d+\.\d+)[\s\x00]?$/) {
         $cpu_usage = 100 - $1; # 100% - %idle
         last;
     }
 }
-close(MPSTAT);
+close(MPSTAT) or die "$!";
 
 $cpu_usage eq -1 and die 'Can\'t find CPU information';
 
