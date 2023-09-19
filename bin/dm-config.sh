@@ -4,6 +4,7 @@ declare -a options=(
 "alacritty - $HOME/.config/alacritty/alacritty.yml"
 "kitty - $HOME/.config/kitty/kitty.conf"
 "i3 - $HOME/.config/i3/config"
+"qtile - $HOME/.config/qtile/config.py"
 "dunst - $HOME/.config/dunst/dunstrc"
 "polybar - $HOME/.config/polybar/config.ini"
 "bashrc - $HOME/.bashrc"

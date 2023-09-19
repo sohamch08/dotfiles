@@ -32,9 +32,9 @@ floating_modifier $mod
 #########
 # I3Gaps
 #########
-for_window [class=".*"] border pixel 3
-gaps inner 10
-gaps outer 0
+#for_window [class=".*"] border pixel 3
+#gaps inner 10
+#gaps outer 0
 
 #########################
 # Autostart Applications

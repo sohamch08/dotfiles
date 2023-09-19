@@ -1,0 +1,5 @@
+set lib_sort=albumartist
+fset classi
+set lib_sort=title
+se filename play_count
+set pl_sort=title
