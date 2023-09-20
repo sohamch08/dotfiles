@@ -91,6 +91,7 @@ keys = [
     Key([mod, "shift"], "d", lazy.spawn("dmenu_run"), desc="Opens dmenu to run application"),
     Key([mod, "shift"], "w", lazy.spawn("nautilus"), desc="Opens dmenu to run application"),
     Key([mod, "shift"], "b", lazy.spawn("brave-browser"), desc="Opens brave browser"),
+    Key([mod, "shift"], "x", lazy.spawn("betterlockscreen -l dim --time-format '%I:%M %p'"), desc="Opens brave browser"),
     Key([mod, "shift", "control"], "x", lazy.spawn("texstudio"), desc="Opens texstudio"),
     Key([mod], "p", lazy.spawn("/home/sohamch/bin/openbook.sh"), desc="Opens book list to open"),
     Key([mod], "semicolon", lazy.spawn("/home/sohamch/bin/dm-config.sh"), desc="Opens config list"),
