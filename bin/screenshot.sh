@@ -8,4 +8,4 @@ file_name="$name.png"
 scrot "$HOME/Pictures/$file_name"
 
 xclip -selection clipboard -target image/png -i ~/Pictures/${file_name} &&
-    notify-send "Screenshot taken ${file_name}"
+    notify-send "Screenshot taken ${file_name}" -i "$HOME/Pictures/$file_name"
