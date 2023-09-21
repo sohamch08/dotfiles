@@ -5,7 +5,7 @@ while true; do
 
     if [[ $battery_level -le 15 ]]; then
         dunstify -u critical "Low Battery" "Battery level is ${battery_level}%" -i "/home/sohamch/.config/dunst/icons/battery-alert.png"
-    elif [[ $battery_level -ge 95 ]]; then
+    elif [[ $battery_level -ge 90 ]]; then
         dunstify -u low "Full Battery" "Battery level is ${battery_level}%" -i "/home/sohamch/.config/dunst/icons/battery-alert-variant.png"
     fi
 

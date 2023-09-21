@@ -74,6 +74,7 @@ keys = [
         desc="Toggle between split and unsplit sides of stack",
     ),
     Key([mod], "Return", lazy.spawn(terminal), desc="Launch terminal"),
+    Key([mod, "shift"], "t", lazy.spawn("flatpak run org.telegram.desktop"), desc="Launch terminal"),
     # Toggle between different layouts as defined below
     Key([mod], "Tab", lazy.screen.next_group(skip_empty=True), desc="Move to the next group"),
     Key([mod, "shift"], "Tab", lazy.screen.prev_group(skip_empty=True), desc="Move to the previous group"),
@@ -86,7 +87,7 @@ keys = [
     ),
     Key([mod], "t", lazy.window.toggle_floating(), desc="Toggle floating on the focused window"),
     Key([mod, "shift"], "r", lazy.reload_config(), desc="Reload the config"),
-    Key([mod, "shift", "control"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
+    Key([mod, "shift", "control"], "q", lazy.spawn("/home/sohamch/.config/rofi/scripts/powermenu.sh"), desc="Poowermenu"),
     Key([mod], "d", lazy.spawn("rofi -show drun -theme .config/rofi/themes/launchers/ribbon/ribbon_bottom_round.rasi"), desc="Spawn a command using a prompt widget"),
     Key([mod, "shift"], "d", lazy.spawn("dmenu_run"), desc="Opens dmenu to run application"),
     Key([mod, "shift"], "w", lazy.spawn("nautilus"), desc="Opens dmenu to run application"),
@@ -95,10 +96,12 @@ keys = [
     Key([mod, "shift", "control"], "x", lazy.spawn("texstudio"), desc="Opens texstudio"),
     Key([mod], "p", lazy.spawn("/home/sohamch/bin/openbook.sh"), desc="Opens book list to open"),
     Key([mod], "semicolon", lazy.spawn("/home/sohamch/bin/dm-config.sh"), desc="Opens config list"),
+
     Key([], "XF86AudioLowerVolume", lazy.spawn("amixer sset Master 5%-"), desc="Lower Volume by 5%"),
     Key([], "XF86AudioRaiseVolume", lazy.spawn("amixer sset Master 5%+"), desc="Raise Volume by 5%"),
     Key([], "XF86AudioMute", lazy.spawn("amixer sset Master 1+ toggle"), desc="Mute/Unmute Volume"),
-    # Key([mod], "d", lazy.function(os.system, "ls >> /tmp/ls_output.log 2>&1")),
+    Key([], "XF86MonBrightnessUp", lazy.spawn("brightnessctl set +5% && dunstify 'brightness up'"), desc="Brighness Up"),
+    Key([], "XF86MonBrightnessDown", lazy.spawn("brightnessctl set 5%- && dunstify 'brightness down'"), desc="Brighness down"),
 ]
 
 groups = [Group(i) for i in "123456789"]
