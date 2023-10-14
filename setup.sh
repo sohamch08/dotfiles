@@ -1,3 +1,4 @@
+#!/bin/bash
 # Setup bashrc
 if [[ -e "$HOME/.bashrc" ]]; then
     mv $HOME/.bashrc $HOME/.bashrc.bak
