@@ -92,6 +92,7 @@ alias pstopdf='f() { input=$1; gs -sDEVICE=pdfwrite -sOutputFile=${input}.pdf -d
 alias mdview='f() { input=$1; pandoc $input > $input.html ; lynx $input.html; unset -f f; }; f'
 #alias debinstall='f () { input=$1; sudo debtap $input; sudo pacman -U $input.tar.zst; unset -f f; }; f'
 alias python="python3"
+alias sp="python -m spotdl"
 
 
 export EXA_ICON_SPACING=2

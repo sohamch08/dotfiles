@@ -11,3 +11,5 @@ brightnessctl -d amdgpu_bl1 set 30 &
 /home/sohamch/bin/chargingnotify.sh &
 # Battery status notification
 /home/sohamch/bin/batterynotify.sh &
+# Switches power profile to battery saving
+system76-power profile battery &
