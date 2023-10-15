@@ -19,7 +19,6 @@ Plug 'sonph/onehalf', { 'rtp': 'vim' }
 Plug 'https://github.com/lambdalisue/nerdfont.vim.git'
 Plug 'https://github.com/ryanoasis/vim-devicons.git'
 Plug 'mhinz/vim-startify'
-Plug 'neoclide/coc.nvim'
 
 Plug 'kyazdani42/nvim-web-devicons' " optional, for file icons
 Plug 'kyazdani42/nvim-tree.lua'

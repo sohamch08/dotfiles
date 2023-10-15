@@ -60,7 +60,7 @@ alias rcs="rclone sync -P"
 
 ### cd nevigation
 alias cdlatex="cd ~/Arna/LaTeX/CMI/B.Sc/Sem\ 5"
-alias cddotfiles="cd ~/github/dotfiles/"
+alias cddotfiles="cd ~/Github/dotfiles/"
 alias cdacad="cd ~/Arna/Markdown/My-Academic-Works/"
 alias cdq="cd ~/Arna/Coding/Qiskit"
 alias cdweb="cd ~/Arna/Coding/Web\ Coding/sohamch08.github.io"

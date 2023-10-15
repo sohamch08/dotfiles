@@ -32,9 +32,9 @@ floating_modifier $mod
 #########
 # I3Gaps
 #########
-#for_window [class=".*"] border pixel 3
-#gaps inner 10
-#gaps outer 0
+for_window [class=".*"] border pixel 3
+gaps inner 10
+gaps outer 0
 
 #########################
 # Autostart Applications
@@ -66,20 +66,20 @@ exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 # Starts dunst
 exec --no-startup-id dbus-launch dunst --config ~/.config/dunst/dunstrc
 # Starts greenclip deamon (install rofi-greenclip from the AUR)
-exec --no-startup-id greenclip daemon>/dev/null 
+#exec --no-startup-id greenclip daemon>/dev/null 
 # Clear greenclip
-exec greenclip clear
+#exec greenclip clear
 # Charging notification
 exec --no-startup-id /home/sohamch/bin/chargingnotify.sh
 # Charging notification
 exec --no-startup-id /home/sohamch/bin/batterynotify.sh
 # redshift
-exec --no-startup-id redshift -l 13:80
+#exec --no-startup-id redshift -l 13:80
 # starts picom
 # exec_always --no-startup-id picom --experimental-backends
-exec --no-startup-id picom -f
+#exec --no-startup-id picom -f
 # disables Touchpad
-exec --no-startup-id xinput-toggle.sh 'ELAN071A:00 04F3:30FD Touchpad'
+#exec --no-startup-id xinput-toggle.sh 'ELAN071A:00 04F3:30FD Touchpad'
 
 ### For scratchpad
 # Opens a terminal for cmus
@@ -114,11 +114,11 @@ bindsym $mod+F4 exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ togg
 # Brightness Control
 #####################
 # Use brightnessctl to adjust brightness in monitor
-bindsym XF86MonBrightnessUp exec "brightnessctl -d amdgpu_bl1 set 10+; notify-send 'brightness up'" 
-bindsym XF86MonBrightnessDown exec "brightnessctl -d amdgpu_bl1 set 10-; notify-send 'brightness down'"
+bindsym XF86MonBrightnessUp exec "brightnessctl -d amdgpu_bl0 set 10+; notify-send 'brightness up'" 
+bindsym XF86MonBrightnessDown exec "brightnessctl -d amdgpu_bl0 set 10-; notify-send 'brightness down'"
 
-bindsym $mod+F9 exec "brightnessctl -d amdgpu_bl1 set 10+; notify-send 'brightness up'" 
-bindsym $mod+F10 exec "brightnessctl -d amdgpu_bl1 set 10-; notify-send 'brightness down'"
+bindsym $mod+F9 exec "brightnessctl -d amdgpu_bl0 set 10+; notify-send 'brightness up'" 
+bindsym $mod+F10 exec "brightnessctl -d amdgpu_bl0 set 10-; notify-send 'brightness down'"
 #####################
 # Movement and Focus
 #####################
@@ -242,23 +242,23 @@ bindsym $mod+Shift+d exec dmenu_run
 bindsym $mod+semicolon exec ~/bin/dm-config.sh
 
 ### Keybind $Mod+<key>
-bindsym $mod+o exec flatpak run md.obsidian.Obsidian
-bindsym $mod+g exec gimp
+#bindsym $mod+o exec flatpak run md.obsidian.Obsidian
+#bindsym $mod+g exec gimp
 bindsym $mod+p exec ~/bin/openbook.sh
 bindsym $mod+r mode "resize"
 bindsym $mod+Return exec $myTerm
 
 ### Keybind $Mod+Shift+<key>
-bindsym $mod+Shift+b exec brave --password-store
-bindsym $mod+Shift+p exec rofi-pass
-bindsym $Mod+Shift+t exec telegram-desktop
-bindsym $Mod+Shift+v exec code
+bindsym $mod+Shift+b exec brave-browser --password-store
+bindsym $Mod+Shift+t exec flatpak run org.telegram.desktop
+#bindsym $Mod+Shift+v exec code
 bindsym $Mod+Shift+w exec $fm
-bindsym $mod+Shift+x exec betterlockscreen -l
+#bindsym $mod+Shift+x exec betterlockscreen -l
+bindsym $mod+Shift+x exec i3lock
 bindsym $mod+Shift+q kill
 
 ### Keybind $Mod+Shift+Ctrl+<key>
-bindsym $Mod+Shift+Ctrl+x exec texstudio
+#bindsym $Mod+Shift+Ctrl+x exec texstudio
 
 ### I3 Session ending
 # Power Menu

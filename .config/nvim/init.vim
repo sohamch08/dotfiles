@@ -1,7 +1,6 @@
 source ~/.config/nvim/user/sets.vim
 source ~/.config/nvim/user/mapping.vim
 source ~/.config/nvim/user/plugins.vim
-source ~/.config/nvim/user/plugins/coc.vim
 luafile ~/.config/nvim/user/plugins/comments.lua
 luafile ~/.config/nvim/user/plugins/nvim-tree.lua
 
@@ -68,5 +67,4 @@ colorscheme tokyonight
 
 let g:tex_conceal = ''
 let g:vimtex_syntax_conceal_disable = 1
-let g:coc_node_path ='/usr/bin/node'
 let g:indentLine_conceallevel = 0

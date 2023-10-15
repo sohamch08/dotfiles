@@ -1,9 +1,0 @@
-{
-    "languageserver": {
-      "digestif": {
-        "command": "digestif",
-        "filetypes": ["tex", "plaintex", "context"]
-      }
-    },
-    "Lua.telemetry.enable": true
-}
