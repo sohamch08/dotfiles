@@ -258,7 +258,7 @@ bindsym $mod+Shift+x exec i3lock
 bindsym $mod+Shift+q kill
 
 ### Keybind $Mod+Shift+Ctrl+<key>
-#bindsym $Mod+Shift+Ctrl+x exec texstudio
+bindsym $Mod+Shift+Ctrl+x exec texstudio
 
 ### I3 Session ending
 # Power Menu
