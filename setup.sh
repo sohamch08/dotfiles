@@ -14,6 +14,22 @@ if [[ -e "$HOME/.config/starship.toml" ]]; then
 else
     ln -s $(pwd)/.config/starship.toml $HOME/.config/starship.toml
 fi
+
+# Setup betterlockscreen
+if [[ -e "$HOME/.config/betterlockscreenrc" ]]; then
+    mv $HOME/.config/betterlockscreenrc $HOME/.config/betterlockscreenrc.bak
+    ln -s $(pwd)/.config/betterlockscreenrc $HOME/.config/betterlockscreenrc
+else
+    ln -s $(pwd)/.config/betterlockscreenrc $HOME/.config/betterlockscreenrc
+fi
+# Setup alacritty
+if [ -d "$HOME/.config/alacritty" ]; then
+    mv $HOME/.config/alacritty $HOME/.config/alacritty.bak
+    ln -s $(pwd)/.config/alacritty $HOME/.config/alacritty
+else
+    ln -s $(pwd)/.config/alacritty $HOME/.config/alacritty
+fi
+
 # Setup cmus
 if [ -d "$HOME/.config/cmus" ]; then
     mv $HOME/.config/cmus $HOME/.config/cmus.bak
@@ -47,6 +63,22 @@ else
     ln -s $(pwd)/.config/rofi $HOME/.config/rofi
 fi
 
+# Setup i3
+if [ -d "$HOME/.config/i3" ]; then
+    mv $HOME/.config/i3 $HOME/.config/i3.bak
+    ln -s $(pwd)/.config/i3 $HOME/.config/i3
+else 
+    ln -s $(pwd)/.config/i3 $HOME/.config/i3
+fi
+
+# Setup polybar
+if [ -d "$HOME/.config/polybar" ]; then
+    mv $HOME/.config/polybar $HOME/.config/polybar.bak
+    ln -s $(pwd)/.config/polybar $HOME/.config/polybar
+else 
+    ln -s $(pwd)/.config/polybar $HOME/.config/polybar
+fi
+
 # Setup bin
 if [ -d "$HOME/bin" ]; then
     mv $HOME/bin $HOME/bin.bak
@@ -54,4 +86,3 @@ if [ -d "$HOME/bin" ]; then
 else 
     ln -s $(pwd)/bin $HOME/bin
 fi
-
