@@ -8,7 +8,7 @@ fi
 # User specific environment
 if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin" ]]
 then
-    PATH="$HOME/bin:$HOME/Applications:$HOME/.cargo/bin:$PATH"
+    PATH="$HOME/bin:$HOME/.local/bin:$HOME/Applications:$HOME/.cargo/bin:$PATH"
 fi
 
 # Uncomment the following line if you don't like systemctl's auto-paging feature:

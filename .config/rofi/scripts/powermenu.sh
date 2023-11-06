@@ -79,7 +79,7 @@ case $chosen in
     $logout)
 		ans=$(confirm_exit &)
 		if [[ $ans == "yes" || $ans == "YES" || $ans == "y" || $ans == "Y" || $ans == " " ]]; then
-            killall qtile
+            killall i3
             # elif [[ "$DESKTOP_SESSION" == "Openbox" ]]; then
 			# 	openbox --exit
 			# elif [[ "$DESKTOP_SESSION" == "bspwm" ]]; then

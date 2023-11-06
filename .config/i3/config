@@ -70,11 +70,11 @@ exec --no-startup-id dbus-launch dunst --config ~/.config/dunst/dunstrc
 # Clear greenclip
 #exec greenclip clear
 # Charging notification
-exec --no-startup-id /home/sohamch/bin/chargingnotify.sh
+# exec --no-startup-id /home/sohamch/bin/chargingnotify.sh
 # Charging notification
-exec --no-startup-id /home/sohamch/bin/batterynotify.sh
+# exec --no-startup-id /home/sohamch/bin/batterynotify.sh
 # redshift
-#exec --no-startup-id redshift -l 13:80
+# exec --no-startup-id redshift -l 13:80
 # starts picom
 # exec_always --no-startup-id picom --experimental-backends
 #exec --no-startup-id picom -f
@@ -110,6 +110,8 @@ bindsym $mod+F3 exec --no-startup-id $HOME/bin/change-vol.sh up
 bindsym $mod+F2 exec --no-startup-id $HOME/bin/change-vol.sh down
 bindsym $mod+F1 exec --no-startup-id $HOME/bin/change-vol.sh mute
 bindsym $mod+F4 exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle
+bindsym $mod+Shift+F1 exec xfce4-find-cursor
+
 #####################
 # Brightness Control
 #####################
@@ -251,10 +253,11 @@ bindsym $mod+Return exec $myTerm
 ### Keybind $Mod+Shift+<key>
 bindsym $mod+Shift+b exec brave-browser --password-store
 bindsym $Mod+Shift+t exec flatpak run org.telegram.desktop
+bindsym $mod+Shift+slash exec xfce4-find-cursor
 #bindsym $Mod+Shift+v exec code
 bindsym $Mod+Shift+w exec $fm
-#bindsym $mod+Shift+x exec betterlockscreen -l
-bindsym $mod+Shift+x exec i3lock
+bindsym $mod+Shift+x exec betterlockscreen -l dim
+#bindsym $mod+Shift+x exec i3lock
 bindsym $mod+Shift+q kill
 
 ### Keybind $Mod+Shift+Ctrl+<key>
