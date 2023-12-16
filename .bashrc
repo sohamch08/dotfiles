@@ -11,6 +11,7 @@ then
     PATH="$HOME/bin:$HOME/.local/bin:$HOME/Applications:$HOME/.cargo/bin:$PATH"
 fi
 
+PATH="$HOME/Applications:$PATH"
 # Uncomment the following line if you don't like systemctl's auto-paging feature:
 # export SYSTEMD_PAGER=
 
@@ -63,6 +64,7 @@ alias cdlatex="cd ~/Arna/LaTeX/CMI/B.Sc/Sem\ 5"
 alias cddotfiles="cd ~/Github/dotfiles/"
 alias cdacad="cd ~/Arna/Markdown/My-Academic-Works/"
 alias cdq="cd ~/Arna/Coding/Qiskit"
+alias cdact="cd /home/sohamch/Github/algorithmic-coding-theory-aks/"
 alias cdweb="cd ~/Arna/Coding/Web\ Coding/sohamch08.github.io"
 
 ### Cat 
@@ -90,6 +92,7 @@ alias scrvi='scrcpy --lock-video-orientation=2'
 alias flac2mp3='f() { input=$1; ffmpeg -y -i $input -codec:a libmp3lame -q:a 0 -map_metadata 0 -id3v2_version 3 -write_id3v1 1 ${input}.mp3; unset -f f; }; f '
 alias pstopdf='f() { input=$1; gs -sDEVICE=pdfwrite -sOutputFile=${input}.pdf -dBATCH -dNOPAUSE ${input} ; unset -f f; }; f '
 alias mdview='f() { input=$1; pandoc $input > $input.html ; lynx $input.html; unset -f f; }; f'
+alias djvu2pdf='f() { input=$1; ddjvu -format=pdf -quality=85 -verbose "$1" "$1.pdf"; unset -f f; }; f'
 #alias debinstall='f () { input=$1; sudo debtap $input; sudo pacman -U $input.tar.zst; unset -f f; }; f'
 alias python="python3"
 alias sp="python -m spotdl"
