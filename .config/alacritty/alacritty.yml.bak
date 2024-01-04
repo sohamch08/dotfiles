@@ -252,7 +252,6 @@ colors:
     magenta: "#c795ae"
     cyan: "#95aec7"
     white: "#f3f4f5"
-colors: *Dracula
 # theme: Ashes.dark
 
 # Default colors
