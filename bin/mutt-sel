@@ -1,0 +1,8 @@
+#!/bin/sh
+
+export MUTT_CONFIG_DIR="$HOME/.config/mutt"
+export MAIL="$1"
+
+shift
+
+exec neomutt "$@"
