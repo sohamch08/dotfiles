@@ -60,11 +60,14 @@ alias rcs="rclone sync -P"
 #alias evince="devour evince"
 
 ### cd nevigation
-alias cdlatex="cd ~/Arna/LaTeX/CMI/B.Sc/Sem\ 5"
+alias cdlatex="cd ~/Arna/Academic-Notes/"
+alias cdx="cd ~/Arna/Academic-Notes/Expander\ Graphs/"
+alias cdac="cd ~/Arna/Academic-Notes/Algebra\ and\ Computation/"
+alias cdact="cd ~/Arna/Academic-Notes/Coding\ Theory/"
+alias cdpar="cd ~/Arna/Academic-Notes/Parallel\ Algorithm\ and\ Complexity/"
 alias cddotfiles="cd ~/Github/dotfiles/"
 alias cdacad="cd ~/Arna/Markdown/My-Academic-Works/"
 alias cdq="cd ~/Arna/Coding/Qiskit"
-alias cdact="cd /home/sohamch/Github/algorithmic-coding-theory-aks/"
 alias cdweb="cd ~/Arna/Coding/Web\ Coding/sohamch08.github.io"
 
 ### Cat 
