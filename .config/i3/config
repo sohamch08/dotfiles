@@ -52,7 +52,7 @@ exec_always --no-startup-id nm-applet
 # Opens nitrojen with previous wallpaper
 exec --no-startup-id nitrogen --restore
 # launches polybar
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+# exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 # Set brightness
 exec_always --no-startup-id "brightnessctl -d amdgpu_bl1 set 30"
 # Autotiling
@@ -89,7 +89,7 @@ exec --no-startup-id $myTerm -t "dropdown"
 # Opens a terminal for bluetoothctl
 exec --no-startup-id $myTerm -t "bluetoothctlterminal" -e bluetoothctl
 # Opens thunderbird
-exec --no-startup-id thunderbird
+# exec --no-startup-id thunderbird
 
 ################
 # Audio Control
@@ -368,3 +368,31 @@ client.focused #664477 #664477 #cccccc #e7d8b1
 client.focused_inactive #e7d8b1 #e7d8b1 #181715 #A074C4
 client.unfocused #222133 #222133 #AAAAAA #A074C4
 client.urgent #CE4045 #CE4045 #e7d8b1 #DCCD69
+
+bar {
+    position top
+    status_command i3blocks -c ~/.config/i3/i3blocks.conf
+}
+############################################
+# bar settings (input comes from i3blocks) #
+############################################
+
+# Start i3bar to display a workspace bar
+# (plus the system information i3status finds out, if available)
+# bar {
+# 		font pango: Noto Sans Regular 10
+# 		status_command i3blocks -c ~/.config/i3/i3blocks.conf
+# 	    	position bottom
+# #	    	i3bar_command i3bar --transparency
+# # it could be that you have no primary display set: set one (xrandr --output <output> --primary)
+# # reference: https://i3wm.org/docs/userguide.html#_tray_output
+# 		    #tray_output primary
+# 		    tray_padding 0
+#
+# # When strip_workspace_numbers is set to yes,
+# # any workspace that has a name of the form
+# # “[n][:][NAME]” will display only the name.
+# strip_workspace_numbers yes
+# ##strip_workspace_name no
+#
+# }

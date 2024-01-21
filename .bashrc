@@ -106,7 +106,7 @@ export EXA_ICON_SPACING=2
 
 eval "$(starship init bash)"
 
-neofetch 
+# neofetch 
 
 # This will  enable GPG agent caching. This allows the agent to remember my passphrase for a certain amount of taime.
 export GPG_TTY=$(tty)
