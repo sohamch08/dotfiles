@@ -399,7 +399,7 @@ set $yellowbrown	#e1b700
 # (plus the system information i3status finds out, if available)
 bar {
 		# font pango: Noto Sans Regular 10
-		status_command i3blocks -c ~/.config/i3/i3blocks.conf
+		status_command i3status --config ~/.config/i3/i3status.conf
 	    position top
 #	    	i3bar_command i3bar --transparency
 # it could be that you have no primary display set: set one (xrandr --output <output> --primary)
