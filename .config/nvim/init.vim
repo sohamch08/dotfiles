@@ -63,7 +63,8 @@ let g:vim_json_conceal=0
 syntax on
 filetype plugin indent on
 
-colorscheme tokyonight
+colorscheme dracula
+
 
 let g:tex_conceal = ''
 let g:vimtex_syntax_conceal_disable = 1

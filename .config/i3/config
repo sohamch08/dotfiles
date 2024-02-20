@@ -16,7 +16,7 @@
 #####################
 set $mod Mod4
 set $fm "thunar"
-set $myTerm alacritty
+set $myTerm kitty
 
 #######
 # Font
@@ -83,11 +83,11 @@ exec_always --no-startup-id picom --experimental-backends
 
 ### For scratchpad
 # Opens a terminal for cmus
-exec --no-startup-id $myTerm -t "musicterminal" -e ~/bin/cmus-start.sh
+exec --no-startup-id alacritty -t "musicterminal" -e ~/bin/cmus-start.sh
 # Opens a terminal
-exec --no-startup-id $myTerm -t "dropdown"
+exec --no-startup-id kitty -T "dropdown"
 # Opens a terminal for bluetoothctl
-exec --no-startup-id $myTerm -t "bluetoothctlterminal" -e bluetoothctl
+exec --no-startup-id alacritty -t "bluetoothctlterminal" -e bluetoothctl
 # Opens thunderbird
 # exec --no-startup-id thunderbird
 
@@ -261,7 +261,7 @@ bindsym $mod+Shift+x exec betterlockscreen -l dim
 bindsym $mod+Shift+q kill
 
 ### Keybind $Mod+Shift+Ctrl+<key>
-bindsym $Mod+Shift+Ctrl+x exec texstudio
+bindsym $Mod+Shift+Ctrl+x exec flatpak run org.texstudio.TeXstudio
 
 ### I3 Session ending
 # Power Menu
@@ -283,8 +283,8 @@ bindsym $mod+F7 exec cmus-remote --prev
 bindsym $mod+F8 exec cmus-remote --next
 
 ### Screenshot
-bindsym Print exec screenshot.sh
-bindsym --release Shift+Print exec screenshotselect.sh
+bindsym Print exec ~/bin/screenshot.sh
+bindsym --release Shift+Print exec ~/bin/screenshotselect.sh
 
 # resize window (you can also use the mouse for that)
 mode "resize" {

@@ -38,7 +38,7 @@ blinking = "Off"
 shape = "Block"
 
 [font]
-size = 9
+size = 1
 
 [font.bold]
 family = "Iosevka"

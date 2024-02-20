@@ -104,7 +104,7 @@ alias sp="python -m spotdl"
 export EXA_ICON_SPACING=2
 
 
-eval "$(starship init bash)"
+#eval "$(starship init bash)"
 
 # neofetch 
 pfetch
