@@ -67,3 +67,4 @@ alias djvu2pdf='f() { input=$1; ddjvu -format=pdf -quality=85 -verbose "$1" "$1.
 #alias debinstall='f () { input=$1; sudo debtap $input; sudo pacman -U $input.tar.zst; unset -f f; }; f'
 alias python="python3"
 alias sp="python -m spotdl"
+alias screenDarkOff="xset dpms 0 0 0 && xset s noblank  && xset s off"
