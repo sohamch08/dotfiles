@@ -29,10 +29,10 @@ alias rcs="rclone sync -P"
 
 ### cd nevigation
 alias cdlatex="cd ~/Arna/academic-notes/"
-alias cdx="cd ~/Arna/Academic-Notes/Expander\ Graphs/"
-alias cdac="cd ~/Arna/Academic-Notes/Algebra\ and\ Computation/"
-alias cdact="cd ~/Arna/Academic-Notes/Coding\ Theory/"
-alias cdpar="cd ~/Arna/Academic-Notes/Parallel\ Algorithm\ and\ Complexity/"
+alias cdx="cd ~/Arna/academic-notes/Expander\ Graphs/"
+alias cdac="cd ~/Arna/academic-notes/Algebra\ and\ Computation/"
+alias cdact="cd ~/Arna/academic-notes/Coding\ Theory/"
+alias cdpar="cd ~/Arna/academic-notes/Parallel\ Algorithm\ and\ Complexity/"
 alias cddotfiles="cd ~/Github/dotfiles/"
 alias cdacad="cd ~/Arna/Markdown/My-Academic-Works/"
 alias cdq="cd ~/Arna/Coding/Qiskit"
@@ -66,5 +66,6 @@ alias mdview='f() { input=$1; pandoc $input > $input.html ; lynx $input.html; un
 alias djvu2pdf='f() { input=$1; ddjvu -format=pdf -quality=85 -verbose "$1" "$1.pdf"; unset -f f; }; f'
 #alias debinstall='f () { input=$1; sudo debtap $input; sudo pacman -U $input.tar.zst; unset -f f; }; f'
 alias python="python3"
-alias sp="python -m spotdl"
+alias sp="python -m spotdl --bitrate 320k"
 alias screenDarkOff="xset dpms 0 0 0 && xset s noblank  && xset s off"
+alias spotdl="python -m spotdl"

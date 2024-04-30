@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 declare -a options=(
+"menu-config - $HOME/bin/dm-config.sh"
 "alacritty - $HOME/.config/alacritty/alacritty.yml"
 "kitty - $HOME/.config/kitty/kitty.conf"
 "i3 - $HOME/.config/i3/config"
@@ -8,6 +9,7 @@ declare -a options=(
 "dunst - $HOME/.config/dunst/dunstrc"
 "polybar - $HOME/.config/polybar/config.ini"
 "bashrc - $HOME/.bashrc"
+"bash alias - $HOME/.bash_aliases"
 "picom - $HOME/.config/picom.conf"
 "starship - $HOME/.config/starship.toml"
 "cava - $HOME/.config/cava/config"
