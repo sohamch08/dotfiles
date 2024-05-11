@@ -119,3 +119,5 @@ pfetch
 eval "$(starship init bash)"
 
 
+
+export PATH=$PATH:/home/sohamch/.spicetify

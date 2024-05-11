@@ -256,7 +256,10 @@ bindsym $Mod+Shift+t exec flatpak run org.telegram.desktop
 bindsym $mod+Shift+slash exec xfce4-find-cursor
 #bindsym $Mod+Shift+v exec code
 bindsym $Mod+Shift+w exec $fm
-bindsym $mod+Shift+x exec multilockscreen -l dim
+# If single screen is there
+bindsym $mod+Shift+x exec betterlockscreen -l dim
+# If multiple screens are there
+# bindsym $mod+Shift+x exec multilockscreen -l dim
 #bindsym $mod+Shift+x exec i3lock
 bindsym $mod+Shift+q kill
 
