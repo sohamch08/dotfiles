@@ -14,7 +14,7 @@ Plug 'https://github.com/neovimhaskell/haskell-vim.git'
 Plug 'https://github.com/vim-python/python-syntax.git'
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
-Plug 'catppuccin/vim', { 'as': 'catppuccin' }
+" Plug 'catppuccin/vim', { 'as': 'catppuccin' }
 Plug 'sonph/onehalf', { 'rtp': 'vim' }
 Plug 'https://github.com/lambdalisue/nerdfont.vim.git'
 Plug 'https://github.com/ryanoasis/vim-devicons.git'
