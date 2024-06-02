@@ -43,8 +43,8 @@ gaps outer 0
 # Start XDG autostart .desktop files using dex. See also
 # https://wiki.archlinux.org/index.php/XDG_Autostart
 exec --no-startup-id dex-autostart --autostart --environment i3
-# Enables Touchpad
-exec xinput set-prop "ELAN071A:00 04F3:30FD Touchpad" "libinput Tapping Enabled" 1
+# Disables Touchpad
+exec xinput set-prop 11 "Device Enabled" 0
 # Enables to use gnome svaed passwords in chrome
 exec --no-startup-id /usr/bin/gnome-keyring-daemon --start --components=secrets
 # Opens Network Manager
@@ -317,7 +317,7 @@ mode "resize" {
 bindsym $mod+m [title="musicterminal"] scratchpad show; [title="musicterminal"] move position center; exec cmus-remote -C "view sorted"
 bindsym $mod+u [title="dropdown"] scratchpad show; [title="dropdown"] move position center
 bindsym $mod+b [title="bluetoothctlterminal"] scratchpad show; [title="bluetoothctlterminal"] move position center
-bindsym $mod+Shift+m [class="thunderbird"] scratchpad show; [class="thunderbird"] move position center
+bindsym $mod+Shift+m [class="com.github.neithern.g4music"] scratchpad show; [class="com.github.neithern.g4music"] move position center
 bindsym $mod+Shift+a [title="OBS"] scratchpad show; [title="OBS"] move position center
 
 
@@ -339,9 +339,9 @@ for_window [title="bluetoothctlterminal"] resize set 800 400
 for_window [title="bluetoothctlterminal"] move scratchpad
 for_window [title="bluetoothctlterminal"] border pixel 5
 
-for_window [class="thunderbird"] floating enable
-for_window [class="thunderbird"] resize set 1820 825
-for_window [class="thunderbird"] move scratchpad
+for_window [class="com.github.neithern.g4music"] floating enable
+for_window [class="com.github.neithern.g4music"] resize set 1820 825
+for_window [class="com.github.neithern.g4music"] move scratchpad
 
 for_window [title="OBS"] floating enable
 for_window [title="OBS"] resize set 1820 825

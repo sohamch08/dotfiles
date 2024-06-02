@@ -28,4 +28,4 @@ fi
 
 $HOME/bin/isilab.sh
 xset dpms 0 0 0 && xset s noblank  && xset s off
-xinput set-prop 11 "Device Enabled" 0
+

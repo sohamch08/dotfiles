@@ -1,6 +1,7 @@
+add Music/English/
+clear
 add /home/sohamch/Downloads/spotdl/Bangla Songs/
 add ./
-clear
 add /home/sohamch/Music/Japanese/
 q
 set status_display_program=/usr/local/bin/cmus-notify
