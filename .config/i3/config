@@ -83,11 +83,11 @@ exec_always --no-startup-id picom --experimental-backends
 
 ### For scratchpad
 # Opens a terminal for cmus
-exec --no-startup-id kitty -T "musicterminal" -e ~/bin/cmus-start.sh
+exec --no-startup-id kitty -T "MusicTerminalToRunCmusInBackgroundHiddenInScratchpadInI3" -e ~/bin/cmus-start.sh
 # Opens a terminal
-exec --no-startup-id kitty -T "dropdown"
+exec --no-startup-id kitty -T "DropdownTerminalInBackgroundHiddenInScratchpadInI3"
 # Opens a terminal for bluetoothctl
-exec --no-startup-id kitty -T "bluetoothctlterminal"  bluetoothctl
+exec --no-startup-id kitty -T "BluetoothctlTerminalInBackgroundHiddenInScratchpadInI3"  bluetoothctl
 # Opens thunderbird
 # exec --no-startup-id thunderbird
 
@@ -314,38 +314,38 @@ mode "resize" {
 #############
 
 ### Keybindings
-bindsym $mod+m [title="musicterminal"] scratchpad show; [title="musicterminal"] move position center; exec cmus-remote -C "view sorted"
-bindsym $mod+u [title="dropdown"] scratchpad show; [title="dropdown"] move position center
-bindsym $mod+b [title="bluetoothctlterminal"] scratchpad show; [title="bluetoothctlterminal"] move position center
+bindsym $mod+m [title="MusicTerminalToRunCmusInBackgroundHiddenInScratchpadInI3"] scratchpad show; [title="MusicTerminalToRunCmusInBackgroundHiddenInScratchpadInI3"] move position center; exec cmus-remote -C "view sorted"
+bindsym $mod+u [title="DropdownTerminalInBackgroundHiddenInScratchpadInI3"] scratchpad show; [title="DropdownTerminalInBackgroundHiddenInScratchpadInI3"] move position center
+bindsym $mod+b [title="BluetoothctlTerminalInBackgroundHiddenInScratchpadInI3"] scratchpad show; [title="BluetoothctlTerminalInBackgroundHiddenInScratchpadInI3"] move position center
 bindsym $mod+Shift+m [class="com.github.neithern.g4music"] scratchpad show; [class="com.github.neithern.g4music"] move position center
-bindsym $mod+Shift+a [title="OBS"] scratchpad show; [title="OBS"] move position center
+#bindsym $mod+Shift+a [title="OBS"] scratchpad show; [title="OBS"] move position center
 
 
-#-#===musicterminal scratchpad wondow===#-#
-for_window [title="musicterminal"] floating enable
-for_window [title="musicterminal"] resize set 1500 800
-for_window [title="musicterminal"] move scratchpad
-for_window [title="musicterminal"] border pixel 2
+#-#===MusicTerminalToRunCmusInBackgroundHiddenInScratchpadInI3 scratchpad wondow===#-#
+for_window [title="MusicTerminalToRunCmusInBackgroundHiddenInScratchpadInI3"] floating enable
+for_window [title="MusicTerminalToRunCmusInBackgroundHiddenInScratchpadInI3"] resize set 1500 800
+for_window [title="MusicTerminalToRunCmusInBackgroundHiddenInScratchpadInI3"] move scratchpad
+for_window [title="MusicTerminalToRunCmusInBackgroundHiddenInScratchpadInI3"] border pixel 2
 
-#-#===dropdown scratchpad wondow===#-#
-for_window [title="dropdown"] floating enable
-for_window [title="dropdown"] resize set 1500 800
-for_window [title="dropdown"] move scratchpad
-for_window [title="dropdown"] border pixel 5
+#-#===DropdownTerminalInBackgroundHiddenInScratchpadInI3 scratchpad wondow===#-#
+for_window [title="DropdownTerminalInBackgroundHiddenInScratchpadInI3"] floating enable
+for_window [title="DropdownTerminalInBackgroundHiddenInScratchpadInI3"] resize set 1500 800
+for_window [title="DropdownTerminalInBackgroundHiddenInScratchpadInI3"] move scratchpad
+for_window [title="DropdownTerminalInBackgroundHiddenInScratchpadInI3"] border pixel 5
 
-#-#===bluetoothctlterminal scratchpad wondow===#-#
-for_window [title="bluetoothctlterminal"] floating enable
-for_window [title="bluetoothctlterminal"] resize set 800 400
-for_window [title="bluetoothctlterminal"] move scratchpad
-for_window [title="bluetoothctlterminal"] border pixel 5
+#-#===BluetoothctlTerminalInBackgroundHiddenInScratchpadInI3 scratchpad wondow===#-#
+for_window [title="BluetoothctlTerminalInBackgroundHiddenInScratchpadInI3"] floating enable
+for_window [title="BluetoothctlTerminalInBackgroundHiddenInScratchpadInI3"] resize set 800 400
+for_window [title="BluetoothctlTerminalInBackgroundHiddenInScratchpadInI3"] move scratchpad
+for_window [title="BluetoothctlTerminalInBackgroundHiddenInScratchpadInI3"] border pixel 5
 
 for_window [class="com.github.neithern.g4music"] floating enable
 for_window [class="com.github.neithern.g4music"] resize set 1820 825
 for_window [class="com.github.neithern.g4music"] move scratchpad
 
-for_window [title="OBS"] floating enable
-for_window [title="OBS"] resize set 1820 825
-for_window [title="OBS"] move scratchpad
+#for_window [title="OBS"] floating enable
+#for_window [title="OBS"] resize set 1820 825
+#for_window [title="OBS"] move scratchpad
 #################
 # Color settings
 #################
