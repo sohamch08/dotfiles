@@ -1,8 +1,14 @@
-q
-add Downloads/spotdl/Bangla Songs/
+add /home/sohamch/Downloads/spotdl/Bangla Songs/
+add ./
 clear
+add /home/sohamch/Music/Japanese/
+q
+set status_display_program=/usr/local/bin/cmus-notify
+set repeat=false
+set lib_sort=title
+set aaa_mode=all
+add Downloads/spotdl/Bangla Songs/
 set lib_sort=albumartist
 fset classi
-set lib_sort=title
 se filename play_count
 set pl_sort=title

@@ -6,6 +6,13 @@ if [[ -e "$HOME/.bashrc" ]]; then
 else
     ln -s $(pwd)/.bashrc $HOME/.bashrc
 fi
+# Setup .profile
+if [[ -e "$HOME/.profile" ]]; then
+    mv $HOME/.profile $HOME/.profile.bak
+    ln -s $(pwd)/.profile $HOME/.profile
+else
+    ln -s $(pwd)/.profile $HOME/.profile
+fi
 
 # Setup starship prompt
 if [[ -e "$HOME/.config/starship.toml" ]]; then

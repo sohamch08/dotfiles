@@ -83,7 +83,7 @@ exec_always --no-startup-id picom --experimental-backends
 
 ### For scratchpad
 # Opens a terminal for cmus
-exec --no-startup-id alacritty -t "musicterminal" -e ~/bin/cmus-start.sh
+exec --no-startup-id kitty -T "musicterminal" -e ~/bin/cmus-start.sh
 # Opens a terminal
 exec --no-startup-id kitty -T "dropdown"
 # Opens a terminal for bluetoothctl
