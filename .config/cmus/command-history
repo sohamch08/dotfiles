@@ -1,5 +1,10 @@
-add Music/English/
+update-cache 
+set format_title=%l - %a - %t (%y)
+set format_current= %l - %a -%3n. %t%= %y 
+set aaa_mode=all
+add ~/Downloads/spotdl/Bangla Songs/
 clear
+add Music/English/
 add /home/sohamch/Downloads/spotdl/Bangla Songs/
 add ./
 add /home/sohamch/Music/Japanese/
@@ -7,7 +12,6 @@ q
 set status_display_program=/usr/local/bin/cmus-notify
 set repeat=false
 set lib_sort=title
-set aaa_mode=all
 add Downloads/spotdl/Bangla Songs/
 set lib_sort=albumartist
 fset classi

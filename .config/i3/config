@@ -264,7 +264,7 @@ bindsym $mod+Shift+x exec multilockscreen -l dim
 bindsym $mod+Shift+q kill
 
 ### Keybind $Mod+Shift+Ctrl+<key>
-bindsym $Mod+Shift+Ctrl+x exec flatpak run org.texstudio.TeXstudio
+bindsym $Mod+Shift+Ctrl+x exec texstudio
 
 ### I3 Session ending
 # Power Menu
