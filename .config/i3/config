@@ -44,7 +44,7 @@ gaps outer 0
 # https://wiki.archlinux.org/index.php/XDG_Autostart
 exec --no-startup-id dex-autostart --autostart --environment i3
 # Disables Touchpad
-exec xinput set-prop 11 "Device Enabled" 0
+# exec xinput set-prop 11 "Device Enabled" 0
 # Enables to use gnome svaed passwords in chrome
 exec --no-startup-id /usr/bin/gnome-keyring-daemon --start --components=secrets
 # Opens Network Manager
