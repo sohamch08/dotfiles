@@ -69,3 +69,5 @@ colorscheme tokyonight-night
 let g:tex_conceal = ''
 let g:vimtex_syntax_conceal_disable = 1
 let g:indentLine_conceallevel = 0
+
+lua require'nvim-tree'.setup {}

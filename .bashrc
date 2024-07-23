@@ -117,7 +117,7 @@ if ! shopt -oq posix; then
 fi
 
 xset dpms 0 0 0 && xset s noblank  && xset s off
-# $HOME/bin/isilab.sh
+$HOME/.screenlayout/isilab.sh
 pfetch
 eval "$(starship init bash)"
 
@@ -131,3 +131,6 @@ PERL_LOCAL_LIB_ROOT="/home/sohamch/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB
 PERL_MB_OPT="--install_base \"/home/sohamch/perl5\""; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=/home/sohamch/perl5"; export PERL_MM_OPT;
 . "$HOME/.cargo/env"
+# Install Ruby Gems to ~/gems
+export GEM_HOME="$HOME/gems"
+export PATH="$HOME/gems/bin:$PATH"

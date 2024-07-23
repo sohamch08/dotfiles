@@ -74,7 +74,7 @@ exec --no-startup-id dbus-launch dunst --config ~/.config/dunst/dunstrc
 # Charging notification
 # exec --no-startup-id /home/sohamch/bin/batterynotify.sh
 # redshift
-# exec --no-startup-id redshift -l 13:80
+exec --no-startup-id redshift -l 13:80 -m randr
 # starts picom
 exec_always --no-startup-id picom --experimental-backends
 #exec --no-startup-id picom -f
@@ -257,9 +257,9 @@ bindsym $mod+Shift+slash exec xfce4-find-cursor
 #bindsym $Mod+Shift+v exec code
 bindsym $Mod+Shift+w exec $fm
 # If single screen is there
-bindsym $mod+Shift+x exec multilockscreen -l dim
+# bindsym $mod+Shift+x exec betterlockscreen -l dim
 # If multiple screens are there
-# bindsym $mod+Shift+x exec multilockscreen -l dim
+bindsym $mod+Shift+x exec multilockscreen -l dim
 #bindsym $mod+Shift+x exec i3lock
 bindsym $mod+Shift+q kill
 

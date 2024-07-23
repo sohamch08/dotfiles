@@ -40,7 +40,7 @@ alias cdweb="cd ~/Arna/Coding/Web\ Coding/sohamch08.github.io"
 
 ### Cat
 alias c='cat'
-#alias b='bat'
+alias b='btop --utf-force'
 
 ### Others
 alias sourced='source ~/.bashrc'
@@ -66,6 +66,5 @@ alias mdview='f() { input=$1; pandoc $input > $input.html ; lynx $input.html; un
 alias djvu2pdf='f() { input=$1; ddjvu -format=pdf -quality=85 -verbose "$1" "$1.pdf"; unset -f f; }; f'
 #alias debinstall='f () { input=$1; sudo debtap $input; sudo pacman -U $input.tar.zst; unset -f f; }; f'
 alias python="python3"
-alias sp="python -m spotdl --bitrate 320k"
+alias spotdl="python -m spotdl --bitrate 320k"
 alias screenDarkOff="xset dpms 0 0 0 && xset s noblank  && xset s off"
-alias spotdl="python -m spotdl"
