@@ -70,9 +70,11 @@ exec --no-startup-id dbus-launch dunst --config ~/.config/dunst/dunstrc
 # Clear greenclip
 #exec greenclip clear
 # Charging notification
-# exec --no-startup-id /home/sohamch/bin/chargingnotify.sh
+exec --no-startup-id /home/sohamch/bin/chargingnotify.sh
 # Charging notification
-# exec --no-startup-id /home/sohamch/bin/batterynotify.sh
+exec --no-startup-id /home/sohamch/bin/batterynotify.sh
+# External Monitor
+exec --no-startup-id /home/sohamch/.screenlayout/isilab.sh
 # redshift
 exec --no-startup-id redshift -l 13:80 -m randr
 # starts picom
@@ -89,7 +91,7 @@ exec --no-startup-id kitty -T "DropdownTerminalInBackgroundHiddenInScratchpadInI
 # Opens a terminal for bluetoothctl
 exec --no-startup-id kitty -T "BluetoothctlTerminalInBackgroundHiddenInScratchpadInI3"  bluetoothctl
 # Opens thunderbird
-# exec --no-startup-id thunderbird
+exec --no-startup-id flatpak run org.mozilla.Thunderbird
 
 ################
 # Audio Control
@@ -317,8 +319,10 @@ mode "resize" {
 bindsym $mod+m [title="MusicTerminalToRunCmusInBackgroundHiddenInScratchpadInI3"] scratchpad show; [title="MusicTerminalToRunCmusInBackgroundHiddenInScratchpadInI3"] move position center; exec cmus-remote -C "view sorted"
 bindsym $mod+u [title="DropdownTerminalInBackgroundHiddenInScratchpadInI3"] scratchpad show; [title="DropdownTerminalInBackgroundHiddenInScratchpadInI3"] move position center
 bindsym $mod+b [title="BluetoothctlTerminalInBackgroundHiddenInScratchpadInI3"] scratchpad show; [title="BluetoothctlTerminalInBackgroundHiddenInScratchpadInI3"] move position center
-bindsym $mod+Shift+m [class="com.github.neithern.g4music"] scratchpad show; [class="com.github.neithern.g4music"] move position center
-#bindsym $mod+Shift+a [title="OBS"] scratchpad show; [title="OBS"] move position center
+bindsym $mod+Ctrl+Shift+m [class="com.github.neithern.g4music"] scratchpad show; [class="com.github.neithern.g4music"] move position center
+bindsym $mod+Shift+m [class="thunderbird-esr"] scratchpad show; [class="thunderbird-esr"] move position center
+bindsym $mod+Shift+a [title="OBS 30.1.2 - Profile: Untitled - Scenes: Untitled"] scratchpad show; [title="OBS 30.1.2 - Profile: Untitled - Scenes: Untitled"] move position center
+bindsym $mod+Mod1+v [class="PulseUI"] scratchpad show; [class="PulseUI"] move position center
 
 
 #-#===MusicTerminalToRunCmusInBackgroundHiddenInScratchpadInI3 scratchpad wondow===#-#
@@ -331,21 +335,31 @@ for_window [title="MusicTerminalToRunCmusInBackgroundHiddenInScratchpadInI3"] bo
 for_window [title="DropdownTerminalInBackgroundHiddenInScratchpadInI3"] floating enable
 for_window [title="DropdownTerminalInBackgroundHiddenInScratchpadInI3"] resize set 1500 800
 for_window [title="DropdownTerminalInBackgroundHiddenInScratchpadInI3"] move scratchpad
-for_window [title="DropdownTerminalInBackgroundHiddenInScratchpadInI3"] border pixel 5
+for_window [title="DropdownTerminalInBackgroundHiddenInScratchpadInI3"] border pixel 2
 
 #-#===BluetoothctlTerminalInBackgroundHiddenInScratchpadInI3 scratchpad wondow===#-#
 for_window [title="BluetoothctlTerminalInBackgroundHiddenInScratchpadInI3"] floating enable
 for_window [title="BluetoothctlTerminalInBackgroundHiddenInScratchpadInI3"] resize set 800 400
 for_window [title="BluetoothctlTerminalInBackgroundHiddenInScratchpadInI3"] move scratchpad
-for_window [title="BluetoothctlTerminalInBackgroundHiddenInScratchpadInI3"] border pixel 5
+for_window [title="BluetoothctlTerminalInBackgroundHiddenInScratchpadInI3"] border pixel 2
 
+#-#===Thunderbird scratchpad wondow===#-#
+for_window [class="thunderbird-esr"] floating enable
+for_window [class="thunderbird-esr"] resize set 1820 900
+for_window [class="thunderbird-esr"] move scratchpad
+
+#-#===G4 Music scratchpad wondow===#-#
 for_window [class="com.github.neithern.g4music"] floating enable
 for_window [class="com.github.neithern.g4music"] resize set 1820 825
 for_window [class="com.github.neithern.g4music"] move scratchpad
 
-#for_window [title="OBS"] floating enable
-#for_window [title="OBS"] resize set 1820 825
-#for_window [title="OBS"] move scratchpad
+for_window [class="PulseUI"] floating enable
+for_window [class="PulseUI"] resize set 600 400
+for_window [class="PulseUI"] move scratchpad
+
+for_window [title="OBS 30.1.2 - Profile: Untitled - Scenes: Untitled"] floating enable
+for_window [title="OBS 30.1.2 - Profile: Untitled - Scenes: Untitled"] resize set 1820 825
+for_window [title="OBS 30.1.2 - Profile: Untitled - Scenes: Untitled"] move scratchpad
 #################
 # Color settings
 #################

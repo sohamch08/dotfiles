@@ -116,8 +116,6 @@ if ! shopt -oq posix; then
   fi
 fi
 
-xset dpms 0 0 0 && xset s noblank  && xset s off
-$HOME/.screenlayout/isilab.sh
 pfetch
 eval "$(starship init bash)"
 

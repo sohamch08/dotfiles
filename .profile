@@ -26,8 +26,6 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
-$HOME/bin/isilab.sh
 xset dpms 0 0 0 && xset s noblank  && xset s off
-
 export QT_STYLE_OVERRIDE=kvantum
 . "$HOME/.cargo/env"
