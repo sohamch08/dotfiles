@@ -131,4 +131,4 @@ PERL_MM_OPT="INSTALL_BASE=/home/sohamch/perl5"; export PERL_MM_OPT;
 . "$HOME/.cargo/env"
 # Install Ruby Gems to ~/gems
 export GEM_HOME="$HOME/gems"
-export PATH="$HOME/gems/bin:$PATH"
+export PATH="$PATH:$HOME/gems/bin:/sbin:/usr/sbin"
