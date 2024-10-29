@@ -261,7 +261,7 @@ bindsym $mod+p exec ~/bin/openbook.sh
 bindsym $mod+r mode "resize"
 bindsym $mod+n mode "Controls"
 bindsym $mod+Return exec $myTerm
-
+bindsym --whole-window $mod+button3 exec xfce4-find-cursor
 ### Keybind $Mod+Shift+<key>
 bindsym $mod+Shift+b exec brave-browser --password-store
 bindsym $Mod+Shift+t exec flatpak run org.telegram.desktop
@@ -312,7 +312,6 @@ mode "Controls" {
         bindsym h exec "brightnessctl -d amdgpu_bl0 set 10-; notify-send 'brightness down'"
         bindsym m exec --no-startup-id  $HOME/bin/change-vol.sh mute
         bindsym M exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle 
-        bindsym $mod+Shift+F1 exec xfce4-find-cursor
 }
 
 # resize window (you can also use the mouse for that)
