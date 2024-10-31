@@ -271,7 +271,7 @@ bindsym $Mod+Shift+w exec $fm
 # If single screen is there
 # bindsym $mod+Shift+x exec betterlockscreen -l dim
 # If multiple screens are there
-bindsym $mod+Shift+x exec multilockscreen -l dim
+bindsym $mod+Shift+x exec i3lock -n -i ~/Pictures/Wallpaper/Linux/debian5.png   --color=000000 --inside-color=373445 --ring-color=ffffff     --line-uses-inside --keyhl-color=d23c3d --bshl-color=d23c3d     --insidever-color=fecf4d --insidewrong-color=d23c3d     --ringver-color=ffffff --ringwrong-color=ffffff     --radius=15 --verif-text="" --wrong-text="" --noinput-text=""     --scale fit --time-color=000000 --ind-pos="x+86:y+1030"
 #bindsym $mod+Shift+x exec i3lock
 bindsym $mod+Shift+q kill
 
@@ -311,7 +311,9 @@ mode "Controls" {
         bindsym l exec "brightnessctl -d amdgpu_bl0 set 10+; notify-send 'brightness up'" 
         bindsym h exec "brightnessctl -d amdgpu_bl0 set 10-; notify-send 'brightness down'"
         bindsym m exec --no-startup-id  $HOME/bin/change-vol.sh mute
-        bindsym M exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle 
+        bindsym Shift+m exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle 
+        bindsym p exec ~/bin/screenshot.sh
+        bindsym --release Shift+p exec ~/bin/screenshotselect.sh
 }
 
 # resize window (you can also use the mouse for that)
