@@ -66,9 +66,9 @@ exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 # Starts dunst
 exec --no-startup-id dbus-launch dunst --config ~/.config/dunst/dunstrc
 # Starts greenclip deamon (install rofi-greenclip from the AUR)
-#exec --no-startup-id greenclip daemon>/dev/null 
+exec --no-startup-id greenclip daemon>/dev/null 
 # Clear greenclip
-#exec greenclip clear
+exec greenclip clear
 # Charging notification
 exec --no-startup-id /home/sohamch/bin/chargingnotify.sh
 # Charging notification
@@ -315,7 +315,12 @@ mode "Controls" {
         bindsym p exec ~/bin/screenshot.sh
         bindsym --release Shift+p exec ~/bin/screenshotselect.sh
 }
+#CapsLock indicator
+mode "CAPSLOCK" {
+    bindsym Caps_Lock mode "default"
+}
 
+bindsym Caps_Lock mode "CAPSLOCK"
 # resize window (you can also use the mouse for that)
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
