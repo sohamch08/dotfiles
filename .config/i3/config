@@ -318,9 +318,15 @@ mode "Controls" {
 #CapsLock indicator
 mode "CAPSLOCK" {
     bindsym Caps_Lock mode "default"
+    bindsym Shift+Caps_Lock mode "default"
+    bindsym Ctrl+Caps_Lock mode "default"
+    bindsym Mod1+Caps_Lock mode "default"
 }
 
 bindsym Caps_Lock mode "CAPSLOCK"
+bindsym Shift+Caps_Lock mode "CAPSLOCK"
+bindsym Ctrl+Caps_Lock mode "CAPSLOCK"
+bindsym Mod1+Caps_Lock mode "CAPSLOCK"
 # resize window (you can also use the mouse for that)
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
