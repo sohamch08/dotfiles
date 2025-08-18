@@ -12,7 +12,7 @@ esac
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
 HISTCONTROL=ignoreboth
-export PATH="$HOME/bin:$HOME/Applications:$PATH"
+export PATH="$HOME/bin:$HOME/.local/bin:$HOME/Applications:$PATH"
 # append to the history file, don't overwrite it
 shopt -s histappend
 
@@ -132,3 +132,7 @@ PERL_MM_OPT="INSTALL_BASE=/home/sohamch/perl5"; export PERL_MM_OPT;
 # Install Ruby Gems to ~/gems
 export GEM_HOME="$HOME/gems"
 export PATH="$PATH:$HOME/gems/bin:/sbin:/usr/sbin"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

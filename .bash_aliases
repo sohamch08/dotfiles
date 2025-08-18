@@ -68,3 +68,7 @@ alias djvu2pdf='f() { input=$1; ddjvu -format=pdf -quality=85 -verbose "$1" "$1.
 alias python="python3"
 alias spotdl="python -m spotdl --bitrate 320k"
 alias screenDarkOff="xset dpms 0 0 0 && xset s noblank  && xset s off"
+
+# ADB 
+alias shizukuStart='adb shell sh /sdcard/Android/data/moe.shizuku.privileged.api/start.sh'
+alias btop='btop --utf-force'

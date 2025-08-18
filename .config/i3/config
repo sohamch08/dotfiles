@@ -74,7 +74,7 @@ exec --no-startup-id /home/sohamch/bin/chargingnotify.sh
 # Charging notification
 exec --no-startup-id /home/sohamch/bin/batterynotify.sh
 # External Monitor
-exec --no-startup-id /home/sohamch/.screenlayout/tifroffice.sh
+# exec --no-startup-id /home/sohamch/.screenlayout/tifroffice.sh
 # redshift
 exec --no-startup-id redshift -l 13:80 -m randr
 # starts picom
@@ -271,7 +271,7 @@ bindsym $Mod+Shift+w exec $fm
 # If single screen is there
 # bindsym $mod+Shift+x exec betterlockscreen -l dim
 # If multiple screens are there
-bindsym $mod+Shift+x exec i3lock -n -i ~/Pictures/Wallpaper/Linux/debian5.png   --color=000000 --inside-color=373445 --ring-color=ffffff     --line-uses-inside --keyhl-color=d23c3d --bshl-color=d23c3d     --insidever-color=fecf4d --insidewrong-color=d23c3d     --ringver-color=ffffff --ringwrong-color=ffffff     --radius=15 --verif-text="" --wrong-text="" --noinput-text=""     --scale fit --time-color=000000 --ind-pos="x+86:y+1030"
+bindsym $mod+Shift+x exec ~/bin/lockscreen.sh
 #bindsym $mod+Shift+x exec i3lock
 bindsym $mod+Shift+q kill
 
@@ -357,7 +357,7 @@ bindsym $mod+u [title="DropdownTerminalInBackgroundHiddenInScratchpadInI3"] scra
 bindsym $mod+b [title="BluetoothctlTerminalInBackgroundHiddenInScratchpadInI3"] scratchpad show; [title="BluetoothctlTerminalInBackgroundHiddenInScratchpadInI3"] move position center
 bindsym $mod+Ctrl+Shift+m [class="com.github.neithern.g4music"] scratchpad show; [class="com.github.neithern.g4music"] move position center
 bindsym $mod+Shift+m [class="thunderbird-esr"] scratchpad show; [class="thunderbird-esr"] move position center
-bindsym $mod+Shift+a [title="OBS 30.1.2 - Profile: Untitled - Scenes: Untitled"] scratchpad show; [title="OBS 30.1.2 - Profile: Untitled - Scenes: Untitled"] move position center
+bindsym $mod+Shift+a [title="OBS 30.2.3 - Profile: Untitled - Scenes: Untitled"] scratchpad show; [title="OBS 30.2.3 - Profile: Untitled - Scenes: Untitled"] move position center
 bindsym $mod+Mod1+v [class="PulseUI"] scratchpad show; [class="PulseUI"] move position center
 
 
@@ -393,9 +393,9 @@ for_window [class="PulseUI"] floating enable
 for_window [class="PulseUI"] resize set 600 400
 for_window [class="PulseUI"] move scratchpad
 
-for_window [title="OBS 30.1.2 - Profile: Untitled - Scenes: Untitled"] floating enable
-for_window [title="OBS 30.1.2 - Profile: Untitled - Scenes: Untitled"] resize set 1820 825
-for_window [title="OBS 30.1.2 - Profile: Untitled - Scenes: Untitled"] move scratchpad
+for_window [title="OBS 30.2.3 - Profile: Untitled - Scenes: Untitled"] floating enable
+for_window [title="OBS 30.2.3 - Profile: Untitled - Scenes: Untitled"] resize set 1820 825
+for_window [title="OBS 30.2.3 - Profile: Untitled - Scenes: Untitled"] move scratchpad
 #################
 # Color settings
 #################
