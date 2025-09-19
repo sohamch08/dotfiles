@@ -1,155 +1,55 @@
-[colors]
-# author = "Chris Kempson"
-# name = "Ashes (dark)"
-
-[colors.bright]
-black = "#4d4d4d"
-blue = "#caa9fa"
-cyan = "#9aedfe"
-green = "#5af78e"
-magenta = "#ff92d0"
-red = "#ff6e67"
-white = "#e6e6e6"
-yellow = "#f4f99d"
-
-[colors.cursor]
-cursor = "#c7ccd1"
-text = "#1c2023"
-
-[colors.normal]
-black = "#000000"
-blue = "#bd93f9"
-cyan = "#8be9fd"
-green = "#50fa7b"
-magenta = "#ff79c6"
-red = "#ff5555"
-white = "#bfbfbf"
-yellow = "#f1fa8c"
 
 [colors.primary]
 background = "#1e222a"
 foreground = "#f8f8f2"
 
+[colors.normal]
+black   = "#000000"
+red     = "#ff5555"
+green   = "#50fa7b"
+yellow  = "#f1fa8c"
+blue    = "#bd93f9"
+magenta = "#ff79c6"
+cyan    = "#8be9fd"
+white   = "#bfbfbf"
+
+[colors.bright]
+black   = "#4d4d4d"
+red     = "#ff6e67"
+green   = "#5af78e"
+yellow  = "#f4f99d"
+blue    = "#caa9fa"
+magenta = "#ff92d0"
+cyan    = "#9aedfe"
+white   = "#e6e6e6"
+
+[colors.cursor]
+cursor = "#c7ccd1"
+text = "#1c2023"
+
+[cursor.style]
+shape = "Block"
+blinking = "Off"
+
 [cursor]
 vi_mode_style = "Block"
 
-[cursor.style]
-blinking = "Off"
-shape = "Block"
-
 [font]
-size = 1
-
-[font.bold]
-family = "Iosevka"
-style = "Bold"
-
-[font.bold_italic]
-family = "Iosevka"
-style = "Bold Italic"
-
-[font.italic]
-family = "Iosevka"
-style = "Italic"
+size = 16.0
 
 [font.normal]
-family = "Iosevka"
+family = "Iosevka Nerd Font"
 style = "Regular"
 
-[font.offset]
-x = 0
-y = 0
+[font.bold]
+family = "Iosevka Nerd Font"
+style = "Bold"
 
-# [schemes.DoomOne.bright]
-# black = "#5b6268"
-# blue = "#3071db"
-# cyan = "#46d9ff"
-# green = "#4db5bd"
-# magenta = "#a9a1e1"
-# red = "#da8548"
-# white = "#dfdfdf"
-# yellow = "#ecbe7b"
-#
-# [schemes.DoomOne.cursor]
-# cursor = "#528bff"
-# text = "CellBackground"
-#
-# [schemes.DoomOne.normal]
-# black = "#1c1f24"
-# blue = "#51afef"
-# cyan = "#5699af"
-# green = "#98be65"
-# magenta = "#c678dd"
-# red = "#ff6c6b"
-# white = "#202328"
-# yellow = "#da8548"
-#
-# [schemes.DoomOne.primary]
-# background = "#282c34"
-# foreground = "#bbc2cf"
-#
-# [schemes.DoomOne.selection]
-# background = "#3e4451"
-# text = "CellForeground"
-#
-# [schemes.Dracula.bright]
-# black = "#4d4d4d"
-# blue = "#caa9fa"
-# cyan = "#9aedfe"
-# green = "#5af78e"
-# magenta = "#ff92d0"
-# red = "#ff6e67"
-# white = "#e6e6e6"
-# yellow = "#f4f99d"
-#
-# [schemes.Dracula.cursor]
-# cursor = "CellForeground"
-# text = "CellBackground"
-#
-# [schemes.Dracula.dim]
-# black = "#14151b"
-# blue = "#4d5b86"
-# cyan = "#59dffc"
-# green = "#1ef956"
-# magenta = "#ff46b0"
-# red = "#ff2222"
-# white = "#e6e6d1"
-# yellow = "#ebf85b"
-#
-# [schemes.Dracula.line_indicator]
-# background = "None"
-# foreground = "None"
-#
-# [schemes.Dracula.normal]
-# black = "#000000"
-# blue = "#bd93f9"
-# cyan = "#8be9fd"
-# green = "#50fa7b"
-# magenta = "#ff79c6"
-# red = "#ff5555"
-# white = "#bfbfbf"
-# yellow = "#f1fa8c"
-#
-# [schemes.Dracula.primary]
-# background = "#1e222a"
-# foreground = "#f8f8f2"
-#
-# [schemes.Dracula.search.focused_match]
-# background = "#ffb86c"
-# foreground = "#44475a"
-#
-# [schemes.Dracula.search.footer_bar]
-# background = "#282a36"
-# foreground = "#f8f8f2"
-#
-# [schemes.Dracula.search.matches]
-# background = "#50fa7b"
-# foreground = "#44475a"
-#
-# [schemes.Dracula.selection]
-# background = "#44475a"
-# text = "CellForeground"
-#
-# [schemes.Dracula.vi_mode_cursor]
-# cursor = "CellForeground"
-# text = "CellBackground"
+[font.italic]
+family = "Iosevka Nerd Font"
+style = "Italic"
+
+[font.bold_italic]
+family = "Iosevka Nerd Font"
+style = "Bold Italic"
+
