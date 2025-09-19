@@ -79,6 +79,7 @@ exec --no-startup-id /home/sohamch/bin/batterynotify.sh
 exec --no-startup-id redshift -l 13:80 -m randr
 # starts picom
 exec_always --no-startup-id picom --experimental-backends
+exec_always --no-startup-id $HOME/bin/tifroffice.sh
 #exec --no-startup-id picom -f
 # disables Touchpad
 #exec --no-startup-id xinput-toggle.sh 'ELAN071A:00 04F3:30FD Touchpad'
@@ -193,16 +194,16 @@ set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
-workspace 1 output eDP
-workspace 2 output HDMI-A-0
-workspace 3 output eDP
-workspace 4 output HDMI-A-0
-workspace 5 output eDP
-workspace 6 output HDMI-A-0
-workspace 7 output eDP
-workspace 8 output HDMI-A-0
-workspace 9 output eDP
-workspace 10 output HDMI-A-0
+workspace 1 output HDMI-A-0
+workspace 2 output eDP
+workspace 3 output HDMI-A-0
+workspace 4 output eDP
+workspace 5 output HDMI-A-0
+workspace 6 output eDP
+workspace 7 output HDMI-A-0
+workspace 8 output eDP
+workspace 9 output HDMI-A-0
+workspace 10 output eDP
 # switch to workspace
 bindsym $mod+1 workspace $ws1
 bindsym $mod+2 workspace $ws2

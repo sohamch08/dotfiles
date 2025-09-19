@@ -37,6 +37,7 @@ alias cddotfiles="cd ~/Github/dotfiles/"
 alias cdacad="cd ~/Arna/Markdown/My-Academic-Works/"
 alias cdq="cd ~/Arna/Coding/Qiskit"
 alias cdweb="cd ~/Arna/Coding/Web\ Coding/sohamch08.github.io"
+alias cdtopix="cd ~/Arna/Topics\ in\ Coding\ Theory\ Lecture\ Notes"
 
 ### Cat
 alias c='cat'
