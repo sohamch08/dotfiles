@@ -16,7 +16,7 @@
 #####################
 set $mod Mod4
 set $fm "thunar"
-set $myTerm kitty
+set $myTerm alacritty
 
 #######
 # Font

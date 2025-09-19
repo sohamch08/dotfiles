@@ -38,18 +38,18 @@ vi_mode_style = "Block"
 size = 16.0
 
 [font.normal]
-family = "Iosevka Nerd Font"
+family = "Iosevka Font"
 style = "Regular"
 
 [font.bold]
-family = "Iosevka Nerd Font"
+family = "Iosevka Font"
 style = "Bold"
 
 [font.italic]
-family = "Iosevka Nerd Font"
+family = "Iosevka Font"
 style = "Italic"
 
 [font.bold_italic]
-family = "Iosevka Nerd Font"
+family = "Iosevka Font"
 style = "Bold Italic"
 

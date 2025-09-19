@@ -2,7 +2,7 @@
 
 declare -a options=(
 "menu-config - $HOME/bin/dm-config.sh"
-"alacritty - $HOME/.config/alacritty/alacritty.yml"
+"alacritty - $HOME/.config/alacritty/alacritty.toml"
 "kitty - $HOME/.config/kitty/kitty.conf"
 "i3 - $HOME/.config/i3/config"
 "qtile - $HOME/.config/qtile/config.py"

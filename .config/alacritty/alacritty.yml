@@ -137,6 +137,120 @@ font:
 ##      START OF COLOR SCHEMES       ##
 #######################################
 schemes:
+  ### Everforest ###
+  Everforest:
+    &Everforest
+    primary:
+      background: '#2b3339'  # Base dark
+      foreground: '#d3c6aa'  # Foreground text
+
+    cursor:
+      text: '#2b3339'
+      cursor: '#d3c6aa'
+
+    vi_mode_cursor:
+      text: CellBackground
+      cursor: CellForeground
+
+    selection:
+      text: '#d3c6aa'
+      background: '#3a444a'
+
+    normal:
+      black:   '#2b3339'
+      red:     '#e46876'
+      green:   '#a7c080'
+      yellow:  '#d7c080'
+      blue:    '#7fbbb3'
+      magenta: '#d699b6'
+      cyan:    '#83c092'
+      white:   '#d3c6aa'
+
+    bright:
+      black:   '#65737e'
+      red:     '#e46876'
+      green:   '#a7c080'
+      yellow:  '#d7c080'
+      blue:    '#7fbbb3'
+      magenta: '#d699b6'
+      cyan:    '#83c092'
+      white:   '#e0dfc9'
+  ### Tokyo Night Storm ###
+  TokyoNightStorm:
+    &TokyoNightStorm
+    primary:
+      background: '#1a1b26'  # Base dark
+      foreground: '#c0caf5'  # Foreground text
+
+    cursor:
+      text: '#1a1b26'
+      cursor: '#7aa2f7'
+
+    vi_mode_cursor:
+      text: CellBackground
+      cursor: CellForeground
+
+    selection:
+      text: '#c0caf5'
+      background: '#414868'
+
+    normal:
+      black:   '#1a1b26'
+      red:     '#f7768e'
+      green:   '#9ece6a'
+      yellow:  '#e0af68'
+      blue:    '#7aa2f7'
+      magenta: '#bb9af7'
+      cyan:    '#7dcfff'
+      white:   '#a9b1d6'
+
+    bright:
+      black:   '#414868'
+      red:     '#f7768e'
+      green:   '#9ece6a'
+      yellow:  '#e0af68'
+      blue:    '#7aa2f7'
+      magenta: '#bb9af7'
+      cyan:    '#7dcfff'
+      white:   '#c0caf5'
+  ### Rose Pine ###
+  RosePine:
+    &RosePine
+    primary:
+      background: '#191724'  # Base
+      foreground: '#e0def4'  # Text
+
+    cursor:
+      text: '#191724'
+      cursor: '#f6c177'
+    vi_mode_cursor:
+      text: CellBackground
+      cursor: CellForeground
+
+    selection:
+      text: '#e0def4'
+      background: '#403d52'
+
+    normal:
+      black:   '#191724'
+      red:     '#eb6f92'
+      green:   '#9ccfd8'
+      yellow:  '#f6c177'
+      blue:    '#31748f'
+      magenta: '#c4a7e7'
+      cyan:    '#9ccfd8'
+      white:   '#e0def4'
+
+    bright:
+      black:   '#6e6a86'
+      red:     '#eb6f92'
+      green:   '#9ccfd8'
+      yellow:  '#f6c177'
+      blue:    '#31748f'
+      magenta: '#c4a7e7'
+      cyan:    '#9ccfd8'
+      white:   '#f6f1fc'
+
   ### Doom One ###
   DoomOne:
     &DoomOne
@@ -223,41 +337,45 @@ schemes:
       magenta: '#ff46b0'
       cyan: '#59dffc'
       white: '#e6e6d1'
+  ### Rose Pine Lively ###
+  RosePineLively:
+    &RosePineLively
+    primary:
+      background: '#232136'  # slightly lighter than original #191724
+      foreground: '#e6e0f0'  # slightly brighter than #e0def4
 
-# Colors (Tomorrow Night)
-colors:
-  name: Ashes (dark)
-  author: Chris Kempson
-  primary:
-    background: "#1c2023"
-    foreground: "#c7ccd1"
-  cursor:
-    text: "#1c2023"
-    cursor: "#c7ccd1"
-  normal:
-    black: "#1c2023"
-    red: "#c7ae95"
-    green: "#95c7ae"
-    yellow: "#aec795"
-    blue: "#ae95c7"
-    magenta: "#c795ae"
-    cyan: "#95aec7"
-    white: "#c7ccd1"
-  bright:
-    black: "#747c84"
-    red: "#c7ae95"
-    green: "#95c7ae"
-    yellow: "#aec795"
-    blue: "#ae95c7"
-    magenta: "#c795ae"
-    cyan: "#95aec7"
-    white: "#f3f4f5"
-# theme: Ashes.dark
+    cursor:
+      text: '#232136'
+      cursor: '#f6c177'
 
-# Default colors
-#primary:
-#  background: '#282a36'
-#  foreground: '#c5c8c6'
+    vi_mode_cursor:
+      text: CellBackground
+      cursor: CellForeground
+
+    selection:
+      text: '#e6e0f0'
+      background: '#504f67'  # slightly lighter selection
+
+    normal:
+      black:   '#232136'
+      red:     '#f07178'  # slightly brighter
+      green:   '#99d4d8'  # more vivid cyan-green
+      yellow:  '#f6c177'
+      blue:    '#5a87a0'  # more vivid blue
+      magenta: '#c4a7e7'
+      cyan:    '#9cdfe0'  # brighter cyan
+      white:   '#e6e0f0'
+
+    bright:
+      black:   '#7a748c'
+      red:     '#f07178'
+      green:   '#99d4d8'
+      yellow:  '#f6c177'
+      blue:    '#5a87a0'
+      magenta: '#c4a7e7'
+      cyan:    '#9cdfe0'
+      white:   '#f7f1fc'
+colors: *RosePineLively
 # Bright and dim foreground colors
 #
 # The dimmed foreground color is calculated automatically if it is not
