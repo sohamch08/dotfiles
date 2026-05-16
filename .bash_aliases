@@ -85,26 +85,26 @@ rcls() {
 # Tree view of any remote via eza (mounts temporarily)
 rctree() {
     local remote="$1"
-    local mount="$HOME/.rclone-mounts/${remote%:}"
+    local mount="$HOME/${remote}-mounts"
     mkdir -p "$mount"
-    rclone mount "$remote" "$mount" --daemon --vfs-cache-mode full
-    eza --tree --icons --long --human-readable "$mount"
+    rclone mount "$remote:" "$mount" --daemon --vfs-cache-mode full
+    lt "$mount"
 }
 
 # Mount a remote
 rcmount() {
     local remote="$1"
-    local mount="$HOME/.rclone-mounts/${remote%:}"
+    local mount="$HOME/${remote}-mounts/"
     mkdir -p "$mount"
-    rclone mount "$remote" "$mount" --daemon --vfs-cache-mode full
-    echo "Mounted $remote at $mount"
+    rclone mount "$remote:" "$mount" --daemon --vfs-cache-mode full
+    echo "Mounted $remote: at $mount"
 }
 
 # Unmount a remote
 rcumount() {
     local remote="$1"
-    local mount="$HOME/.rclone-mounts/${remote%:}"
-    fusermount -u "$mount" && echo "Unmounted $remote"
+    local mount="$HOME/${remote}-mounts/"
+    fusermount -u "$mount" && echo "Unmounted $remote:"
 }
 
 # Copy remote → local
