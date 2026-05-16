@@ -1,95 +1,99 @@
 #!/bin/bash
-# Setup bashrc
-if [[ -e "$HOME/.bashrc" ]]; then
-    mv $HOME/.bashrc $HOME/.bashrc.bak
-    ln -s $(pwd)/.bashrc $HOME/.bashrc
-else
-    ln -s $(pwd)/.bashrc $HOME/.bashrc
-fi
-# Setup .profile
-if [[ -e "$HOME/.profile" ]]; then
-    mv $HOME/.profile $HOME/.profile.bak
-    ln -s $(pwd)/.profile $HOME/.profile
-else
-    ln -s $(pwd)/.profile $HOME/.profile
-fi
 
-# Setup starship prompt
-if [[ -e "$HOME/.config/starship.toml" ]]; then
-    mv $HOME/.config/starship.toml $HOME/.config/starship.toml.bak
-    ln -s $(pwd)/.config/starship.toml $HOME/.config/starship.toml
-else
-    ln -s $(pwd)/.config/starship.toml $HOME/.config/starship.toml
-fi
+info()    { echo -e "  \033[0;36m→\033[0m $1"; }
+success() { echo -e "  \033[0;32m✔\033[0m \033[0;32m$1\033[0m"; }
+warn()    { echo -e "  \033[1;33m⚠\033[0m \033[1;33m$1\033[0m"; }
+error()   { echo -e "  \033[0;31m✘\033[0m \033[0;31m$1\033[0m"; }
+header()  { echo -e "\n\033[1m\033[0;36m$1\033[0m\n"; }
 
-# Setup betterlockscreen
-if [[ -e "$HOME/.config/betterlockscreenrc" ]]; then
-    mv $HOME/.config/betterlockscreenrc $HOME/.config/betterlockscreenrc.bak
-    ln -s $(pwd)/.config/betterlockscreenrc $HOME/.config/betterlockscreenrc
-else
-    ln -s $(pwd)/.config/betterlockscreenrc $HOME/.config/betterlockscreenrc
-fi
-# Setup alacritty
-if [ -d "$HOME/.config/alacritty" ]; then
-    mv $HOME/.config/alacritty $HOME/.config/alacritty.bak
-    ln -s $(pwd)/.config/alacritty $HOME/.config/alacritty
-else
-    ln -s $(pwd)/.config/alacritty $HOME/.config/alacritty
-fi
+DOTFILES_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-# Setup cmus
-if [ -d "$HOME/.config/cmus" ]; then
-    mv $HOME/.config/cmus $HOME/.config/cmus.bak
-    ln -s $(pwd)/.config/cmus $HOME/.config/cmus
-else 
-    ln -s $(pwd)/.config/cmus $HOME/.config/cmus
-fi
+# ── Symlink helper ─────────────────────────────────────────────────────────────
+# Usage: symlink <source relative to dotfiles> <destination>
 
-# Setup neofetch
-if [ -d "$HOME/.config/neofetch" ]; then
-    mv $HOME/.config/neofetch $HOME/.config/neofetch.bak
-    ln -s $(pwd)/.config/neofetch $HOME/.config/neofetch
-else 
-    ln -s $(pwd)/.config/neofetch $HOME/.config/neofetch
-fi
+symlink() {
+    local src="$DOTFILES_DIR/$1"
+    local dst="$2"
 
-# Setup nvim
-if [ -d "$HOME/.config/nvim" ]; then
-    mv $HOME/.config/nvim $HOME/.config/nvim.bak
-    ln -s $(pwd)/.config/nvim $HOME/.config/nvim
-else 
-    ln -s $(pwd)/.config/nvim $HOME/.config/nvim
-fi
+    if [ ! -e "$src" ]; then
+        warn "Source not found, skipping: $src"
+        return
+    fi
 
+    if [ -e "$dst" ] || [ -L "$dst" ]; then
+        mv "$dst" "${dst}.bak"
+        warn "Backed up existing: $dst → ${dst}.bak"
+    fi
 
-# Setup rofi
-if [ -d "$HOME/.config/rofi" ]; then
-    mv $HOME/.config/rofi $HOME/.config/rofi.bak
-    ln -s $(pwd)/.config/rofi $HOME/.config/rofi
-else 
-    ln -s $(pwd)/.config/rofi $HOME/.config/rofi
-fi
+    ln -s "$src" "$dst"
+    success "$dst"
+}
 
-# Setup i3
-if [ -d "$HOME/.config/i3" ]; then
-    mv $HOME/.config/i3 $HOME/.config/i3.bak
-    ln -s $(pwd)/.config/i3 $HOME/.config/i3
-else 
-    ln -s $(pwd)/.config/i3 $HOME/.config/i3
-fi
+# ── Dotfiles ──────────────────────────────────────────────────────────────────
 
-# Setup polybar
-if [ -d "$HOME/.config/polybar" ]; then
-    mv $HOME/.config/polybar $HOME/.config/polybar.bak
-    ln -s $(pwd)/.config/polybar $HOME/.config/polybar
-else 
-    ln -s $(pwd)/.config/polybar $HOME/.config/polybar
-fi
+setup_dotfiles() {
+    header "Symlinking dotfiles"
 
-# Setup bin
-if [ -d "$HOME/bin" ]; then
-    mv $HOME/bin $HOME/bin.bak
-    ln -s $(pwd)/bin $HOME/bin
-else 
-    ln -s $(pwd)/bin $HOME/bin
-fi
+    symlink ".bashrc"                    "$HOME/.bashrc"
+    symlink ".profile"                   "$HOME/.profile"
+    symlink ".config/starship.toml"      "$HOME/.config/starship.toml"
+    symlink ".config/alacritty"          "$HOME/.config/alacritty"
+    symlink ".config/cmus"               "$HOME/.config/cmus"
+    symlink ".config/neofetch"           "$HOME/.config/neofetch"
+    symlink ".config/nvim"               "$HOME/.config/nvim"
+    symlink ".config/rofi"               "$HOME/.config/rofi"
+    symlink "bin"                        "$HOME/bin"
+}
+
+# ── yt-download ───────────────────────────────────────────────────────────────
+
+setup_yt_download() {
+    header "Setting up yt-download"
+
+    if ! command -v python3 &>/dev/null; then
+        error "python3 not found. Install it first."
+        return 1
+    fi
+
+    info "Creating venv at ~/.venv/yt-download..."
+    python3 -m venv ~/.venv/yt-download
+    success "Venv created"
+
+    info "Installing yt-dlp..."
+    ~/.venv/yt-download/bin/pip install --quiet yt-dlp
+    success "yt-dlp installed"
+
+    mkdir -p ~/.local/share/yt-download
+    success "History dir created at ~/.local/share/yt-download"
+
+    info "Installing script..."
+    mkdir -p ~/.local/bin
+    VENV_PYTHON="$HOME/.venv/yt-download/bin/python"
+    sed "s|#!/usr/bin/env python3|#!${VENV_PYTHON}|" \
+        "$DOTFILES_DIR/scripts/yt-download.py" \
+        > ~/.local/bin/yt-download
+    chmod +x ~/.local/bin/yt-download
+    success "Script installed at ~/.local/bin/yt-download"
+
+    if [[ ":$PATH:" != *":$HOME/.local/bin:"* ]]; then
+        warn "~/.local/bin is not in your PATH — add it to your .bashrc"
+    fi
+}
+
+# ── Main ──────────────────────────────────────────────────────────────────────
+
+main() {
+    echo ""
+    echo -e "\033[1m\033[0;36m╔══════════════════════════════════════╗\033[0m"
+    echo -e "\033[1m\033[0;36m║        Dotfiles Setup Script         ║\033[0m"
+    echo -e "\033[1m\033[0;36m╚══════════════════════════════════════╝\033[0m"
+
+    setup_dotfiles
+    setup_yt_download
+
+    echo ""
+    success "All done! Restart your shell or run: source ~/.bashrc"
+    echo ""
+}
+
+main
