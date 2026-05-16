@@ -1,75 +1,192 @@
-# Aliases
+alias sourced="source ~/.bashrc"
+alias bashedit="nvim ~/.bashrc"
+alias aliasedit="nvim ~/.bash_aliases"
 
-### Apt
-alias pcup='sudo apt update -y && sudo apt upgrade -y'
-
-#alias netshare='sudo killall dnsmasq; sudo hotspot wlan0 start'  # Start Hotspot
-#alias netshstop='sudo hotspot wlan0 stop'        # Stop Hotspot
-
-
-### Exa as ls
-alias ls='exa -aG --color=always --group-directories-first --sort=type'
+# eza aliases
+alias ls='eza -aG --color=always --group-directories-first --sort=type --icons=always'
 alias sl='ls'
-alias ll='exa -aglhHS -s type'
-
-### Git Aliases
-alias gc="git clone"
-alias gpa="git add -A && git commit -m updated && git push origin"
-
-### Rclone
-alias rcg="rclone config"
-alias rcc="rclone copy -P"
-alias rcs="rclone sync -P"
+alias ll='eza -lghH --color=always --group-directories-first --sort=type --icons=always --git'
+alias lla='eza -alghH --color=always --group-directories-first --sort=type --icons=always --git'
+alias lt='eza -aT --color=always --group-directories-first --icons=always'
+alias lt2='eza -aT --level=2 --color=always --group-directories-first --icons=always'
+alias lS='eza -alghH --color=always --group-directories-first --sort=size --icons=always'
+alias lm='eza -alghH --color=always --group-directories-first --sort=modified --icons=always'
 
 
-### Devour
-#alias mpv="devour mpv"
-#alias zathura="devour zathura"
-#alias evince="devour evince"
+# ─── RCLONE GENERAL ALIASES ───────────────────────────────────────────────────
 
-### cd nevigation
-alias cdlatex="cd ~/Arna/academic-notes/"
-alias cdx="cd ~/Arna/academic-notes/Course\ Lecture\ Notes/Expander\ Graphs/"
-alias cdac="cd ~/Arna/academic-notes/Course\ Lecture\ Notes/Algebra\ and\ Computation/"
-alias cdact="cd ~/Arna/academic-notes/Course\ Lecture\ Notes/Coding\ Theory/"
-alias cdpar="cd ~/Arna/academic-notes/Course\ Lecture\ Notes/Parallel\ Algorithm\ and\ Complexity/"
-alias cddotfiles="cd ~/Github/dotfiles/"
-alias cdacad="cd ~/Arna/Markdown/My-Academic-Works/"
-alias cdq="cd ~/Arna/Coding/Qiskit"
-alias cdweb="cd ~/Arna/Coding/Web\ Coding/sohamch08.github.io"
-alias cdtopix="cd ~/Arna/Topics\ in\ Coding\ Theory\ Lecture\ Notes"
+# List all configured remotes
+alias rcremotes='rclone listremotes'
 
-### Cat
-alias c='cat'
-alias b='btop --utf-force'
+# Show rclone config
+alias rcconfig='sed "s/token = .*/token = ██████████████████████████████/" ~/.config/rclone/rclone.conf | bat --language=ini'
+# alias rcconfig='bat ~/.config/rclone/rclone.conf'
 
-### Others
-alias sourced='source ~/.bashrc'
-alias del='shred -uzn3'
-alias rmdir='rm -rf'
-alias info=viminfo
-alias v="nvim"
-##alias wifi="wine $HOME/.wine/drive_c/Program\ Files\ \(x86\)/Connector/Connector.exe"
-alias man2pdf='f() { man -Tpdf $1 > $1.pdf && notify-send "Created $1 Man Page to $1.pdf" -t 2000 && mv $1.pdf ~/man2pdf; unset -f f; }; f'
-#alias pdf2jpg='pdftoppm -jpeg -r 1200'
-# alias touchtoggle="xinput-toggle.sh 'ELAN071A:00 04F3:30FD Touchpad'"
-# srccpy
-alias scrh='scrcpy --lock-video-orientation=3'
-alias scrhi='scrcpy --lock-video-orientation=1'
-alias scrv='scrcpy --lock-video-orientation=0'
-alias scrvi='scrcpy --lock-video-orientation=2'
-#alias bluetoothrestart='sudo systemctl restart bluetooth'
-#alias j='f() { input=$1; javac $input; java $(echo $input | cut -d '.' -f 1); unset -f f; }; f '
-#alias spot='f() { spotdl $1 -p "/home/sohamch/Downloads/spotdl/{artists}/{album}/{title}-{artist}.{ext}"; unset -f f; }; f '
-alias flac2mp3='f() { input=$1; ffmpeg -y -i $input -codec:a libmp3lame -q:a 0 -map_metadata 0 -id3v2_version 3 -write_id3v1 1 ${input}.mp3; unset -f f; }; f '
-alias pstopdf='f() { input=$1; gs -sDEVICE=pdfwrite -sOutputFile=${input}.pdf -dBATCH -dNOPAUSE ${input} ; unset -f f; }; f '
-alias mdview='f() { input=$1; pandoc $input > $input.html ; lynx $input.html; unset -f f; }; f'
-alias djvu2pdf='f() { input=$1; ddjvu -format=pdf -quality=85 -verbose "$1" "$1.pdf"; unset -f f; }; f'
-#alias debinstall='f () { input=$1; sudo debtap $input; sudo pacman -U $input.tar.zst; unset -f f; }; f'
-alias python="python3"
-alias spotdl="python -m spotdl --bitrate 320k"
-alias screenDarkOff="xset dpms 0 0 0 && xset s noblank  && xset s off"
+# Edit rclone config
+alias rcedit='nvim ~/.config/rclone/rclone.conf'
 
-# ADB 
-alias shizukuStart='adb shell sh /sdcard/Android/data/moe.shizuku.privileged.api/start.sh'
-alias btop='btop --utf-force'
+# Show rclone log
+alias rclog='tail -f ~/.config/rclone/rclone.log'
+
+# Clear rclone log
+alias rclog-clear='> ~/.config/rclone/rclone.log'
+
+# Show all rclone aliases and usage
+rchelp() {
+    bat --language=bash --style=plain <<'EOF'
+# ── GENERAL ──────────────────────────────────────────────
+rchelp                                  # Show this help
+rcremotes                               # List all configured remotes
+rcconfig                                # Show rclone config
+rcedit                                  # Edit config in nvim
+rclog                                   # Live tail of log
+rclog-clear                             # Clear log
+
+# ── LISTING ──────────────────────────────────────────────
+rcls visa:                              # List files on remote
+rctree gdrive:                          # Tree view via eza
+
+# ── MOUNT ────────────────────────────────────────────────
+rcmount visa:                           # Mount remote
+rcumount visa:                          # Unmount remote
+# Mounts to: ~/.rclone-mounts/<remotename>
+
+# ── TRANSFER ─────────────────────────────────────────────
+rcpull "visa:Visa Application" ~/local  # Download remote → local
+rcpush ~/local "visa:Visa Application"  # Upload local → remote
+
+# ── SYNC (DESTRUCTIVE) ───────────────────────────────────
+rcsync-down "visa:Visa Application" ~/local  # Mirror remote → local
+rcsync-up ~/local "visa:Visa Application"    # Mirror local → remote
+# ⚠ Always dry run first!
+
+# ── DRY RUN (SAFE PREVIEW) ───────────────────────────────
+rcdry-down "visa:Visa Application" ~/local   # Preview download
+rcdry-up ~/local "visa:Visa Application"     # Preview upload
+
+# ── STATUS (GIT-LIKE) ────────────────────────────────────
+rcgit "visa:Visa Application" ~/local        # Full git-like summary
+rcstatus "visa:Visa Application" ~/local     # Diff with symbols
+rcremote-only "visa:Visa Application" ~/local  # Remote ahead
+rclocal-only "visa:Visa Application" ~/local   # Local ahead
+rcdiff "visa:Visa Application" ~/local         # Files that differ
+
+# Symbols:  = identical  < local ahead  > remote ahead  * different
+EOF
+}
+
+# ─── RCLONE FUNCTIONS (remote specific) ───────────────────────────────────────
+
+# List files on any remote (human readable)
+rcls() {
+    rclone ls "$1" --human-readable
+}
+
+# Tree view of any remote via eza (mounts temporarily)
+rctree() {
+    local remote="$1"
+    local mount="$HOME/.rclone-mounts/${remote%:}"
+    mkdir -p "$mount"
+    rclone mount "$remote" "$mount" --daemon --vfs-cache-mode full
+    eza --tree --icons --long --human-readable "$mount"
+}
+
+# Mount a remote
+rcmount() {
+    local remote="$1"
+    local mount="$HOME/.rclone-mounts/${remote%:}"
+    mkdir -p "$mount"
+    rclone mount "$remote" "$mount" --daemon --vfs-cache-mode full
+    echo "Mounted $remote at $mount"
+}
+
+# Unmount a remote
+rcumount() {
+    local remote="$1"
+    local mount="$HOME/.rclone-mounts/${remote%:}"
+    fusermount -u "$mount" && echo "Unmounted $remote"
+}
+
+# Copy remote → local
+rcpull() {
+    rclone copy "$1" "$2" --progress
+}
+
+# Copy local → remote
+rcpush() {
+    rclone copy "$1" "$2" --progress
+}
+
+# Sync remote → local
+rcsync-down() {
+    rclone sync "$1" "$2" --progress
+}
+
+# Sync local → remote
+rcsync-up() {
+    rclone sync "$1" "$2" --progress
+}
+
+# Dry run: preview download
+rcdry-down() {
+    rclone copy "$1" "$2" --dry-run --progress
+}
+
+# Dry run: preview upload
+rcdry-up() {
+    rclone copy "$1" "$2" --dry-run --progress
+}
+
+# ─── RCLONE STATUS (git-like) ─────────────────────────────────────────────────
+
+# Full status with symbols
+rcstatus() {
+    echo "=  identical"
+    echo "<  only on local (local ahead)"
+    echo ">  only on remote (remote ahead)"
+    echo "*  different on both"
+    echo "──────────────────────────────"
+    rclone check "$1" "$2" --combined -
+}
+
+# Files only on remote
+rcremote-only() {
+    echo "Remote ahead — files only on $1:"
+    rclone check "$1" "$2" --missing-on-destination -
+}
+
+# Files only on local
+rclocal-only() {
+    echo "Local ahead — files only in $2:"
+    rclone check "$1" "$2" --missing-on-source -
+}
+
+# Files that differ
+rcdiff() {
+    echo "Files that differ between $1 and $2:"
+    rclone check "$1" "$2" --differ -
+}
+
+# Full git-like summary
+rcgit() {
+    local remote="$1"
+    local local_path="$2"
+    echo ""
+    echo "📡 Remote: $remote"
+    echo "💻 Local:  $local_path"
+    echo "──────────────────────────────────────"
+
+    echo ""
+    echo "🔼 Local ahead (only on local):"
+    rclone check "$remote" "$local_path" --missing-on-source - 2>/dev/null || echo "  none"
+
+    echo ""
+    echo "🔽 Remote ahead (only on remote):"
+    rclone check "$remote" "$local_path" --missing-on-destination - 2>/dev/null || echo "  none"
+
+    echo ""
+    echo "📝 Different on both:"
+    rclone check "$remote" "$local_path" --differ - 2>/dev/null || echo "  none"
+
+    echo "──────────────────────────────────────"
+}

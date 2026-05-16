@@ -40,7 +40,7 @@ setup_dotfiles() {
     symlink ".config/alacritty"          "$HOME/.config/alacritty"
     symlink ".config/cmus"               "$HOME/.config/cmus"
     symlink ".config/neofetch"           "$HOME/.config/neofetch"
-    symlink ".config/nvim"               "$HOME/.config/nvim"
+    # symlink ".config/nvim"               "$HOME/.config/nvim"
     symlink ".config/rofi"               "$HOME/.config/rofi"
     symlink "bin"                        "$HOME/bin"
 }

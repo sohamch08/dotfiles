@@ -1,9 +1,9 @@
-#
-# ~/.bash_profile
-#
+# .bash_profile
 
-if [[ -f ~/.bashrc ]]; then
-        source ~/.bashrc
+# Get the aliases and functions
+if [ -f ~/.bashrc ]; then
+    . ~/.bashrc
 fi
-export PATH=$PATH:/home/sohamch/.spicetify
-export XCURSOR_PATH=${XCURSOR_PATH}:~/.local/share/icons
+
+# User specific environment and startup programs
+export XDG_CONFIG_HOME="$HOME/.config"
