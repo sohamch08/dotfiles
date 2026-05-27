@@ -1,4 +1,6 @@
 # Alacritty configuration (TOML format)
+[window]
+dimensions = { columns = 180, lines = 35 }
 
 [font]
 size = 11

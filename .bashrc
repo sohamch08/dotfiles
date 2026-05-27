@@ -30,5 +30,5 @@ if [ -f ~/.bash_personal_variables ]; then
     . ~/.bash_personal_variables
 fi
 eval "$(starship init bash)"
-
+eval "$(zoxide init --cmd cd bash)"
 PATH=/usr/local/texlive/2026/bin/x86_64-linux:$PATH

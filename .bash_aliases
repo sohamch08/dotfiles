@@ -3,6 +3,7 @@ alias bashedit="nvim ~/.bashrc"
 alias aliasedit="nvim ~/.bash_aliases"
 
 # eza aliases
+alias eza='eza --icons'
 alias ls='eza -aG --color=always --group-directories-first --sort=type --icons=always'
 alias sl='ls'
 alias ll='eza -lghH --color=always --group-directories-first --sort=type --icons=always --git'
@@ -190,3 +191,55 @@ rcgit() {
 
     echo "──────────────────────────────────────"
 }
+
+
+
+# ─── Extra FUNCTIONS  ──────────────────────────────────────────────────────
+alias b="bat"
+alias c="clear"
+alias e="nvim"
+alias l="ll"
+alias la="lla"
+alias v="nvim"
+alias su="sudo su"
+alias reboot='sudo /sbin/reboot'
+alias poweroff='sudo /sbin/poweroff'
+alias ve='python3 -m venv ./venv'
+alias va='source ./venv/bin/activate'
+mkcd () {
+  mkdir -p -- "$1" && cd -- "$1"
+}
+extract () {
+  [[ -f "$1" ]] || { echo "File not found"; return 1; }
+
+  case "$1" in
+    *.tar.gz|*.tgz) tar -xzf "$1" ;;
+    *.tar.bz2)      tar -xjf "$1" ;;
+    *.tar.xz)       tar -xJf "$1" ;;
+    *.zip)          unzip "$1" ;;
+    *.gz)           gunzip "$1" ;;
+    *.bz2)          bunzip2 "$1" ;;
+    *) echo "Unsupported format" ;;
+  esac
+}
+alias fuck="sudo !!"
+cl()
+{
+        last_dir="$(/bin/ls -Frt | grep '/$' | tail -n1)"
+        if [ -d "$last_dir" ]; then
+                cd "$last_dir"
+        fi
+}
+rd(){
+    pwd > "$HOME/.lastdir_$1"
+}
+
+crd(){
+        lastdir="$(cat "$HOME/.lastdir_$1")">/dev/null 2>&1
+        if [ -d "$lastdir" ]; then
+                cd "$lastdir"
+        else
+                echo "no existing directory stored in buffer $1">&2
+        fi
+}
+alias copy='xclip -selection clipboard'

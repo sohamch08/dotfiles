@@ -1,0 +1,3 @@
+export EZA_CONFIG_DIR=$HOME/.config/eza
+export EZA_ICON_SPACING=2
+export EDITOR=nvim
