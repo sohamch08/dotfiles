@@ -1,0 +1,22 @@
+[[plugin.deps]]
+use = "mikavilpas/easyjump.yazi:easyjump"
+rev = "178b752"
+hash = "b976709df0f6d3341736f053e87b2b8"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:smart-enter"
+rev = "c2c16c8"
+hash = "187cc58ba7ac3befd49c342129e6f1b6"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:jump-to-char"
+rev = "c2c16c8"
+hash = "7a4b4237223aaa94e589d1c01a23542a"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:git"
+rev = "c2c16c8"
+hash = "88e56a64b7ce7c4314427452343fef17"
+
+[flavor]
+deps = []

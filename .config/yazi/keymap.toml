@@ -1,0 +1,42 @@
+[mgr]
+prepend_keymap = [
+  # Jump
+  { on = [ "i" ], run = [ "plugin easyjump" ], desc = "easyjump" },
+  { on = [ "f" ], run = [ "plugin jump-to-char" ], desc = "Jump to char" },
+  
+  # Smart enter
+  { on = [ "o" ], run = [ "plugin smart-enter -- list", "escape --visual --select" ], desc = "List openers for file." },
+  { on = [ "l" ], run = [ "plugin smart-enter", "escape --visual --select" ], desc = "Enter the child directory, or open file." },
+  { on = [ "L" ], run = [ "plugin smart-enter -- detatch", "escape --visual --select" ], desc = "Open in new window." },
+
+  # Archives
+  { on = [ "u" ], run = [ "shell 'punpack \"$0\"' --confirm"], desc = "Open archive" },
+
+  # Openers
+  { on = [ "1" ], run = [ "shell 'opener -n 1 \"$0\"' --block --confirm"], desc = "Open with program 1." },
+  { on = [ "2" ], run = [ "shell 'opener -n 2 \"$0\"' --block --confirm"], desc = "Open with program 2." },
+  { on = [ "3" ], run = [ "shell 'opener -n 3 \"$0\"' --block --confirm"], desc = "Open with program 3." },
+  { on = [ "4" ], run = [ "shell 'opener -n 4 \"$0\"' --block --confirm"], desc = "Open with program 4." },
+  { on = [ "5" ], run = [ "shell 'opener -n 5 \"$0\"' --block --confirm"], desc = "Open with program 5." },
+  { on = [ "!" ], run = [ "shell 'opener -n 1 detatch \"$0\"' --block --confirm"], desc = "Open in new window with program 1." },
+  { on = [ "@" ], run = [ "shell 'opener -n 2 detatch \"$0\"' --block --confirm"], desc = "Open in new window with program 2." },
+  { on = [ "#" ], run = [ "shell 'opener -n 3 detatch \"$0\"' --block --confirm"], desc = "Open in new window with program 3." },
+  { on = [ "$" ], run = [ "shell 'opener -n 4 detatch \"$0\"' --block --confirm"], desc = "Open in new window with program 4." },
+  { on = [ "%" ], run = [ "shell 'opener -n 5 detatch \"$0\"' --block --confirm"], desc = "Open in new window with program 5." },
+
+  { on = [ "<C-n>" ], run = 'shell -- xdragon -x -T "$1"', desc = "Open file with dragon"},
+
+  { on = [ "<C-t>" ], run = "shell 'devour nautilus' --block --confirm", desc = "Open nautilus"},
+
+  { on = [ "=" ], run = """
+    shell 'printf "Mode Bits: "; read ans; chmod $ans "$@"' --block --confirm
+  """, desc = "chmod" },
+
+  { on = [ "<A-Enter>" ], run = """
+    shell '$TERMINAL -e $SHELL -c -i \"cd $PWD && ya && exec $SHELL\"' --orphan --confirm
+  """, desc = "Spawn new yazi window in CWD" },
+  { on = [ "T" ], run = "plugin max-preview -- preview" },
+  { on = [ "<C-j>" ], run = "seek 1",  desc = "Next page in preview" },
+  { on = [ "<C-k>" ], run = "seek -1", desc = "Previous page in preview" },
+]
+

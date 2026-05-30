@@ -1,0 +1,42 @@
+[preview]
+max_width = 1920
+max_height = 1080
+
+[mgr]
+
+show_symlink = false
+linemode = "size"
+
+[opener]
+open = [
+    { run = 'opener "$@"', block = true, desc = "Open" },
+]
+alt = [
+    { run = 'opener "$@"', block = true, desc = "Alt" },
+]
+nothing = [
+    { run = 'echo -n', desc = "" },
+]
+
+[open]
+rules = [
+    { url = "*/", use = [ "nothing" ] },
+    { mime = "*", use = [ "open", "alt" ] },
+]
+
+[plugin]
+prepend_previewers = [
+    # Default json previewer not working for some reason
+    { mime = "application/{json,ndjson}", run = "code" },
+]
+[[plugin.prepend_fetchers]]
+id    = "git" # Remove if Yazi > v26.1.22
+url   = "*"
+run   = "git"
+group = "git"
+
+[[plugin.prepend_fetchers]]
+id    = "git" # Remove if Yazi > v26.1.22
+url   = "*/"
+run   = "git"
+group = "git"

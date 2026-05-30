@@ -1,0 +1,77 @@
+[status]
+sep_left = { open = "", close = "" }
+sep_right = { open = "", close = "" }
+
+# Progress
+progress_label  = { bold = false }
+progress_normal = { fg = "lightblue", bg = "black" }
+progress_error  = { fg = "red",  bg = "black" }
+
+# Permissions
+perm_type  = { fg = "lightgreen" }
+perm_read  = { fg = "lightyellow" }
+perm_write = { fg = "lightred" }
+perm_exec  = { fg = "lightcyan" }
+
+[mode]
+normal_main = { fg = "black", bg = "lightblue",    bold = false }
+select_main = { fg = "black", bg = "lightgreen",   bold = false }
+unset_main  = { fg = "black", bg = "lightmagenta", bold = false }
+
+[filetype]
+
+rules = [
+    # Sections correspond to different colors and their meaning
+
+	# Can see and not hear
+	{ mime = "image/*", fg = "yellow" },
+	{ mime = "application/{epub*,pdf,doc,rtf,vnd.*}", fg = "yellow" },
+
+	# Can hear
+	{ mime = "{audio,video}/*", fg = "magenta" },
+
+    # Is link
+    { url = "*", is = "link", fg = "cyan" },
+    { url = "*/", is = "link", fg = "cyan", bold = true },
+
+	# Can open
+	{ mime = "application/{,g}zip", fg = "blue" },
+	{ mime = "application/x-{tar,bzip*,7z-compressed,xz,rar}", fg = "blue" },
+	{ url = "*/", fg = "blue", bold = true },
+
+    # Can run
+	{ url = "*", is = "exec", fg = "green" },
+
+	# Broken
+	{ url = "*", is = "orphan", bg = "red" },
+	{ url = "*", is = "dummy", bg = "red" },
+	{ url = "*/", is = "dummy", bg = "red" },
+]
+
+[icon]
+
+dirs  = [
+]
+
+conds = [
+	# Special files
+	{ if = "orphan", text = "" },
+
+	{ if = "block", text = "" },
+	{ if = "char", text = "" },
+	{ if = "fifo", text = "" },
+	{ if = "sock", text = "" },
+	{ if = "sticky", text = "" },
+	{ if = "dummy", text = "" },
+
+	# Fallback
+	{ if = "dir",  text = "󰝰", fg = "yellow" },
+	{ if = "exec", text = "" },
+	# { if = "!dir", text = "" },
+    { if = "!dir", text = "" },
+]
+[git]
+unknown_sign  = " "
+modified_sign = "M"
+deleted_sign  = "D"
+clean_sign    = "✔"

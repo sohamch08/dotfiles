@@ -200,12 +200,12 @@ alias c="clear"
 alias e="nvim"
 alias l="ll"
 alias la="lla"
-alias v="nvim"
 alias su="sudo su"
 alias reboot='sudo /sbin/reboot'
 alias poweroff='sudo /sbin/poweroff'
 alias ve='python3 -m venv ./venv'
 alias va='source ./venv/bin/activate'
+alias y="yazi"
 mkcd () {
   mkdir -p -- "$1" && cd -- "$1"
 }
