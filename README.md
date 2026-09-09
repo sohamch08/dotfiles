@@ -58,13 +58,7 @@ cd ~/.dotfiles
 
 MIT License © 2025 [Soham Chatterjee](https://github.com/sohamch08)
 
----
-
-## 🔗 Connect with Me
-
-- GitHub: [@sohamch08](https://github.com/sohamch08)  
-- Twitter: [@soham_dev](https://twitter.com/soham_dev)  
 
 ---
 
-> 💡 Fun Fact: My dotfiles evolve as my Linux journey evolves — always improving workflow, speed, and aesthetics!  
+> 💡 Fun Fact: My dotfiles evolve as my Linux journey evolves: always improving workflow, speed, and aesthetics!  
