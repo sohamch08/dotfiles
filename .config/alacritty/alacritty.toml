@@ -6,19 +6,19 @@ dimensions = { columns = 140, lines = 30 }
 size = 16
 
 [font.normal]
-family = "IosevkaTerm Nerd Font"
+family = "Iosevka Nerd Font Mono"
 style = "Regular"
 
 [font.bold]
-family = "IosevkaTerm Nerd Font"
+family = "Iosevka Nerd Font Mono"
 style = "Bold"
 
 [font.italic]
-family = "IosevkaTerm Nerd Font"
+family = "Iosevka Nerd Font Mono"
 style = "Italic"
 
 [font.bold_italic]
-family = "IosevkaTerm Nerd Font"
+family = "Iosevka Nerd Font Mono"
 style = "Bold Italic"
 
 [font.offset]
