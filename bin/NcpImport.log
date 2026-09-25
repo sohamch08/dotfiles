@@ -1,0 +1,54 @@
+
+Importing IKE Proposal "P1_POLICY_REMOTE_VPN"
+   added crypto algorithm=7
+   added crypto key length=256
+   added IkeHash=4
+   added IkeAuth=1
+   added IkeDhGroup=19
+overwriting previously existing configuration "P1_POLICY_REMOTE_VPN" with content of section "IKEPOLICY1"
+successfully imported IKE Proposal "P1_POLICY_REMOTE_VPN"
+
+Importing IpSec Proposal "P2_POLICY_REMOTE_VPN"
+   added crypto algorithm=20
+   added crypto key length=256
+   added IpsecAuth=0
+overwriting previously existing configuration "P2_POLICY_REMOTE_VPN" with content of section "IPSECPOLICY1"
+successfully imported IpSec Proposal "P2_POLICY_REMOTE_VPN"
+
+Importing VPN profile "vpn.tifr.res.in/tifruser"
+   added Name=vpn.tifr.res.in/tifruser
+   added ConnMode=0
+   added Timeout=0
+     NOTE: Parameter not supported (OS) -> NotKeepVpn=1
+   added DPDInterval=60
+   added DPDRetrys=5
+   added AntiReplay=1
+   added PathFinder=1
+   added PathFinderSNI=TIFR
+   added Gateway=158.144.9.1
+   added ExchMode=4
+   added IkeIdType=3
+   added IkeIdStr=srx@tifr.res.in.tifruser
+   set mode to "VPN connection to IPSec gateway"
+   added UseTunnel=0
+     NOTE: Parameter not supported (OS) -> VpnBypass=none
+   added IPSec-Policy=P2_POLICY_REMOTE_VPN
+   added PFS=19
+   added IPSecLTType=1
+   added IpsecLTSec=000:01:00:00
+   added IPSecLTKb=0
+   added IpAddrAssign=0
+   added TunnelIpVersion=1
+   added SplitOptionV4=1
+   added BannerActivation=0
+   added IKE-Policy=P1_POLICY_REMOTE_VPN
+   added UsePreShKey=1
+   added Secret=lab123
+   added IkeLTSec=000:08:00:00
+   added UseXAUTH=1
+   added IkeDhGroup=19
+fixed ip address according to selected "IpAddrAssign": 0.0.0.0
+updating XAUTH-Username from Wizard
+updating XAUTH-Password from Wizard
+NOTE: Ignoring not supported parameters
+successfully imported VPN profile "vpn.tifr.res.in/tifruser"

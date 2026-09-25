@@ -1,3 +1,4 @@
+# Alacritty configuration (TOML format)
 [window]
 dimensions = { columns = 140, lines = 30 }
 
@@ -5,19 +6,19 @@ dimensions = { columns = 140, lines = 30 }
 size = 16
 
 [font.normal]
-family = "Iosevka Nerd Font"
+family = "Iosevka Nerd Font Mono"
 style = "Regular"
 
 [font.bold]
-family = "Iosevka Nerd Font"
+family = "Iosevka Nerd Font Mono"
 style = "Bold"
 
 [font.italic]
-family = "Iosevka Nerd Font"
+family = "Iosevka Nerd Font Mono"
 style = "Italic"
 
 [font.bold_italic]
-family = "Iosevka Nerd Font"
+family = "Iosevka Nerd Font Mono"
 style = "Bold Italic"
 
 [font.offset]
@@ -25,14 +26,12 @@ x = 0
 y = 0
 
 [cursor]
-blink_interval = 750
 [cursor.style]
 shape = "Block"
-blinking = "Always"
+blinking = "Off"
 
 [cursor.vi_mode_style]
 shape = "Block"
-blinking = "Always"
 
 
 [general]
